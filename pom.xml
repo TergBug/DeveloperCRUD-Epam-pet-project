@@ -209,7 +209,7 @@
           </execution>
           <execution>
             <id>package</id>
-            <phase>prepare-package</phase>
+            <phase>deploy</phase>
             <goals>
               <goal>update</goal>
             </goals>
