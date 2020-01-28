@@ -208,8 +208,8 @@
             </configuration>
           </execution>
           <execution>
-            <id>package</id>
-            <phase>prepare-package</phase>
+            <id>install</id>
+            <phase>install</phase>
             <goals>
               <goal>update</goal>
             </goals>
