@@ -208,8 +208,8 @@
             </configuration>
           </execution>
           <execution>
-            <id>install</id>
-            <phase>install</phase>
+            <id>deploy</id>
+            <phase>deploy</phase>
             <goals>
               <goal>update</goal>
             </goals>
