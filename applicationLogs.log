@@ -3429,3 +3429,515 @@ Account: Din DELETED
 2020-01-28 22:12:33 DEBUG SkillService:32 - Service->Delete
 2020-01-28 22:12:33 DEBUG JDBCConnectionUtil:30 - Getting connection from pool
 2020-01-28 22:12:33 DEBUG SkillService:23 - Service->Read
+2020-01-28 23:04:38 DEBUG JDBCConnectionUtil:30 - Getting connection from pool
+2020-01-28 23:04:40 DEBUG SkillServlet:58 - GET request to read
+2020-01-28 23:04:40 DEBUG SkillServlet:63 - Request to get all
+2020-01-28 23:04:40 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-01-28 23:04:40 DEBUG SkillService:36 - Service->Get all
+2020-01-28 23:04:40 DEBUG SkillServlet:65 - Sand JSON response
+2020-01-28 23:05:51 DEBUG SkillServlet:48 - POST request to create
+2020-01-28 23:05:51 ERROR JDBCSkillRepositoryImpl:39 - Wrong SQL query to DB in creation
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 70 750 milliseconds ago.  The last packet sent successfully to the server was 70 819 milliseconds ago.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.isReadOnly(ConnectionImpl.java:1429)
+	at com.mysql.cj.jdbc.ConnectionImpl.isReadOnly(ConnectionImpl.java:1408)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.checkReadOnlySafeStatement(ClientPreparedStatement.java:324)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:334)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.create(JDBCSkillRepositoryImpl.java:36)
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.create(JDBCSkillRepositoryImpl.java:16)
+	at org.mycode.service.SkillService.create(SkillService.java:18)
+	at org.mycode.rest.SkillServlet.doPost(SkillServlet.java:50)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 70 750 milliseconds ago.  The last packet sent successfully to the server was 70 819 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:562)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:732)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:671)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:132)
+	at com.mysql.cj.NativeSession.sendCommand(NativeSession.java:321)
+	at com.mysql.cj.NativeSession.queryServerVariable(NativeSession.java:1079)
+	at com.mysql.cj.jdbc.ConnectionImpl.isReadOnly(ConnectionImpl.java:1416)
+	... 29 more
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:67)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:556)
+	... 35 more
+2020-01-28 23:05:51 ERROR SkillServlet:52 - Cannot create entry
+org.mycode.exceptions.RepoStorageException: Wrong SQL query to DB in creation
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.create(JDBCSkillRepositoryImpl.java:40)
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.create(JDBCSkillRepositoryImpl.java:16)
+	at org.mycode.service.SkillService.create(SkillService.java:18)
+	at org.mycode.rest.SkillServlet.doPost(SkillServlet.java:50)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-01-28 23:05:57 DEBUG SkillServlet:58 - GET request to read
+2020-01-28 23:05:57 DEBUG SkillServlet:63 - Request to get all
+2020-01-28 23:05:57 ERROR JDBCSkillRepositoryImpl:102 - Wrong SQL query to DB in reading
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 76 969 milliseconds ago.  The last packet sent successfully to the server was 77 038 milliseconds ago.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:970)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1020)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:96)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:96)
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.getAll(JDBCSkillRepositoryImpl.java:93)
+	at org.mycode.service.SkillService.getAll(SkillService.java:35)
+	at org.mycode.rest.SkillServlet.doGet(SkillServlet.java:64)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 76 969 milliseconds ago.  The last packet sent successfully to the server was 77 038 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeProtocol.clearInputStream(NativeProtocol.java:837)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:652)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:986)
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1157)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:947)
+	... 26 more
+Caused by: java.io.IOException: Socket is closed
+	at com.mysql.cj.protocol.AbstractSocketConnection.getMysqlInput(AbstractSocketConnection.java:72)
+	at com.mysql.cj.protocol.a.NativeProtocol.clearInputStream(NativeProtocol.java:833)
+	... 30 more
+2020-01-28 23:05:57 ERROR SkillServlet:72 - Cannot read entry
+org.mycode.exceptions.RepoStorageException: Wrong SQL query to DB in reading
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.getAll(JDBCSkillRepositoryImpl.java:103)
+	at org.mycode.service.SkillService.getAll(SkillService.java:35)
+	at org.mycode.rest.SkillServlet.doGet(SkillServlet.java:64)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-01-28 23:12:59 DEBUG JDBCConnectionUtil:30 - Getting connection from pool
+2020-01-28 23:13:01 DEBUG SkillServlet:58 - GET request to read
+2020-01-28 23:13:01 DEBUG SkillServlet:63 - Request to get all
+2020-01-28 23:13:01 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-01-28 23:13:01 DEBUG SkillService:36 - Service->Get all
+2020-01-28 23:13:01 DEBUG SkillServlet:65 - Sand JSON response
+2020-01-28 23:13:06 DEBUG SkillServlet:58 - GET request to read
+2020-01-28 23:13:06 DEBUG SkillServlet:67 - Request to get by ID
+2020-01-28 23:13:06 DEBUG JDBCSkillRepositoryImpl:54 - Read entry(DB) with ID: 2
+2020-01-28 23:13:06 DEBUG SkillService:23 - Service->Read
+2020-01-28 23:13:06 DEBUG SkillServlet:69 - Sand JSON response
+2020-01-28 23:13:17 DEBUG SkillServlet:78 - PUT request to update
+2020-01-28 23:13:17 DEBUG JDBCSkillRepositoryImpl:70 - Update entry(DB): 2 SmallTalk
+2020-01-28 23:13:17 DEBUG SkillService:28 - Service->Update
+2020-01-28 23:13:22 DEBUG SkillServlet:58 - GET request to read
+2020-01-28 23:13:22 DEBUG SkillServlet:63 - Request to get all
+2020-01-28 23:13:22 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-01-28 23:13:22 DEBUG SkillService:36 - Service->Get all
+2020-01-28 23:13:22 DEBUG SkillServlet:65 - Sand JSON response
+2020-01-28 23:13:37 DEBUG SkillServlet:48 - POST request to create
+2020-01-28 23:13:37 DEBUG JDBCSkillRepositoryImpl:37 - Create entry(DB): 1 perl
+2020-01-28 23:13:37 DEBUG SkillService:19 - Service->Create
+2020-01-28 23:13:41 DEBUG SkillServlet:58 - GET request to read
+2020-01-28 23:13:41 DEBUG SkillServlet:63 - Request to get all
+2020-01-28 23:13:42 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-01-28 23:13:42 DEBUG SkillService:36 - Service->Get all
+2020-01-28 23:13:42 DEBUG SkillServlet:65 - Sand JSON response
+2020-01-28 23:13:52 DEBUG SkillServlet:48 - POST request to create
+2020-01-28 23:13:53 ERROR JDBCSkillRepositoryImpl:39 - Wrong SQL query to DB in creation
+java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'perl' for key 'name'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:970)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:387)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.create(JDBCSkillRepositoryImpl.java:36)
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.create(JDBCSkillRepositoryImpl.java:16)
+	at org.mycode.service.SkillService.create(SkillService.java:18)
+	at org.mycode.rest.SkillServlet.doPost(SkillServlet.java:50)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-01-28 23:13:53 ERROR SkillServlet:52 - Cannot create entry
+org.mycode.exceptions.RepoStorageException: Wrong SQL query to DB in creation
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.create(JDBCSkillRepositoryImpl.java:40)
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.create(JDBCSkillRepositoryImpl.java:16)
+	at org.mycode.service.SkillService.create(SkillService.java:18)
+	at org.mycode.rest.SkillServlet.doPost(SkillServlet.java:50)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-01-28 23:14:09 DEBUG SkillServlet:58 - GET request to read
+2020-01-28 23:14:09 DEBUG SkillServlet:63 - Request to get all
+2020-01-28 23:14:09 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-01-28 23:14:09 DEBUG SkillService:36 - Service->Get all
+2020-01-28 23:14:09 DEBUG SkillServlet:65 - Sand JSON response
+2020-01-28 23:14:17 DEBUG SkillServlet:58 - GET request to read
+2020-01-28 23:14:17 DEBUG SkillServlet:63 - Request to get all
+2020-01-28 23:14:17 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-01-28 23:14:17 DEBUG SkillService:36 - Service->Get all
+2020-01-28 23:14:17 DEBUG SkillServlet:65 - Sand JSON response
+2020-01-28 23:14:30 DEBUG SkillServlet:48 - POST request to create
+2020-01-28 23:14:30 DEBUG JDBCSkillRepositoryImpl:37 - Create entry(DB): 0 po
+2020-01-28 23:14:30 DEBUG SkillService:19 - Service->Create
+2020-01-28 23:14:36 DEBUG SkillServlet:58 - GET request to read
+2020-01-28 23:14:36 DEBUG SkillServlet:63 - Request to get all
+2020-01-28 23:14:36 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-01-28 23:14:36 DEBUG SkillService:36 - Service->Get all
+2020-01-28 23:14:36 DEBUG SkillServlet:65 - Sand JSON response
+2020-01-28 23:14:47 DEBUG SkillServlet:88 - DELETE request to delete
+2020-01-28 23:14:48 DEBUG JDBCSkillRepositoryImpl:84 - Delete entry(DB) with ID: 31
+2020-01-28 23:14:48 DEBUG SkillService:32 - Service->Delete
+2020-01-28 23:14:51 DEBUG SkillServlet:58 - GET request to read
+2020-01-28 23:14:51 DEBUG SkillServlet:63 - Request to get all
+2020-01-28 23:14:51 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-01-28 23:14:51 DEBUG SkillService:36 - Service->Get all
+2020-01-28 23:14:51 DEBUG SkillServlet:65 - Sand JSON response
+2020-01-28 23:15:11 DEBUG SkillServlet:88 - DELETE request to delete
+2020-01-28 23:15:11 DEBUG JDBCSkillRepositoryImpl:84 - Delete entry(DB) with ID: 11
+2020-01-28 23:15:11 DEBUG SkillService:32 - Service->Delete
+2020-01-28 23:15:15 DEBUG SkillServlet:58 - GET request to read
+2020-01-28 23:15:15 DEBUG SkillServlet:63 - Request to get all
+2020-01-28 23:15:15 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-01-28 23:15:15 DEBUG SkillService:36 - Service->Get all
+2020-01-28 23:15:15 DEBUG SkillServlet:65 - Sand JSON response
+2020-01-28 23:15:28 DEBUG SkillServlet:48 - POST request to create
+2020-01-28 23:15:29 DEBUG JDBCSkillRepositoryImpl:37 - Create entry(DB): 0 perl
+2020-01-28 23:15:29 DEBUG SkillService:19 - Service->Create
+2020-01-28 23:15:33 DEBUG SkillServlet:58 - GET request to read
+2020-01-28 23:15:33 DEBUG SkillServlet:63 - Request to get all
+2020-01-28 23:15:33 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-01-28 23:15:33 DEBUG SkillService:36 - Service->Get all
+2020-01-28 23:15:33 DEBUG SkillServlet:65 - Sand JSON response
+2020-01-28 23:17:04 DEBUG SkillServlet:88 - DELETE request to delete
+2020-01-28 23:17:04 ERROR JDBCSkillRepositoryImpl:86 - Wrong SQL query to DB in deleting
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 91 439 milliseconds ago.  The last packet sent successfully to the server was 91 510 milliseconds ago.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:970)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1109)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1057)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1377)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1042)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:105)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:105)
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.delete(JDBCSkillRepositoryImpl.java:80)
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.delete(JDBCSkillRepositoryImpl.java:16)
+	at org.mycode.service.SkillService.delete(SkillService.java:31)
+	at org.mycode.rest.SkillServlet.doDelete(SkillServlet.java:94)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:667)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 91 439 milliseconds ago.  The last packet sent successfully to the server was 91 510 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:562)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:732)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:671)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:986)
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1157)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:947)
+	... 30 more
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:67)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:556)
+	... 35 more
+2020-01-28 23:17:04 ERROR SkillServlet:97 - Cannot delete entry
+org.mycode.exceptions.RepoStorageException: Wrong SQL query to DB in deleting
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.delete(JDBCSkillRepositoryImpl.java:87)
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.delete(JDBCSkillRepositoryImpl.java:16)
+	at org.mycode.service.SkillService.delete(SkillService.java:31)
+	at org.mycode.rest.SkillServlet.doDelete(SkillServlet.java:94)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:667)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-01-28 23:17:16 DEBUG SkillServlet:58 - GET request to read
+2020-01-28 23:17:16 DEBUG SkillServlet:63 - Request to get all
+2020-01-28 23:17:16 ERROR JDBCSkillRepositoryImpl:102 - Wrong SQL query to DB in reading
+java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:73)
+	at com.mysql.cj.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:1674)
+	at org.apache.commons.dbcp.DelegatingConnection.prepareStatement(DelegatingConnection.java:295)
+	at org.apache.commons.dbcp.PoolingDataSource$PoolGuardConnectionWrapper.prepareStatement(PoolingDataSource.java:318)
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.getAll(JDBCSkillRepositoryImpl.java:92)
+	at org.mycode.service.SkillService.getAll(SkillService.java:35)
+	at org.mycode.rest.SkillServlet.doGet(SkillServlet.java:64)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:1263)
+	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:575)
+	at com.mysql.cj.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:1605)
+	... 25 more
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 91 439 milliseconds ago.  The last packet sent successfully to the server was 91 510 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:562)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:732)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:671)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:986)
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1157)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:947)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1109)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1057)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1377)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1042)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:105)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:105)
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.delete(JDBCSkillRepositoryImpl.java:80)
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.delete(JDBCSkillRepositoryImpl.java:16)
+	at org.mycode.service.SkillService.delete(SkillService.java:31)
+	at org.mycode.rest.SkillServlet.doDelete(SkillServlet.java:94)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:667)
+	... 19 more
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:67)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:556)
+	... 35 more
+2020-01-28 23:17:16 ERROR SkillServlet:72 - Cannot read entry
+org.mycode.exceptions.RepoStorageException: Wrong SQL query to DB in reading
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.getAll(JDBCSkillRepositoryImpl.java:103)
+	at org.mycode.service.SkillService.getAll(SkillService.java:35)
+	at org.mycode.rest.SkillServlet.doGet(SkillServlet.java:64)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
