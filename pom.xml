@@ -209,7 +209,7 @@
           </execution>
           <execution>
             <id>deploy</id>
-            <phase>install</phase>
+            <phase>site-deploy</phase>
             <goals>
               <goal>update</goal>
             </goals>
