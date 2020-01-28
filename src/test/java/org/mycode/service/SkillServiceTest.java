@@ -1,27 +1,30 @@
 package org.mycode.service;
 
 import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.mycode.exceptions.RepoStorageException;
 import org.mycode.model.Skill;
 import org.mycode.repository.SkillRepository;
-import org.mycode.repository.javaio.JavaIOSkillRepositoryImpl;
-import org.mycode.repository.jdbc.JDBCSkillRepositoryImpl;
 import org.mycode.testutil.TestUtils;
 
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class SkillServiceTest {
-    private SkillService testedSkillService;
+    @InjectMocks
+    private SkillService testedSkillService = new SkillService();
+    @Mock
     private SkillRepository currentRepo;
     private Skill createSkill = new Skill(5L, "Java");
     private Skill updateSkill = new Skill(5L, "JDBC");
+
+    public SkillServiceTest() throws RepoStorageException { }
+
     @BeforeClass
     public static void connect(){
         TestUtils.switchConfigToTestMode();
@@ -29,15 +32,6 @@ public class SkillServiceTest {
     @AfterClass
     public static void backProperty(){
         TestUtils.switchConfigToWorkMode();
-    }
-    @Before
-    public void injectMock(){
-        currentRepo = mock(SkillRepository.class);
-        try {
-            testedSkillService = new SkillService(currentRepo);
-        } catch (RepoStorageException e) {
-            e.printStackTrace();
-        }
     }
     @Test
     public void shouldInvokeCreateInRepo() {
@@ -83,17 +77,5 @@ public class SkillServiceTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-    @Test
-    public void shouldChangeStorage() {
-        try {
-            testedSkillService = new SkillService();
-        } catch (RepoStorageException e) {
-            e.printStackTrace();
-        }
-        testedSkillService.changeStorage(TypeOfStorage.DATABASE);
-        assertTrue(testedSkillService.getCurrentRepo() instanceof JDBCSkillRepositoryImpl);
-        testedSkillService.changeStorage(TypeOfStorage.FILES);
-        assertTrue(testedSkillService.getCurrentRepo() instanceof JavaIOSkillRepositoryImpl);
     }
 }

@@ -5,12 +5,7 @@ import java.io.*;
 public class TestUtils {
     private static final String LINK_TO_PROPERTIES = "./src/main/resources/config.properties";
     private static final String WORK;
-    private static final String TEST= "# Java IO/NIO\n" +
-            "javaio.file.path.skills=./src/test/resources/filestxt/skills.txt\n" +
-            "javaio.file.path.accounts=./src/test/resources/filestxt/accounts.txt\n" +
-            "javaio.file.path.developers=./src/test/resources/filestxt/developers.txt\n" +
-            "\n" +
-            "# JDBC\n" +
+    private static final String TEST= "# JDBC\n" +
             "jdbc.driver=org.h2.Driver\n" +
             "jdbc.url=jdbc:h2:~/test\n" +
             "jdbc.user=sa\n" +

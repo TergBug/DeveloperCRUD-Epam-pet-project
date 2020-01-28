@@ -1,8 +1,4 @@
 use heroku_35887555ec02359;
-delete from developer_skill;
-delete from developers;
-delete from accounts;
-delete from skills;
 insert into skills(id, name) values ('1', 'Java');
 insert into skills(id, name) values ('2', 'C#');
 insert into skills(id, name) values ('3', 'JDBC');
