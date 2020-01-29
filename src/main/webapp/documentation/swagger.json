@@ -1,0 +1,204 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This is a CRUD REST API DeveloperCRUD",
+    "version": "1.0.0",
+    "title": "DeveloperCRUD",
+    "termsOfService": "https://github.com/TergBug",
+    "contact": {
+      "email": "tergbug@gmail.com"
+    }
+  },
+  "host": "developercrud.herokuapp.com",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "skill",
+      "description": "Developer`s skill"
+    },
+    {
+      "name": "account",
+      "description": "Developer`s account"
+    },
+    {
+      "name": "developer",
+      "description": "Developer`s info"
+    }
+  ],
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "paths": {
+    "/api/v1/skills": {
+      "get": {
+        "tags": [
+          "skill"
+        ],
+        "summary": "Get all skills if no parameters or get by id",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "ID of skill",
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/Skill"
+              }
+            }
+          },
+          "201": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Skill"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "skill"
+        ],
+        "summary": "Add a new skill",
+        "description": "",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "skill",
+            "schema": {
+              "$ref": "#/definitions/Skill"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Cannot create skill"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "skill"
+        ],
+        "summary": "Update an existing skill",
+        "description": "",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "skill",
+            "schema": {
+              "$ref": "#/definitions/Skill"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Cannot update skill"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "skill"
+        ],
+        "summary": "Delete skill",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "ID of skill",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Skill": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "Account": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "ACCTIVE",
+            "BUNNED",
+            "DELETED"
+          ]
+        }
+      }
+    },
+    "Developer": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "skills": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Skill"
+          }
+        },
+        "account": {
+          "$ref": "#/definitions/Account"
+        }
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Find out more about Swagger",
+    "url": "http://swagger.io"
+  }
+}

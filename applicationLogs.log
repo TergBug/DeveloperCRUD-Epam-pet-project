@@ -3941,3 +3941,119 @@ org.mycode.exceptions.RepoStorageException: Wrong SQL query to DB in reading
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
+2020-01-28 23:24:24 DEBUG JDBCConnectionUtil:30 - Getting connection from pool
+2020-01-28 23:24:26 DEBUG SkillServlet:58 - GET request to read
+2020-01-28 23:24:26 DEBUG SkillServlet:63 - Request to get all
+2020-01-28 23:24:26 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-01-28 23:24:26 DEBUG SkillService:36 - Service->Get all
+2020-01-28 23:24:26 DEBUG SkillServlet:65 - Sand JSON response
+2020-01-28 23:24:34 DEBUG SkillServlet:88 - DELETE request to delete
+2020-01-28 23:24:34 DEBUG JDBCSkillRepositoryImpl:84 - Delete entry(DB) with ID: 41
+2020-01-28 23:24:34 DEBUG SkillService:32 - Service->Delete
+2020-01-28 23:24:39 DEBUG SkillServlet:58 - GET request to read
+2020-01-28 23:24:39 DEBUG SkillServlet:63 - Request to get all
+2020-01-28 23:24:39 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-01-28 23:24:39 DEBUG SkillService:36 - Service->Get all
+2020-01-28 23:24:39 DEBUG SkillServlet:65 - Sand JSON response
+2020-01-28 23:24:53 DEBUG SkillServlet:78 - PUT request to update
+2020-01-28 23:24:53 DEBUG JDBCSkillRepositoryImpl:70 - Update entry(DB): 2 JS
+2020-01-28 23:24:53 DEBUG SkillService:28 - Service->Update
+2020-01-28 23:24:57 DEBUG SkillServlet:58 - GET request to read
+2020-01-28 23:24:57 DEBUG SkillServlet:63 - Request to get all
+2020-01-28 23:24:57 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-01-28 23:24:57 DEBUG SkillService:36 - Service->Get all
+2020-01-28 23:24:57 DEBUG SkillServlet:65 - Sand JSON response
+2020-01-28 23:25:02 DEBUG SkillServlet:48 - POST request to create
+2020-01-28 23:25:02 DEBUG JDBCSkillRepositoryImpl:37 - Create entry(DB): 0 perl
+2020-01-28 23:25:02 DEBUG SkillService:19 - Service->Create
+2020-01-28 23:25:06 DEBUG SkillServlet:58 - GET request to read
+2020-01-28 23:25:06 DEBUG SkillServlet:63 - Request to get all
+2020-01-28 23:25:06 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-01-28 23:25:06 DEBUG SkillService:36 - Service->Get all
+2020-01-28 23:25:06 DEBUG SkillServlet:65 - Sand JSON response
+2020-01-28 23:25:17 DEBUG SkillServlet:58 - GET request to read
+2020-01-28 23:25:17 DEBUG SkillServlet:67 - Request to get by ID
+2020-01-28 23:25:17 DEBUG JDBCSkillRepositoryImpl:54 - Read entry(DB) with ID: 2
+2020-01-28 23:25:17 DEBUG SkillService:23 - Service->Read
+2020-01-28 23:25:17 DEBUG SkillServlet:69 - Sand JSON response
+2020-01-28 23:25:31 DEBUG SkillServlet:48 - POST request to create
+2020-01-28 23:25:31 DEBUG JDBCSkillRepositoryImpl:37 - Create entry(DB): 0 C++
+2020-01-28 23:25:31 DEBUG SkillService:19 - Service->Create
+2020-01-28 23:25:36 DEBUG SkillServlet:58 - GET request to read
+2020-01-28 23:25:36 DEBUG SkillServlet:63 - Request to get all
+2020-01-28 23:25:36 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-01-28 23:25:36 DEBUG SkillService:36 - Service->Get all
+2020-01-28 23:25:36 DEBUG SkillServlet:65 - Sand JSON response
+2020-01-28 23:26:04 DEBUG SkillServlet:78 - PUT request to update
+2020-01-28 23:26:04 DEBUG JDBCSkillRepositoryImpl:70 - Update entry(DB): 51 Perl
+2020-01-28 23:26:04 DEBUG SkillService:28 - Service->Update
+2020-01-28 23:26:16 DEBUG SkillServlet:88 - DELETE request to delete
+2020-01-28 23:26:16 WARN  JDBCSkillRepositoryImpl:81 - No such entry with ID: 41
+2020-01-28 23:26:16 ERROR SkillServlet:97 - Cannot delete entry
+org.mycode.exceptions.NoSuchEntryException: Deleting in DB is failed
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.delete(JDBCSkillRepositoryImpl.java:82)
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.delete(JDBCSkillRepositoryImpl.java:16)
+	at org.mycode.service.SkillService.delete(SkillService.java:31)
+	at org.mycode.rest.SkillServlet.doDelete(SkillServlet.java:94)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:667)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-01-28 23:26:22 DEBUG SkillServlet:58 - GET request to read
+2020-01-28 23:26:22 DEBUG SkillServlet:63 - Request to get all
+2020-01-28 23:26:22 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-01-28 23:26:22 DEBUG SkillService:36 - Service->Get all
+2020-01-28 23:26:22 DEBUG SkillServlet:65 - Sand JSON response
+2020-01-28 23:26:32 DEBUG SkillServlet:88 - DELETE request to delete
+2020-01-28 23:26:32 DEBUG JDBCSkillRepositoryImpl:84 - Delete entry(DB) with ID: 51
+2020-01-28 23:26:32 DEBUG SkillService:32 - Service->Delete
+2020-01-28 23:26:39 DEBUG SkillServlet:58 - GET request to read
+2020-01-28 23:26:39 DEBUG SkillServlet:63 - Request to get all
+2020-01-28 23:26:39 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-01-28 23:26:39 DEBUG SkillService:36 - Service->Get all
+2020-01-28 23:26:39 DEBUG SkillServlet:65 - Sand JSON response
+2020-01-28 23:26:58 DEBUG SkillServlet:58 - GET request to read
+2020-01-28 23:26:58 DEBUG SkillServlet:63 - Request to get all
+2020-01-28 23:26:58 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-01-28 23:26:58 DEBUG SkillService:36 - Service->Get all
+2020-01-28 23:26:58 DEBUG SkillServlet:65 - Sand JSON response
+2020-01-28 23:27:14 DEBUG SkillServlet:88 - DELETE request to delete
+2020-01-28 23:27:14 DEBUG JDBCSkillRepositoryImpl:84 - Delete entry(DB) with ID: 61
+2020-01-28 23:27:14 DEBUG SkillService:32 - Service->Delete
+2020-01-28 23:27:18 DEBUG SkillServlet:58 - GET request to read
+2020-01-28 23:27:18 DEBUG SkillServlet:63 - Request to get all
+2020-01-28 23:27:18 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-01-28 23:27:18 DEBUG SkillService:36 - Service->Get all
+2020-01-28 23:27:18 DEBUG SkillServlet:65 - Sand JSON response
+2020-01-28 23:27:22 DEBUG SkillServlet:48 - POST request to create
+2020-01-28 23:27:22 DEBUG JDBCSkillRepositoryImpl:37 - Create entry(DB): 0 C++
+2020-01-28 23:27:22 DEBUG SkillService:19 - Service->Create
+2020-01-28 23:27:25 DEBUG SkillServlet:58 - GET request to read
+2020-01-28 23:27:25 DEBUG SkillServlet:63 - Request to get all
+2020-01-28 23:27:25 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-01-28 23:27:25 DEBUG SkillService:36 - Service->Get all
+2020-01-28 23:27:25 DEBUG SkillServlet:65 - Sand JSON response
+2020-01-28 23:27:36 DEBUG SkillServlet:88 - DELETE request to delete
+2020-01-28 23:27:36 DEBUG JDBCSkillRepositoryImpl:84 - Delete entry(DB) with ID: 71
+2020-01-28 23:27:36 DEBUG SkillService:32 - Service->Delete
+2020-01-28 23:27:39 DEBUG SkillServlet:58 - GET request to read
+2020-01-28 23:27:39 DEBUG SkillServlet:63 - Request to get all
+2020-01-28 23:27:39 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-01-28 23:27:39 DEBUG SkillService:36 - Service->Get all
+2020-01-28 23:27:39 DEBUG SkillServlet:65 - Sand JSON response
