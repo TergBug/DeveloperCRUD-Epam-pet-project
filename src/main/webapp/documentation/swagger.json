@@ -388,8 +388,8 @@
         "status": {
           "type": "string",
           "enum": [
-            "ACCTIVE",
-            "BUNNED",
+            "ACTIVE",
+            "BANNED",
             "DELETED"
           ]
         }
