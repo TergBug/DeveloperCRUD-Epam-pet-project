@@ -7,50 +7,69 @@ Skill,
 Account.
 
 Developer:
+Long id;
 String firstName;
 String lastName;
 Set<Skill> skills;
 Account account.
 
 Skill:
+Long id;
 String name.
 
 Account:
+Long id;
 String name;
-AccountStatus (enum ACTIVE, BANNED, DELETED) status.
+AccountStatus (enum: ACTIVE, BANNED, DELETED) status.
 
-It use text files as a storage (in resources repository):
-developers.txt, skills.txt, accounts.txt
+It uses MySQL database as a storage.
 
-User is able to create, read, update and delete data.
+User is able to create, read (get by ID of get all), update and delete data.
 
 Layers:
 >model - POJO classes
 
->view - all data that are required for user/console interaction
+>rest - servlets that handles user’s POST requests from network via HTTP/HTTPS protocol
 
->controller - user’s requests handling
+>service - simple business logic
 
->repository - classes that provide access to text files
+>repository - classes that provide access to storage
 
->storage
+>storage - tables in database
 
 Class-chain for developer (not inheritance):
-DeveloperRepository -> DeveloperController -> DeveloperView -> AppView
+DeveloperRepository -> DeveloperController -> DeveloperService -> DeveloperServlet
 
 Class-chain for skill (not inheritance):
-SkillRepository -> SkillController -> SkillView -> AppView
+SkillRepository -> SkillController -> SkillService -> SkillServlet
 
 Class-chain for account (not inheritance):
-AccountRepository -> AccountController -> AccountView -> AppView
+AccountRepository -> AccountController -> AccountService -> AccountServlet
 
 For repository layer there are a few interfaces, such as 
 GenericRepository<T,ID>, DeveloperRepository, SkillRepository, AccountRepository.
 DeveloperRepository, SkillRepository, AccountRepository extend GenericRepository<T,ID>.
-Classes JavaIODeveloperRepositoryImpl, JavaIOSkillRepositoryImpl, JavaIOAccountRepositoryImpl 
+Classes JDBCDeveloperRepositoryImpl, JDBCSkillRepositoryImpl, JDBCAccountRepositoryImpl 
 implement appropriate interfaces.
 
-All basic functionality is covered with unit tests.
+All basic functionality is covered with unit tests, using JUnit and Mockito. Also pocket 
+H2 DB is used to implement tests with connection to database. 
+
+Liquibase is used to initialize tables in DB and fill them by some information automatically 
+during test (for H2 DB) and deploy (for remote DB) phases.
+
+There are a few endpoints in this API, each of them associate with certain servlets:
+>/api/v1/skills
+
+>/api/v1/accounts
+
+>/api/vi/developers
+
+There is one index.jsp page, which contains description of project in three languages: 
+English, Russian and Chinese. And there is a documentation page on endpoint /documentation, 
+which has been built with Swagger UI.
 
 To start up application you should compile code (version of Java is 8) and start this with 
-entry point in AppRunner class.
+entry point in Main class. Then the tomcat server will start locally.
+
+This api is deployed to heroku cloud service. Link to project: https://developercrud.herokuapp.com.
