@@ -6,6 +6,7 @@ import org.mycode.model.Account;
 import org.mycode.repository.AccountRepository;
 import org.mycode.repository.jdbc.JDBCAccountRepositoryImpl;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class AccountService {
@@ -35,8 +36,5 @@ public class AccountService {
         List<Account> accounts = currentRepo.getAll();
         log.debug("Service->Get all");
         return accounts;
-    }
-    public AccountRepository getCurrentRepo() {
-        return currentRepo;
     }
 }

@@ -11,27 +11,37 @@ import org.mycode.exceptions.RepoStorageException;
 import org.mycode.model.Skill;
 import org.mycode.repository.SkillRepository;
 import org.mycode.testutil.TestUtils;
+import org.mycode.util.JDBCConnectionUtil;
+
+import java.sql.SQLException;
 
 import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class SkillServiceTest {
     @InjectMocks
-    private SkillService testedSkillService = new SkillService();
+    private static SkillService testedSkillService;
     @Mock
     private SkillRepository currentRepo;
     private Skill createSkill = new Skill(5L, "Java");
     private Skill updateSkill = new Skill(5L, "JDBC");
-
-    public SkillServiceTest() throws RepoStorageException { }
-
     @BeforeClass
     public static void connect(){
         TestUtils.switchConfigToTestMode();
+        try {
+            testedSkillService = new SkillService();
+        } catch (RepoStorageException e) {
+            e.printStackTrace();
+        }
     }
     @AfterClass
     public static void backProperty(){
         TestUtils.switchConfigToWorkMode();
+        try {
+            JDBCConnectionUtil.closeConnection("Skill");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
     @Test
     public void shouldInvokeCreateInRepo() {

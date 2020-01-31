@@ -5,6 +5,7 @@ import org.apache.log4j.Logger;
 import org.mycode.exceptions.RepoStorageException;
 import org.mycode.model.Account;
 import org.mycode.service.AccountService;
+import org.mycode.util.JDBCConnectionUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 
 @WebServlet(name = "AccountServlet", urlPatterns = "/api/v1/accounts")
 public class AccountServlet extends HttpServlet {
@@ -22,6 +24,15 @@ public class AccountServlet extends HttpServlet {
     public AccountServlet() throws RepoStorageException {
         gson = new Gson();
         accountService = new AccountService();
+    }
+    @Override
+    public void destroy() {
+        try {
+            JDBCConnectionUtil.closeConnection("Account");
+        } catch (SQLException e) {
+            log.error("Connection problem", e);
+            e.printStackTrace();
+        }
     }
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

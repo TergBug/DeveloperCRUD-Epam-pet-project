@@ -36,7 +36,4 @@ public class SkillService {
         log.debug("Service->Get all");
         return skills;
     }
-    public SkillRepository getCurrentRepo() {
-        return currentRepo;
-    }
 }

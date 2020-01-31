@@ -12,7 +12,9 @@ import org.mycode.model.Account;
 import org.mycode.model.Developer;
 import org.mycode.repository.DeveloperRepository;
 import org.mycode.testutil.TestUtils;
+import org.mycode.util.JDBCConnectionUtil;
 
+import java.sql.SQLException;
 import java.util.HashSet;
 
 import static org.mockito.Mockito.*;
@@ -20,7 +22,7 @@ import static org.mockito.Mockito.*;
 @RunWith(MockitoJUnitRunner.class)
 public class DeveloperServiceTest {
     @InjectMocks
-    private DeveloperService testedDeveloperService = new DeveloperService();
+    private static DeveloperService testedDeveloperService;
     @Mock
     private DeveloperRepository currentRepo;
     private Developer createDeveloper = new Developer(5L, "Joe", "Tred", new HashSet<>(), new Account(2L));
@@ -31,10 +33,20 @@ public class DeveloperServiceTest {
     @BeforeClass
     public static void connect(){
         TestUtils.switchConfigToTestMode();
+        try {
+            testedDeveloperService = new DeveloperService();
+        } catch (RepoStorageException e) {
+            e.printStackTrace();
+        }
     }
     @AfterClass
     public static void backProperty(){
         TestUtils.switchConfigToWorkMode();
+        try {
+            JDBCConnectionUtil.closeConnection("Developer");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
     @Test
     public void shouldInvokeCreateInRepo() {

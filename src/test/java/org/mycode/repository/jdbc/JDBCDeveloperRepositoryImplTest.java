@@ -66,7 +66,7 @@ public class JDBCDeveloperRepositoryImplTest {
     public static void connect() throws RepoStorageException {
         TestUtils.switchConfigToTestMode();
         try{
-            connection = JDBCConnectionUtil.getConnection();
+            connection = JDBCConnectionUtil.getConnection("Developer");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -77,6 +77,7 @@ public class JDBCDeveloperRepositoryImplTest {
         TestUtils.switchConfigToWorkMode();
         try {
             connection.close();
+            JDBCConnectionUtil.closeConnection("Developer");
         } catch (SQLException e) {
             e.printStackTrace();
         }

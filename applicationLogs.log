@@ -4057,3 +4057,215 @@ org.mycode.exceptions.NoSuchEntryException: Deleting in DB is failed
 2020-01-28 23:27:39 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
 2020-01-28 23:27:39 DEBUG SkillService:36 - Service->Get all
 2020-01-28 23:27:39 DEBUG SkillServlet:65 - Sand JSON response
+2020-01-31 01:31:08 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-01-31 01:31:08 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-01-31 01:31:08 DEBUG JDBCAccountRepositoryImpl:38 - Create entry(DB): 5 Lord ACTIVE
+2020-01-31 01:31:08 DEBUG JDBCAccountRepositoryImplTest:71 - Create
+2020-01-31 01:31:08 DEBUG JDBCAccountRepositoryImpl:85 - Delete entry(DB) with ID: 4
+2020-01-31 01:31:08 DEBUG JDBCAccountRepositoryImplTest:103 - Delete
+2020-01-31 01:31:08 DEBUG JDBCAccountRepositoryImpl:100 - Read all entries(DB)
+2020-01-31 01:31:08 DEBUG JDBCAccountRepositoryImplTest:116 - GetAll
+2020-01-31 01:31:08 DEBUG JDBCAccountRepositoryImpl:71 - Update entry(DB): 1 Ming BANNED
+2020-01-31 01:31:08 DEBUG JDBCAccountRepositoryImplTest:92 - Update
+2020-01-31 01:31:08 DEBUG JDBCAccountRepositoryImpl:54 - Read entry(DB) with ID: 2
+2020-01-31 01:31:08 DEBUG JDBCAccountRepositoryImplTest:80 - Read
+2020-01-31 01:31:08 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-01-31 01:31:08 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-01-31 01:31:08 DEBUG JDBCDeveloperRepositoryImpl:60 - Create entry(DB): 5 Lord Dog
+Skills: C# 
+Account: Geek BANNED
+2020-01-31 01:31:09 DEBUG JDBCDeveloperRepositoryImplTest:101 - Create
+2020-01-31 01:31:09 DEBUG JDBCDeveloperRepositoryImpl:147 - Delete entry(DB) with ID: 4
+2020-01-31 01:31:09 DEBUG JDBCDeveloperRepositoryImplTest:133 - Delete
+2020-01-31 01:31:09 DEBUG JDBCDeveloperRepositoryImpl:174 - Read all entries(DB)
+2020-01-31 01:31:09 DEBUG JDBCDeveloperRepositoryImplTest:154 - GetAll
+2020-01-31 01:31:09 DEBUG JDBCDeveloperRepositoryImpl:118 - Update entry(DB): 1 Dinis Wong
+Skills: JDBC 
+Account: Din DELETED
+2020-01-31 01:31:09 DEBUG JDBCDeveloperRepositoryImplTest:122 - Update
+2020-01-31 01:31:09 DEBUG JDBCDeveloperRepositoryImpl:79 - Read entry(DB) with ID: 2
+2020-01-31 01:31:09 DEBUG JDBCDeveloperRepositoryImplTest:110 - Read
+2020-01-31 01:31:09 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-01-31 01:31:09 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-01-31 01:31:09 DEBUG JDBCSkillRepositoryImpl:37 - Create entry(DB): 5 HTML
+2020-01-31 01:31:09 DEBUG JDBCSkillRepositoryImplTest:70 - Create
+2020-01-31 01:31:09 DEBUG JDBCSkillRepositoryImpl:84 - Delete entry(DB) with ID: 4
+2020-01-31 01:31:09 DEBUG JDBCSkillRepositoryImplTest:102 - Delete
+2020-01-31 01:31:09 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-01-31 01:31:09 DEBUG JDBCSkillRepositoryImplTest:115 - GetAll
+2020-01-31 01:31:09 DEBUG JDBCSkillRepositoryImpl:70 - Update entry(DB): 1 JavaScript
+2020-01-31 01:31:09 DEBUG JDBCSkillRepositoryImplTest:91 - Update
+2020-01-31 01:31:09 DEBUG JDBCSkillRepositoryImpl:54 - Read entry(DB) with ID: 2
+2020-01-31 01:31:09 DEBUG JDBCSkillRepositoryImplTest:79 - Read
+2020-01-31 01:31:09 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-01-31 01:31:09 DEBUG AccountService:36 - Service->Get all
+2020-01-31 01:31:09 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-01-31 01:31:09 DEBUG AccountService:19 - Service->Create
+2020-01-31 01:31:09 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-01-31 01:31:09 DEBUG AccountService:28 - Service->Update
+2020-01-31 01:31:09 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-01-31 01:31:09 DEBUG AccountService:32 - Service->Delete
+2020-01-31 01:31:09 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-01-31 01:31:09 DEBUG AccountService:23 - Service->Read
+2020-01-31 01:31:09 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-01-31 02:07:31 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-01-31 02:07:32 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-01-31 02:07:32 DEBUG JDBCAccountRepositoryImpl:38 - Create entry(DB): 5 Lord ACTIVE
+2020-01-31 02:07:32 DEBUG JDBCAccountRepositoryImplTest:71 - Create
+2020-01-31 02:07:32 DEBUG JDBCAccountRepositoryImpl:85 - Delete entry(DB) with ID: 4
+2020-01-31 02:07:32 DEBUG JDBCAccountRepositoryImplTest:103 - Delete
+2020-01-31 02:07:32 DEBUG JDBCAccountRepositoryImpl:100 - Read all entries(DB)
+2020-01-31 02:07:32 DEBUG JDBCAccountRepositoryImplTest:116 - GetAll
+2020-01-31 02:07:32 DEBUG JDBCAccountRepositoryImpl:71 - Update entry(DB): 1 Ming BANNED
+2020-01-31 02:07:32 DEBUG JDBCAccountRepositoryImplTest:92 - Update
+2020-01-31 02:07:32 DEBUG JDBCAccountRepositoryImpl:54 - Read entry(DB) with ID: 2
+2020-01-31 02:07:32 DEBUG JDBCAccountRepositoryImplTest:80 - Read
+2020-01-31 02:07:32 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-01-31 02:07:32 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-01-31 02:07:32 DEBUG JDBCDeveloperRepositoryImpl:60 - Create entry(DB): 5 Lord Dog
+Skills: C# 
+Account: Geek BANNED
+2020-01-31 02:07:33 DEBUG JDBCDeveloperRepositoryImplTest:101 - Create
+2020-01-31 02:07:33 DEBUG JDBCDeveloperRepositoryImpl:147 - Delete entry(DB) with ID: 4
+2020-01-31 02:07:33 DEBUG JDBCDeveloperRepositoryImplTest:133 - Delete
+2020-01-31 02:07:33 DEBUG JDBCDeveloperRepositoryImpl:174 - Read all entries(DB)
+2020-01-31 02:07:33 DEBUG JDBCDeveloperRepositoryImplTest:154 - GetAll
+2020-01-31 02:07:33 DEBUG JDBCDeveloperRepositoryImpl:118 - Update entry(DB): 1 Dinis Wong
+Skills: JDBC 
+Account: Din DELETED
+2020-01-31 02:07:33 DEBUG JDBCDeveloperRepositoryImplTest:122 - Update
+2020-01-31 02:07:33 DEBUG JDBCDeveloperRepositoryImpl:79 - Read entry(DB) with ID: 2
+2020-01-31 02:07:33 DEBUG JDBCDeveloperRepositoryImplTest:110 - Read
+2020-01-31 02:07:33 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-01-31 02:07:33 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-01-31 02:07:33 DEBUG JDBCSkillRepositoryImpl:37 - Create entry(DB): 5 HTML
+2020-01-31 02:07:33 DEBUG JDBCSkillRepositoryImplTest:70 - Create
+2020-01-31 02:07:33 DEBUG JDBCSkillRepositoryImpl:84 - Delete entry(DB) with ID: 4
+2020-01-31 02:07:33 DEBUG JDBCSkillRepositoryImplTest:102 - Delete
+2020-01-31 02:07:33 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-01-31 02:07:33 DEBUG JDBCSkillRepositoryImplTest:115 - GetAll
+2020-01-31 02:07:33 DEBUG JDBCSkillRepositoryImpl:70 - Update entry(DB): 1 JavaScript
+2020-01-31 02:07:33 DEBUG JDBCSkillRepositoryImplTest:91 - Update
+2020-01-31 02:07:33 DEBUG JDBCSkillRepositoryImpl:54 - Read entry(DB) with ID: 2
+2020-01-31 02:07:33 DEBUG JDBCSkillRepositoryImplTest:79 - Read
+2020-01-31 02:07:33 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-01-31 02:07:34 DEBUG AccountService:37 - Service->Get all
+2020-01-31 02:07:34 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-01-31 02:07:34 DEBUG AccountService:20 - Service->Create
+2020-01-31 02:07:34 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-01-31 02:07:34 DEBUG AccountService:29 - Service->Update
+2020-01-31 02:07:34 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-01-31 02:07:34 DEBUG AccountService:33 - Service->Delete
+2020-01-31 02:07:34 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-01-31 02:07:34 DEBUG AccountService:24 - Service->Read
+2020-01-31 02:07:34 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-01-31 02:07:34 DEBUG DeveloperService:37 - Service->Get all
+2020-01-31 02:07:34 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-01-31 02:07:34 DEBUG DeveloperService:20 - Service->Create
+2020-01-31 02:07:34 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-01-31 02:07:34 DEBUG DeveloperService:29 - Service->Update
+2020-01-31 02:07:34 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-01-31 02:07:34 DEBUG DeveloperService:33 - Service->Delete
+2020-01-31 02:07:34 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-01-31 02:07:34 DEBUG DeveloperService:24 - Service->Read
+2020-01-31 02:07:34 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-01-31 02:07:34 DEBUG SkillService:37 - Service->Get all
+2020-01-31 02:07:34 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-01-31 02:07:34 DEBUG SkillService:20 - Service->Create
+2020-01-31 02:07:34 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-01-31 02:07:34 DEBUG SkillService:29 - Service->Update
+2020-01-31 02:07:34 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-01-31 02:07:34 DEBUG SkillService:33 - Service->Delete
+2020-01-31 02:07:34 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-01-31 02:07:34 DEBUG SkillService:24 - Service->Read
+2020-01-31 02:13:29 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-01-31 02:13:30 DEBUG SkillService:37 - Service->Get all
+2020-01-31 02:13:30 DEBUG SkillService:20 - Service->Create
+2020-01-31 02:13:30 DEBUG SkillService:29 - Service->Update
+2020-01-31 02:13:30 DEBUG SkillService:33 - Service->Delete
+2020-01-31 02:13:30 DEBUG SkillService:24 - Service->Read
+2020-01-31 02:36:17 DEBUG JDBCConnectionUtil:31 - Getting connection from pool
+2020-01-31 02:36:19 DEBUG SkillService:36 - Service->Get all
+2020-01-31 02:36:19 DEBUG SkillService:19 - Service->Create
+2020-01-31 02:36:19 DEBUG SkillService:28 - Service->Update
+2020-01-31 02:36:19 DEBUG SkillService:32 - Service->Delete
+2020-01-31 02:36:19 DEBUG SkillService:23 - Service->Read
+2020-01-31 02:36:19 DEBUG JDBCConnectionUtil:39 - Closing connection for Skill
+2020-01-31 02:36:28 DEBUG JDBCConnectionUtil:31 - Getting connection from pool
+2020-01-31 02:36:29 DEBUG DeveloperService:37 - Service->Get all
+2020-01-31 02:36:29 DEBUG DeveloperService:20 - Service->Create
+2020-01-31 02:36:29 DEBUG DeveloperService:29 - Service->Update
+2020-01-31 02:36:29 DEBUG DeveloperService:33 - Service->Delete
+2020-01-31 02:36:29 DEBUG DeveloperService:24 - Service->Read
+2020-01-31 02:36:29 DEBUG JDBCConnectionUtil:39 - Closing connection for Developer
+2020-01-31 02:36:41 DEBUG JDBCConnectionUtil:31 - Getting connection from pool
+2020-01-31 02:36:43 DEBUG AccountService:37 - Service->Get all
+2020-01-31 02:36:43 DEBUG AccountService:20 - Service->Create
+2020-01-31 02:36:43 DEBUG AccountService:29 - Service->Update
+2020-01-31 02:36:43 DEBUG AccountService:33 - Service->Delete
+2020-01-31 02:36:43 DEBUG AccountService:24 - Service->Read
+2020-01-31 02:36:43 DEBUG JDBCConnectionUtil:39 - Closing connection for Account
+2020-01-31 02:37:15 DEBUG JDBCConnectionUtil:31 - Getting connection from pool
+2020-01-31 02:37:15 DEBUG JDBCConnectionUtil:31 - Getting connection from pool
+2020-01-31 02:37:16 DEBUG JDBCAccountRepositoryImpl:38 - Create entry(DB): 5 Lord ACTIVE
+2020-01-31 02:37:16 DEBUG JDBCAccountRepositoryImplTest:72 - Create
+2020-01-31 02:37:16 DEBUG JDBCAccountRepositoryImpl:85 - Delete entry(DB) with ID: 4
+2020-01-31 02:37:16 DEBUG JDBCAccountRepositoryImplTest:104 - Delete
+2020-01-31 02:37:16 DEBUG JDBCAccountRepositoryImpl:100 - Read all entries(DB)
+2020-01-31 02:37:16 DEBUG JDBCAccountRepositoryImplTest:117 - GetAll
+2020-01-31 02:37:16 DEBUG JDBCAccountRepositoryImpl:71 - Update entry(DB): 1 Ming BANNED
+2020-01-31 02:37:16 DEBUG JDBCAccountRepositoryImplTest:93 - Update
+2020-01-31 02:37:16 DEBUG JDBCAccountRepositoryImpl:54 - Read entry(DB) with ID: 2
+2020-01-31 02:37:16 DEBUG JDBCAccountRepositoryImplTest:81 - Read
+2020-01-31 02:37:16 DEBUG JDBCConnectionUtil:39 - Closing connection for Account
+2020-01-31 02:37:16 DEBUG JDBCConnectionUtil:31 - Getting connection from pool
+2020-01-31 02:37:16 DEBUG JDBCConnectionUtil:31 - Getting connection from pool
+2020-01-31 02:37:16 DEBUG JDBCDeveloperRepositoryImpl:60 - Create entry(DB): 5 Lord Dog
+Skills: C# 
+Account: Geek BANNED
+2020-01-31 02:37:16 DEBUG JDBCDeveloperRepositoryImplTest:102 - Create
+2020-01-31 02:37:16 DEBUG JDBCDeveloperRepositoryImpl:147 - Delete entry(DB) with ID: 4
+2020-01-31 02:37:16 DEBUG JDBCDeveloperRepositoryImplTest:134 - Delete
+2020-01-31 02:37:16 DEBUG JDBCDeveloperRepositoryImpl:174 - Read all entries(DB)
+2020-01-31 02:37:16 DEBUG JDBCDeveloperRepositoryImplTest:155 - GetAll
+2020-01-31 02:37:16 DEBUG JDBCDeveloperRepositoryImpl:118 - Update entry(DB): 1 Dinis Wong
+Skills: JDBC 
+Account: Din DELETED
+2020-01-31 02:37:16 DEBUG JDBCDeveloperRepositoryImplTest:123 - Update
+2020-01-31 02:37:16 DEBUG JDBCDeveloperRepositoryImpl:79 - Read entry(DB) with ID: 2
+2020-01-31 02:37:16 DEBUG JDBCDeveloperRepositoryImplTest:111 - Read
+2020-01-31 02:37:16 DEBUG JDBCConnectionUtil:39 - Closing connection for Developer
+2020-01-31 02:37:16 DEBUG JDBCConnectionUtil:31 - Getting connection from pool
+2020-01-31 02:37:16 DEBUG JDBCConnectionUtil:31 - Getting connection from pool
+2020-01-31 02:37:16 DEBUG JDBCSkillRepositoryImpl:37 - Create entry(DB): 5 HTML
+2020-01-31 02:37:16 DEBUG JDBCSkillRepositoryImplTest:71 - Create
+2020-01-31 02:37:16 DEBUG JDBCSkillRepositoryImpl:84 - Delete entry(DB) with ID: 4
+2020-01-31 02:37:16 DEBUG JDBCSkillRepositoryImplTest:103 - Delete
+2020-01-31 02:37:16 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-01-31 02:37:16 DEBUG JDBCSkillRepositoryImplTest:116 - GetAll
+2020-01-31 02:37:16 DEBUG JDBCSkillRepositoryImpl:70 - Update entry(DB): 1 JavaScript
+2020-01-31 02:37:16 DEBUG JDBCSkillRepositoryImplTest:92 - Update
+2020-01-31 02:37:16 DEBUG JDBCSkillRepositoryImpl:54 - Read entry(DB) with ID: 2
+2020-01-31 02:37:16 DEBUG JDBCSkillRepositoryImplTest:80 - Read
+2020-01-31 02:37:16 DEBUG JDBCConnectionUtil:39 - Closing connection for Skill
+2020-01-31 02:37:16 DEBUG JDBCConnectionUtil:31 - Getting connection from pool
+2020-01-31 02:37:17 DEBUG AccountService:37 - Service->Get all
+2020-01-31 02:37:17 DEBUG AccountService:20 - Service->Create
+2020-01-31 02:37:17 DEBUG AccountService:29 - Service->Update
+2020-01-31 02:37:17 DEBUG AccountService:33 - Service->Delete
+2020-01-31 02:37:17 DEBUG AccountService:24 - Service->Read
+2020-01-31 02:37:17 DEBUG JDBCConnectionUtil:39 - Closing connection for Account
+2020-01-31 02:37:17 DEBUG JDBCConnectionUtil:31 - Getting connection from pool
+2020-01-31 02:37:17 DEBUG DeveloperService:37 - Service->Get all
+2020-01-31 02:37:17 DEBUG DeveloperService:20 - Service->Create
+2020-01-31 02:37:17 DEBUG DeveloperService:29 - Service->Update
+2020-01-31 02:37:17 DEBUG DeveloperService:33 - Service->Delete
+2020-01-31 02:37:17 DEBUG DeveloperService:24 - Service->Read
+2020-01-31 02:37:17 DEBUG JDBCConnectionUtil:39 - Closing connection for Developer
+2020-01-31 02:37:17 DEBUG JDBCConnectionUtil:31 - Getting connection from pool
+2020-01-31 02:37:17 DEBUG SkillService:36 - Service->Get all
+2020-01-31 02:37:17 DEBUG SkillService:19 - Service->Create
+2020-01-31 02:37:17 DEBUG SkillService:28 - Service->Update
+2020-01-31 02:37:17 DEBUG SkillService:32 - Service->Delete
+2020-01-31 02:37:17 DEBUG SkillService:23 - Service->Read
+2020-01-31 02:37:17 DEBUG JDBCConnectionUtil:39 - Closing connection for Skill

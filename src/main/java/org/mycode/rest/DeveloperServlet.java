@@ -5,6 +5,7 @@ import org.apache.log4j.Logger;
 import org.mycode.exceptions.RepoStorageException;
 import org.mycode.model.Developer;
 import org.mycode.service.DeveloperService;
+import org.mycode.util.JDBCConnectionUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 
 @WebServlet(name = "DeveloperServlet", urlPatterns = "/api/v1/developers")
 public class DeveloperServlet extends HttpServlet {
@@ -22,6 +24,15 @@ public class DeveloperServlet extends HttpServlet {
     public DeveloperServlet() throws RepoStorageException {
         gson = new Gson();
         developerService = new DeveloperService();
+    }
+    @Override
+    public void destroy() {
+        try {
+            JDBCConnectionUtil.closeConnection("Developer");
+        } catch (SQLException e) {
+            log.error("Connection problem", e);
+            e.printStackTrace();
+        }
     }
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

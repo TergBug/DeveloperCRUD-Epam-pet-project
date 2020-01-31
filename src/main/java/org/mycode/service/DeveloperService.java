@@ -6,6 +6,7 @@ import org.mycode.model.Developer;
 import org.mycode.repository.DeveloperRepository;
 import org.mycode.repository.jdbc.JDBCDeveloperRepositoryImpl;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class DeveloperService {
@@ -35,8 +36,5 @@ public class DeveloperService {
         List<Developer> developers = currentRepo.getAll();
         log.debug("Service->Get all");
         return developers;
-    }
-    public DeveloperRepository getCurrentRepo() {
-        return currentRepo;
     }
 }

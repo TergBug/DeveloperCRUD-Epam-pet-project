@@ -32,7 +32,7 @@ public class JDBCDeveloperRepositoryImpl implements DeveloperRepository {
     private Connection connection;
     public JDBCDeveloperRepositoryImpl() throws RepoStorageException {
         try {
-            connection = JDBCConnectionUtil.getConnection();
+            connection = JDBCConnectionUtil.getConnection("Developer");
         } catch (SQLException e) {
             log.error("Cannot connect to SQL DB", e);
             throw new RepoStorageException("Cannot connect to SQL DB");

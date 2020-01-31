@@ -12,13 +12,16 @@ import org.mycode.model.Account;
 import org.mycode.model.AccountStatus;
 import org.mycode.repository.AccountRepository;
 import org.mycode.testutil.TestUtils;
+import org.mycode.util.JDBCConnectionUtil;
+
+import java.sql.SQLException;
 
 import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class AccountServiceTest {
     @InjectMocks
-    private AccountService testedAccountService = new AccountService();
+    private static AccountService testedAccountService;
     @Mock
     private AccountRepository currentRepo;
     private Account createAccount = new Account(5L, "Jog", AccountStatus.ACTIVE);
@@ -29,10 +32,20 @@ public class AccountServiceTest {
     @BeforeClass
     public static void connect(){
         TestUtils.switchConfigToTestMode();
+        try {
+            testedAccountService = new AccountService();
+        } catch (RepoStorageException e) {
+            e.printStackTrace();
+        }
     }
     @AfterClass
     public static void backProperty(){
         TestUtils.switchConfigToWorkMode();
+        try {
+            JDBCConnectionUtil.closeConnection("Account");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
     @Test
     public void shouldInvokeCreateInRepo() {

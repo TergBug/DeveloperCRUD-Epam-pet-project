@@ -23,7 +23,7 @@ public class JDBCAccountRepositoryImpl implements AccountRepository {
     private Connection connection;
     public JDBCAccountRepositoryImpl() throws RepoStorageException {
         try {
-            connection = JDBCConnectionUtil.getConnection();
+            connection = JDBCConnectionUtil.getConnection("Account");
         } catch (SQLException e) {
             log.error("Cannot connect to SQL DB", e);
             throw new RepoStorageException("Cannot connect to SQL DB");
