@@ -1,7 +1,7 @@
 # **Developer CRUD application**
 [![Build Status](https://api.travis-ci.com/TergBug/hw7.svg?branch=master)](https://travis-ci.com/TergBug/hw7)
 
-I have implemented console CRUD application that has next entities:
+It is a RESTful CRUD application that has next entities:
 Developer,
 Skill,
 Account.
@@ -24,7 +24,7 @@ AccountStatus (enum: ACTIVE, BANNED, DELETED) status.
 
 It uses MySQL database as a storage.
 
-User is able to create, read (get by ID of get all), update and delete data.
+User is able to create, read (get by ID or get all), update and delete data.
 
 Layers:
 >model - POJO classes
@@ -38,13 +38,13 @@ Layers:
 >storage - tables in database
 
 Class-chain for developer (not inheritance):
-DeveloperRepository -> DeveloperController -> DeveloperService -> DeveloperServlet
+DeveloperRepository -> DeveloperService -> DeveloperServlet
 
 Class-chain for skill (not inheritance):
-SkillRepository -> SkillController -> SkillService -> SkillServlet
+SkillRepository -> SkillService -> SkillServlet
 
 Class-chain for account (not inheritance):
-AccountRepository -> AccountController -> AccountService -> AccountServlet
+AccountRepository -> AccountService -> AccountServlet
 
 For repository layer there are a few interfaces, such as 
 GenericRepository<T,ID>, DeveloperRepository, SkillRepository, AccountRepository.
