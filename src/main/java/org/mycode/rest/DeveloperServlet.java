@@ -17,10 +17,9 @@ import java.io.PrintWriter;
 @WebServlet(name = "DeveloperServlet", urlPatterns = "/api/v1/developers")
 public class DeveloperServlet extends HttpServlet {
     private static final Logger log = Logger.getLogger(DeveloperServlet.class);
-    private DeveloperService developerService;
+    private static DeveloperService developerService;
     private Gson gson = new Gson();
-    @Override
-    public void init() {
+    static {
         try {
             developerService = new DeveloperService();
         } catch (RepoStorageException e) {

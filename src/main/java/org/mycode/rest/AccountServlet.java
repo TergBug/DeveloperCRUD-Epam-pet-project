@@ -17,10 +17,9 @@ import java.io.PrintWriter;
 @WebServlet(name = "AccountServlet", urlPatterns = "/api/v1/accounts")
 public class AccountServlet extends HttpServlet {
     private static final Logger log = Logger.getLogger(AccountServlet.class);
-    private AccountService accountService;
+    private static AccountService accountService;
     private Gson gson = new Gson();
-    @Override
-    public void init() {
+    static {
         try {
             accountService = new AccountService();
         } catch (RepoStorageException e) {
