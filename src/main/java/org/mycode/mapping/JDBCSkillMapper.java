@@ -1,6 +1,5 @@
 package org.mycode.mapping;
 
-import lombok.extern.log4j.Log4j;
 import org.apache.log4j.Logger;
 import org.mycode.exceptions.NoSuchEntryException;
 import org.mycode.model.Skill;

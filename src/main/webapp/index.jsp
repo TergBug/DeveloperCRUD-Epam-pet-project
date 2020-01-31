@@ -19,7 +19,8 @@
     <li><a href="?lang=ru"><fmt:message key="label.lang.ru"/></a></li>
 </ul>
 <h2><fmt:message key="message.title"/></h2>
-<fmt:message key="message.description"/><a href="?lang=ru"></a><br>
+<fmt:message key="message.description"/><br>
+<a href="documentation"><fmt:message key="message.documentation"/></a><br>
 <table style="border-spacing: 50px; width: 100%">
     <tr>
         <td style="text-align: center" colspan="3">

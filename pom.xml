@@ -6,7 +6,7 @@
 
   <groupId>org.mycode</groupId>
   <artifactId>DeveloperCRUD</artifactId>
-  <version>2.0-SNAPSHOT</version>
+  <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>DeveloperCRUD</name>
@@ -15,43 +15,63 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
-    <tomcat.version>8.5.23</tomcat.version>
+    <dbcp.version>2.7.0</dbcp.version>
+    <mybatis.version>3.4.5</mybatis.version>
+    <jstl.version>1.2</jstl.version>
+    <taglibs.version>1.1.2</taglibs.version>
+    <mysql.version>8.0.15</mysql.version>
+    <junit.version>4.11</junit.version>
+    <mockito.version>3.2.4</mockito.version>
     <liquibase.version>3.8.5</liquibase.version>
+    <log4j.version>1.2.17</log4j.version>
+    <h2.version>1.4.200</h2.version>
+    <servlet.version>4.0.1</servlet.version>
+    <gson.version>2.8.6</gson.version>
+    <tomcat.version>8.5.23</tomcat.version>
   </properties>
 
   <dependencies>
+    <!--DBCP-->
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-dbcp2</artifactId>
-      <version>2.7.0</version>
+      <version>${dbcp.version}</version>
     </dependency>
+    <!--For executing SQL scripts-->
     <dependency>
       <groupId>org.mybatis</groupId>
       <artifactId>mybatis</artifactId>
-      <version>3.4.5</version>
+      <version>${mybatis.version}</version>
     </dependency>
     <!--JSTL + TagLibs-->
     <dependency>
       <groupId>jstl</groupId>
       <artifactId>jstl</artifactId>
-      <version>1.2</version>
+      <version>${jstl.version}</version>
     </dependency>
     <dependency>
       <groupId>taglibs</groupId>
       <artifactId>standard</artifactId>
-      <version>1.1.2</version>
+      <version>${taglibs.version}</version>
     </dependency>
     <!--MySQL connector-->
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
-      <version>8.0.15</version>
+      <version>${mysql.version}</version>
     </dependency>
     <!--JUnit-->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <!--Mockito-->
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>${mockito.version}</version>
       <scope>test</scope>
     </dependency>
     <!--Liquibase-->
@@ -69,47 +89,27 @@
     <dependency>
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
-      <version>1.2.17</version>
-    </dependency>
-    <!--Lombok-->
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <version>1.18.8</version>
-      <scope>provided</scope>
+      <version>${log4j.version}</version>
     </dependency>
     <!--H2 DB-->
     <dependency>
       <groupId>com.h2database</groupId>
       <artifactId>h2</artifactId>
-      <version>1.4.200</version>
-      <scope>test</scope>
-    </dependency>
-    <!--Mockito-->
-    <dependency>
-      <groupId>org.mockito</groupId>
-      <artifactId>mockito-core</artifactId>
-      <version>3.2.4</version>
+      <version>${h2.version}</version>
       <scope>test</scope>
     </dependency>
     <!--Servlet-->
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
-      <version>4.0.1</version>
+      <version>${servlet.version}</version>
       <scope>provided</scope>
     </dependency>
     <!--Gson-->
     <dependency>
       <groupId>com.google.code.gson</groupId>
       <artifactId>gson</artifactId>
-      <version>2.8.6</version>
-    </dependency>
-    <!--Swagger-->
-    <dependency>
-      <groupId>io.swagger.core.v3</groupId>
-      <artifactId>swagger-core</artifactId>
-      <version>2.1.1</version>
+      <version>${gson.version}</version>
     </dependency>
     <!--Tomcat-->
     <dependency>
@@ -208,8 +208,8 @@
             </configuration>
           </execution>
           <execution>
-            <id>default-cli</id>
-            <phase>deploy</phase>
+            <id>package</id>
+            <phase>prepare-package</phase>
             <goals>
               <goal>update</goal>
             </goals>
@@ -246,7 +246,7 @@
           <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <version>1.4.200</version>
+            <version>${h2.version}</version>
           </dependency>
         </dependencies>
       </plugin>
