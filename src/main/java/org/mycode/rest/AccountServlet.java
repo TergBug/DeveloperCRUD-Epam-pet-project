@@ -19,10 +19,9 @@ import java.sql.SQLException;
 @WebServlet(name = "AccountServlet", urlPatterns = "/api/v1/accounts")
 public class AccountServlet extends HttpServlet {
     private static final Logger log = Logger.getLogger(AccountServlet.class);
+    private static AccountService accountService;
     private Gson gson = new Gson();
-    private AccountService accountService;
-    @Override
-    public void init() throws ServletException {
+    static {
         try {
             accountService = new AccountService();
         } catch (RepoStorageException e) {
@@ -30,15 +29,6 @@ public class AccountServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
-//    @Override
-//    public void destroy() {
-//        try {
-//            JDBCConnectionUtil.closeConnection("Account");
-//        } catch (SQLException e) {
-//            log.error("Connection problem", e);
-//            e.printStackTrace();
-//        }
-//    }
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if(req.getParameter("type")!=null){
