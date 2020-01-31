@@ -1,4 +1,4 @@
-use heroku_35887555ec02359;
+use xz8xc9c13prgjhyx;
 drop table if exists developer_skill;
 commit;
 drop table if exists developers;

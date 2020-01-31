@@ -208,7 +208,7 @@
             </configuration>
           </execution>
           <execution>
-            <id>deploy</id>
+            <id>default-cli</id>
             <phase>deploy</phase>
             <goals>
               <goal>update</goal>
