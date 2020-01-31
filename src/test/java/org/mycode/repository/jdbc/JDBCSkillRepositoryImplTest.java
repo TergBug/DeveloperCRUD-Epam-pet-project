@@ -35,7 +35,7 @@ public class JDBCSkillRepositoryImplTest {
     public static void connect() throws RepoStorageException {
         TestUtils.switchConfigToTestMode();
         try{
-            connection = JDBCConnectionUtil.getConnection("Skill");
+            connection = JDBCConnectionUtil.getConnection();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -46,7 +46,6 @@ public class JDBCSkillRepositoryImplTest {
         TestUtils.switchConfigToWorkMode();
         try {
             connection.close();
-            JDBCConnectionUtil.closeConnection("Skill");
         } catch (SQLException e) {
             e.printStackTrace();
         }

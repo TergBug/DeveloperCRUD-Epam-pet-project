@@ -11,9 +11,6 @@ import org.mycode.exceptions.RepoStorageException;
 import org.mycode.model.Skill;
 import org.mycode.repository.SkillRepository;
 import org.mycode.testutil.TestUtils;
-import org.mycode.util.JDBCConnectionUtil;
-
-import java.sql.SQLException;
 
 import static org.mockito.Mockito.*;
 
@@ -37,11 +34,6 @@ public class SkillServiceTest {
     @AfterClass
     public static void backProperty(){
         TestUtils.switchConfigToWorkMode();
-        try {
-            JDBCConnectionUtil.closeConnection("Skill");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
     }
     @Test
     public void shouldInvokeCreateInRepo() {

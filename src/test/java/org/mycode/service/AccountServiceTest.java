@@ -12,9 +12,6 @@ import org.mycode.model.Account;
 import org.mycode.model.AccountStatus;
 import org.mycode.repository.AccountRepository;
 import org.mycode.testutil.TestUtils;
-import org.mycode.util.JDBCConnectionUtil;
-
-import java.sql.SQLException;
 
 import static org.mockito.Mockito.*;
 
@@ -26,9 +23,6 @@ public class AccountServiceTest {
     private AccountRepository currentRepo;
     private Account createAccount = new Account(5L, "Jog", AccountStatus.ACTIVE);
     private Account updateAccount = new Account(5L, "Pof", AccountStatus.BANNED);
-
-    public AccountServiceTest() throws RepoStorageException { }
-
     @BeforeClass
     public static void connect(){
         TestUtils.switchConfigToTestMode();
@@ -41,11 +35,6 @@ public class AccountServiceTest {
     @AfterClass
     public static void backProperty(){
         TestUtils.switchConfigToWorkMode();
-        try {
-            JDBCConnectionUtil.closeConnection("Account");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
     }
     @Test
     public void shouldInvokeCreateInRepo() {

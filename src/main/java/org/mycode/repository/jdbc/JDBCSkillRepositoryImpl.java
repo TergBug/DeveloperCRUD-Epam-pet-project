@@ -23,7 +23,7 @@ public class JDBCSkillRepositoryImpl implements SkillRepository {
     private Connection connection;
     public JDBCSkillRepositoryImpl() throws RepoStorageException {
         try {
-            connection = JDBCConnectionUtil.getConnection("Skill");
+            connection = JDBCConnectionUtil.getConnection();
         } catch (SQLException e) {
             log.error("Cannot connect to SQL DB", e);
             throw new RepoStorageException("Cannot connect to SQL DB");

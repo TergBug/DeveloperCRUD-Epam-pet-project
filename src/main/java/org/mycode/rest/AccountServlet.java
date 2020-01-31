@@ -5,7 +5,6 @@ import org.apache.log4j.Logger;
 import org.mycode.exceptions.RepoStorageException;
 import org.mycode.model.Account;
 import org.mycode.service.AccountService;
-import org.mycode.util.JDBCConnectionUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,14 +13,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.SQLException;
 
 @WebServlet(name = "AccountServlet", urlPatterns = "/api/v1/accounts")
 public class AccountServlet extends HttpServlet {
     private static final Logger log = Logger.getLogger(AccountServlet.class);
-    private static AccountService accountService;
+    private AccountService accountService;
     private Gson gson = new Gson();
-    static {
+    @Override
+    public void init() {
         try {
             accountService = new AccountService();
         } catch (RepoStorageException e) {
