@@ -17,9 +17,10 @@ import java.io.PrintWriter;
 @WebServlet(name = "SkillServlet", urlPatterns = "/api/v1/skills")
 public class SkillServlet extends HttpServlet {
     private static final Logger log = Logger.getLogger(SkillServlet.class);
-    private static SkillService skillService;
+    private SkillService skillService;
     private Gson gson = new Gson();
-    static {
+    @Override
+    public void init() {
         try {
             skillService = new SkillService();
         } catch (RepoStorageException e) {
