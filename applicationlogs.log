@@ -236,3 +236,61 @@ Account: Din DELETED
 2020-01-31 23:25:36 DEBUG SkillService:28 - Service->Update
 2020-01-31 23:25:36 DEBUG SkillService:32 - Service->Delete
 2020-01-31 23:25:36 DEBUG SkillService:23 - Service->Read
+2020-01-31 23:58:44 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-01-31 23:58:44 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-01-31 23:58:44 DEBUG JDBCAccountRepositoryImpl:38 - Create entry(DB): 5 Lord ACTIVE
+2020-01-31 23:58:44 DEBUG JDBCAccountRepositoryImplTest:71 - Create
+2020-01-31 23:58:44 DEBUG JDBCAccountRepositoryImpl:85 - Delete entry(DB) with ID: 4
+2020-01-31 23:58:44 DEBUG JDBCAccountRepositoryImplTest:103 - Delete
+2020-01-31 23:58:44 DEBUG JDBCAccountRepositoryImpl:100 - Read all entries(DB)
+2020-01-31 23:58:44 DEBUG JDBCAccountRepositoryImplTest:116 - GetAll
+2020-01-31 23:58:44 DEBUG JDBCAccountRepositoryImpl:71 - Update entry(DB): 1 Ming BANNED
+2020-01-31 23:58:44 DEBUG JDBCAccountRepositoryImplTest:92 - Update
+2020-01-31 23:58:44 DEBUG JDBCAccountRepositoryImpl:54 - Read entry(DB) with ID: 2
+2020-01-31 23:58:44 DEBUG JDBCAccountRepositoryImplTest:80 - Read
+2020-01-31 23:58:44 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-01-31 23:58:44 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-01-31 23:58:44 DEBUG JDBCDeveloperRepositoryImpl:60 - Create entry(DB): 5 Lord Dog
+Skills: C# 
+Account: Geek BANNED
+2020-01-31 23:58:44 DEBUG JDBCDeveloperRepositoryImplTest:101 - Create
+2020-01-31 23:58:44 DEBUG JDBCDeveloperRepositoryImpl:147 - Delete entry(DB) with ID: 4
+2020-01-31 23:58:44 DEBUG JDBCDeveloperRepositoryImplTest:133 - Delete
+2020-01-31 23:58:44 DEBUG JDBCDeveloperRepositoryImpl:174 - Read all entries(DB)
+2020-01-31 23:58:44 DEBUG JDBCDeveloperRepositoryImplTest:154 - GetAll
+2020-01-31 23:58:44 DEBUG JDBCDeveloperRepositoryImpl:118 - Update entry(DB): 1 Dinis Wong
+Skills: JDBC 
+Account: Din DELETED
+2020-01-31 23:58:44 DEBUG JDBCDeveloperRepositoryImplTest:122 - Update
+2020-01-31 23:58:44 DEBUG JDBCDeveloperRepositoryImpl:79 - Read entry(DB) with ID: 2
+2020-01-31 23:58:44 DEBUG JDBCDeveloperRepositoryImplTest:110 - Read
+2020-01-31 23:58:44 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-01-31 23:58:44 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-01-31 23:58:44 DEBUG JDBCSkillRepositoryImpl:37 - Create entry(DB): 5 HTML
+2020-01-31 23:58:44 DEBUG JDBCSkillRepositoryImplTest:70 - Create
+2020-01-31 23:58:44 DEBUG JDBCSkillRepositoryImpl:84 - Delete entry(DB) with ID: 4
+2020-01-31 23:58:44 DEBUG JDBCSkillRepositoryImplTest:102 - Delete
+2020-01-31 23:58:44 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-01-31 23:58:44 DEBUG JDBCSkillRepositoryImplTest:115 - GetAll
+2020-01-31 23:58:45 DEBUG JDBCSkillRepositoryImpl:70 - Update entry(DB): 1 JavaScript
+2020-01-31 23:58:45 DEBUG JDBCSkillRepositoryImplTest:91 - Update
+2020-01-31 23:58:45 DEBUG JDBCSkillRepositoryImpl:54 - Read entry(DB) with ID: 2
+2020-01-31 23:58:45 DEBUG JDBCSkillRepositoryImplTest:79 - Read
+2020-01-31 23:58:45 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-01-31 23:58:45 DEBUG AccountService:37 - Service->Get all
+2020-01-31 23:58:45 DEBUG AccountService:20 - Service->Create
+2020-01-31 23:58:45 DEBUG AccountService:29 - Service->Update
+2020-01-31 23:58:45 DEBUG AccountService:33 - Service->Delete
+2020-01-31 23:58:45 DEBUG AccountService:24 - Service->Read
+2020-01-31 23:58:45 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-01-31 23:58:45 DEBUG DeveloperService:37 - Service->Get all
+2020-01-31 23:58:45 DEBUG DeveloperService:20 - Service->Create
+2020-01-31 23:58:45 DEBUG DeveloperService:29 - Service->Update
+2020-01-31 23:58:45 DEBUG DeveloperService:33 - Service->Delete
+2020-01-31 23:58:45 DEBUG DeveloperService:24 - Service->Read
+2020-01-31 23:58:45 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-01-31 23:58:45 DEBUG SkillService:36 - Service->Get all
+2020-01-31 23:58:45 DEBUG SkillService:19 - Service->Create
+2020-01-31 23:58:45 DEBUG SkillService:28 - Service->Update
+2020-01-31 23:58:45 DEBUG SkillService:32 - Service->Delete
+2020-01-31 23:58:45 DEBUG SkillService:23 - Service->Read
