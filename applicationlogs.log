@@ -1,0 +1,6 @@
+2020-01-31 23:13:29 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-01-31 23:13:31 DEBUG SkillServlet:63 - GET request to read
+2020-01-31 23:13:31 DEBUG SkillServlet:68 - Request to get all
+2020-01-31 23:13:31 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-01-31 23:13:31 DEBUG SkillService:36 - Service->Get all
+2020-01-31 23:13:31 DEBUG SkillServlet:70 - Sand JSON response
