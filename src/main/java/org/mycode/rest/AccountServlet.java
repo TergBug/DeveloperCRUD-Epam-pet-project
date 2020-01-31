@@ -19,11 +19,16 @@ import java.sql.SQLException;
 @WebServlet(name = "AccountServlet", urlPatterns = "/api/v1/accounts")
 public class AccountServlet extends HttpServlet {
     private static final Logger log = Logger.getLogger(AccountServlet.class);
-    private Gson gson;
+    private Gson gson = new Gson();
     private AccountService accountService;
-    public AccountServlet() throws RepoStorageException {
-        gson = new Gson();
-        accountService = new AccountService();
+    @Override
+    public void init() throws ServletException {
+        try {
+            accountService = new AccountService();
+        } catch (RepoStorageException e) {
+            log.error("Some problem", e);
+            e.printStackTrace();
+        }
     }
     @Override
     public void destroy() {

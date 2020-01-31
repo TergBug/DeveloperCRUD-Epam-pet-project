@@ -19,11 +19,16 @@ import java.sql.SQLException;
 @WebServlet(name = "DeveloperServlet", urlPatterns = "/api/v1/developers")
 public class DeveloperServlet extends HttpServlet {
     private static final Logger log = Logger.getLogger(DeveloperServlet.class);
-    private Gson gson;
+    private Gson gson = new Gson();
     private DeveloperService developerService;
-    public DeveloperServlet() throws RepoStorageException {
-        gson = new Gson();
-        developerService = new DeveloperService();
+    @Override
+    public void init() throws ServletException {
+        try {
+            developerService = new DeveloperService();
+        } catch (RepoStorageException e) {
+            log.error("Some problem", e);
+            e.printStackTrace();
+        }
     }
     @Override
     public void destroy() {
