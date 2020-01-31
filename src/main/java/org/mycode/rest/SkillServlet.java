@@ -30,15 +30,15 @@ public class SkillServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
-    @Override
-    public void destroy() {
-        try {
-            JDBCConnectionUtil.closeConnection("Skill");
-        } catch (SQLException e) {
-            log.error("Connection problem", e);
-            e.printStackTrace();
-        }
-    }
+//    @Override
+//    public void destroy() {
+//        try {
+//            JDBCConnectionUtil.closeConnection("Skill");
+//        } catch (SQLException e) {
+//            log.error("Connection problem", e);
+//            e.printStackTrace();
+//        }
+//    }
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if(req.getParameter("type")!=null){
