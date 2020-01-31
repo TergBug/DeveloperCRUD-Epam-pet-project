@@ -208,8 +208,7 @@
             </configuration>
           </execution>
           <execution>
-            <id>package</id>
-            <phase>prepare-package</phase>
+            <id>default-cli</id>
             <goals>
               <goal>update</goal>
             </goals>
