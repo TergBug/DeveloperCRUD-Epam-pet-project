@@ -848,3 +848,155 @@ Caused by: com.google.gson.stream.MalformedJsonException: Unterminated string at
 2020-02-16 21:56:25 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
 2020-02-16 21:56:27 DEBUG JDBCSkillRepositoryImpl:70 - Update entry(DB): 2 C#
 2020-02-16 21:56:27 DEBUG SkillService:29 - Service->Update
+2020-02-16 23:04:06 DEBUG MainServlet:50 - GET request to read
+2020-02-16 23:04:06 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 23:04:08 DEBUG MainServlet:56 - Request to get all
+2020-02-16 23:04:08 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-16 23:04:08 DEBUG SkillService:37 - Service->Get all
+2020-02-16 23:04:08 DEBUG MainServlet:60 - Sand JSON response
+2020-02-16 23:04:22 DEBUG MainServlet:50 - GET request to read
+2020-02-16 23:04:22 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 23:04:23 DEBUG MainServlet:56 - Request to get all
+2020-02-16 23:04:23 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-16 23:04:23 DEBUG SkillService:37 - Service->Get all
+2020-02-16 23:04:23 DEBUG MainServlet:60 - Sand JSON response
+2020-02-16 23:05:03 DEBUG MainServlet:92 - DELETE request to delete
+2020-02-16 23:05:03 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 23:05:03 ERROR JDBCSkillRepositoryImpl:28 - Cannot connect to SQL DB
+java.sql.SQLSyntaxErrorException: User 'a3qyzob4edds4vlb' has exceeded the 'max_user_connections' resource (current value: 10)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at org.apache.commons.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:55)
+	at org.apache.commons.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:355)
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:889)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:424)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:349)
+	at org.apache.commons.dbcp2.PoolingDataSource.getConnection(PoolingDataSource.java:134)
+	at org.apache.commons.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:753)
+	at org.mycode.util.JDBCConnectionUtil.getConnection(JDBCConnectionUtil.java:29)
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.<init>(JDBCSkillRepositoryImpl.java:26)
+	at org.mycode.service.SkillService.<init>(SkillService.java:16)
+	at org.mycode.rest.MainServlet.recognizeUrl(MainServlet.java:113)
+	at org.mycode.rest.MainServlet.doDelete(MainServlet.java:93)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:666)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:543)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:609)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:810)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1623)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-02-16 23:06:22 DEBUG MainServlet:50 - GET request to read
+2020-02-16 23:06:22 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 23:06:22 ERROR JDBCSkillRepositoryImpl:28 - Cannot connect to SQL DB
+java.sql.SQLSyntaxErrorException: User 'a3qyzob4edds4vlb' has exceeded the 'max_user_connections' resource (current value: 10)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at org.apache.commons.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:55)
+	at org.apache.commons.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:355)
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:889)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:424)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:349)
+	at org.apache.commons.dbcp2.PoolingDataSource.getConnection(PoolingDataSource.java:134)
+	at org.apache.commons.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:753)
+	at org.mycode.util.JDBCConnectionUtil.getConnection(JDBCConnectionUtil.java:29)
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.<init>(JDBCSkillRepositoryImpl.java:26)
+	at org.mycode.service.SkillService.<init>(SkillService.java:16)
+	at org.mycode.rest.MainServlet.recognizeUrl(MainServlet.java:113)
+	at org.mycode.rest.MainServlet.doGet(MainServlet.java:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:543)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:609)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:810)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1623)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-02-16 23:19:01 DEBUG MainServlet:47 - GET request to read
+2020-02-16 23:19:01 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 23:19:04 DEBUG MainServlet:53 - Request to get all
+2020-02-16 23:19:04 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-16 23:19:04 DEBUG SkillService:37 - Service->Get all
+2020-02-16 23:19:04 DEBUG MainServlet:57 - Sand JSON response
+2020-02-16 23:19:13 DEBUG MainServlet:89 - DELETE request to delete
+2020-02-16 23:19:13 WARN  JDBCSkillRepositoryImpl:81 - No such entry with ID: 8
+2020-02-16 23:19:13 ERROR MainServlet:100 - Cannot delete entry
+org.mycode.exceptions.NoSuchEntryException: Deleting in DB is failed
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.delete(JDBCSkillRepositoryImpl.java:82)
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.delete(JDBCSkillRepositoryImpl.java:16)
+	at org.mycode.service.SkillService.delete(SkillService.java:32)
+	at org.mycode.service.visitors.DeleteVisitor.visitSkillService(DeleteVisitor.java:16)
+	at org.mycode.service.SkillService.doService(SkillService.java:42)
+	at org.mycode.rest.MainServlet.doDelete(MainServlet.java:96)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:666)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:543)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:609)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:810)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1623)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-02-16 23:19:30 DEBUG MainServlet:47 - GET request to read
+2020-02-16 23:19:30 DEBUG MainServlet:53 - Request to get all
+2020-02-16 23:19:31 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-16 23:19:31 DEBUG SkillService:37 - Service->Get all
+2020-02-16 23:19:31 DEBUG MainServlet:57 - Sand JSON response
+2020-02-16 23:19:42 DEBUG MainServlet:89 - DELETE request to delete
+2020-02-16 23:19:42 DEBUG JDBCSkillRepositoryImpl:84 - Delete entry(DB) with ID: 7
+2020-02-16 23:19:42 DEBUG SkillService:33 - Service->Delete
+2020-02-16 23:19:52 DEBUG MainServlet:47 - GET request to read
+2020-02-16 23:19:52 DEBUG MainServlet:53 - Request to get all
+2020-02-16 23:19:52 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-16 23:19:52 DEBUG SkillService:37 - Service->Get all
+2020-02-16 23:19:52 DEBUG MainServlet:57 - Sand JSON response
+2020-02-16 23:19:55 DEBUG MainServlet:47 - GET request to read
+2020-02-16 23:19:55 DEBUG MainServlet:53 - Request to get all
+2020-02-16 23:19:55 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-16 23:19:55 DEBUG SkillService:37 - Service->Get all
+2020-02-16 23:19:55 DEBUG MainServlet:57 - Sand JSON response

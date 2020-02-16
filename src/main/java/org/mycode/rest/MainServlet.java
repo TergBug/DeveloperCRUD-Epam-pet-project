@@ -8,10 +8,7 @@ import org.mycode.exceptions.RepoStorageException;
 import org.mycode.model.Account;
 import org.mycode.model.Developer;
 import org.mycode.model.Skill;
-import org.mycode.service.AccountService;
-import org.mycode.service.DeveloperService;
-import org.mycode.service.Service;
-import org.mycode.service.SkillService;
+import org.mycode.service.*;
 import org.mycode.service.visitors.*;
 
 import javax.servlet.ServletException;
@@ -110,13 +107,13 @@ public class MainServlet extends HttpServlet {
     private Class recognizeUrl(HttpServletRequest req){
         switch (req.getServletPath()){
             case "/api/v1/skills":
-                service = new SkillService();
+                service = ServiceFactory.getServiceByName("SkillService");
                 return Skill.class;
             case "/api/v1/accounts":
-                service = new AccountService();
+                service = ServiceFactory.getServiceByName("AccountService");
                 return Account.class;
             case "/api/v1/developers":
-                service = new DeveloperService();
+                service = ServiceFactory.getServiceByName("DeveloperService");
                 return Developer.class;
         }
         return Object.class;
