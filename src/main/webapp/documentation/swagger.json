@@ -52,14 +52,6 @@
           "200": {
             "description": "OK",
             "schema": {
-              "items": {
-                "$ref": "#/definitions/Skill"
-              }
-            }
-          },
-          "201": {
-            "description": "OK",
-            "schema": {
               "$ref": "#/definitions/Skill"
             }
           }
@@ -84,11 +76,14 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "201": {
+            "description": "Created"
           },
           "400": {
-            "description": "Cannot create skill"
+            "description": "Bad Request"
+          },
+          "409": {
+            "description": "Cannot create entry, maybe this entry has already created"
           }
         }
       },
@@ -111,11 +106,14 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
           },
           "400": {
-            "description": "Cannot update skill"
+            "description": "Bad Request"
+          },
+          "409": {
+            "description": "Cannot find entry"
           }
         }
       },
@@ -135,8 +133,14 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Invalid parameter id"
+          },
+          "409": {
+            "description": "Cannot find entry"
           }
         }
       }
@@ -163,14 +167,6 @@
           "200": {
             "description": "OK",
             "schema": {
-              "items": {
-                "$ref": "#/definitions/Account"
-              }
-            }
-          },
-          "201": {
-            "description": "OK",
-            "schema": {
               "$ref": "#/definitions/Account"
             }
           }
@@ -195,11 +191,14 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "201": {
+            "description": "Created"
           },
           "400": {
-            "description": "Cannot create account"
+            "description": "Bad Request"
+          },
+          "409": {
+            "description": "Cannot create entry, maybe this entry has already created"
           }
         }
       },
@@ -222,11 +221,14 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
           },
           "400": {
-            "description": "Cannot update account"
+            "description": "Bad Request"
+          },
+          "409": {
+            "description": "Cannot find entry"
           }
         }
       },
@@ -246,8 +248,14 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Invalid parameter id"
+          },
+          "409": {
+            "description": "Cannot find entry"
           }
         }
       }
@@ -274,14 +282,6 @@
           "200": {
             "description": "OK",
             "schema": {
-              "items": {
-                "$ref": "#/definitions/Developer"
-              }
-            }
-          },
-          "201": {
-            "description": "OK",
-            "schema": {
               "$ref": "#/definitions/Developer"
             }
           }
@@ -306,11 +306,14 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "201": {
+            "description": "Created"
           },
           "400": {
-            "description": "Cannot create developer"
+            "description": "Bad Request"
+          },
+          "409": {
+            "description": "Cannot create entry, maybe this entry has already created"
           }
         }
       },
@@ -333,11 +336,14 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
           },
           "400": {
-            "description": "Cannot update developer"
+            "description": "Bad Request"
+          },
+          "409": {
+            "description": "Cannot find entry"
           }
         }
       },
@@ -357,8 +363,14 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Invalid parameter id"
+          },
+          "409": {
+            "description": "Cannot find entry"
           }
         }
       }

@@ -1,6 +1,6 @@
 package org.mycode.exceptions;
 
-public class NotUniquePrimaryKeyException extends Exception {
+public class NotUniquePrimaryKeyException extends RuntimeException {
     public NotUniquePrimaryKeyException() {
         super();
     }

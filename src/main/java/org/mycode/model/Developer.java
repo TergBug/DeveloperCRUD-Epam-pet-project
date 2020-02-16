@@ -9,6 +9,16 @@ public class Developer {
     private String lastName;
     private Set<Skill> skills;
     private Account account;
+    public Developer(Long id) {
+        this.id = id;
+    }
+    public Developer(String firstName, String lastName, Set<Skill> skills, Account account) {
+        this.id = 0L;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.skills = skills;
+        this.account = account;
+    }
     public Developer(Long id, String firstName, String lastName, Set<Skill> skills, Account account) {
         this.id = id;
         this.firstName = firstName;
@@ -17,7 +27,7 @@ public class Developer {
         this.account = account;
     }
     public Long getId() {
-        return id;
+        return id!=null ? id : 0L;
     }
     public void setId(Long id) {
         this.id = id;

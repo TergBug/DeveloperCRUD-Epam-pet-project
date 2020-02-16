@@ -8,12 +8,16 @@ public class Skill {
     public Skill(Long id) {
         this.id = id;
     }
+    public Skill(String name) {
+        this.id = 0L;
+        this.name = name;
+    }
     public Skill(Long id, String name) {
         this.id = id;
         this.name = name;
     }
     public Long getId() {
-        return id;
+        return id!=null ? id : 0L;
     }
     public void setId(Long id) {
         this.id = id;

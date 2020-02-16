@@ -9,13 +9,18 @@ public class Account {
     public Account(Long id) {
         this.id = id;
     }
+    public Account(String name, AccountStatus status) {
+        this.id = 0L;
+        this.name = name;
+        this.status = status;
+    }
     public Account(Long id, String name, AccountStatus status) {
         this.id = id;
         this.name = name;
         this.status = status;
     }
     public Long getId() {
-        return id;
+        return id!=null ? id : 0L;
     }
     public void setId(Long id) {
         this.id = id;

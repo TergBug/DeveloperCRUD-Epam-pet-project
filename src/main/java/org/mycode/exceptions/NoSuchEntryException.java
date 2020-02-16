@@ -1,6 +1,6 @@
 package org.mycode.exceptions;
 
-public class NoSuchEntryException extends Exception {
+public class NoSuchEntryException extends RuntimeException {
     public NoSuchEntryException() {
         super();
     }

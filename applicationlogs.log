@@ -294,3 +294,557 @@ Account: Din DELETED
 2020-01-31 23:58:45 DEBUG SkillService:28 - Service->Update
 2020-01-31 23:58:45 DEBUG SkillService:32 - Service->Delete
 2020-01-31 23:58:45 DEBUG SkillService:23 - Service->Read
+2020-02-16 13:41:19 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 13:41:45 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 13:43:26 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 13:44:00 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 13:46:25 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 13:47:22 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 13:47:40 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 13:50:27 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 14:31:02 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 14:31:04 DEBUG SkillServlet:46 - GET request to read
+2020-02-16 14:31:04 DEBUG SkillServlet:51 - Request to get all
+2020-02-16 14:31:05 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-16 14:31:05 DEBUG SkillService:37 - Service->Get all
+2020-02-16 14:31:05 DEBUG SkillServlet:55 - Sand JSON response
+2020-02-16 14:40:11 DEBUG SkillServlet:46 - GET request to read
+2020-02-16 14:40:11 DEBUG SkillServlet:51 - Request to get all
+2020-02-16 14:40:11 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-16 14:40:11 DEBUG SkillService:37 - Service->Get all
+2020-02-16 14:40:11 DEBUG SkillServlet:55 - Sand JSON response
+2020-02-16 14:40:25 DEBUG SkillServlet:46 - GET request to read
+2020-02-16 14:40:25 DEBUG SkillServlet:51 - Request to get all
+2020-02-16 14:40:25 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-16 14:40:25 DEBUG SkillService:37 - Service->Get all
+2020-02-16 14:40:25 DEBUG SkillServlet:55 - Sand JSON response
+2020-02-16 14:41:21 DEBUG SkillServlet:36 - POST request to create
+2020-02-16 14:41:21 DEBUG JDBCSkillRepositoryImpl:37 - Create entry(DB): 0 C++
+2020-02-16 14:41:21 DEBUG SkillService:20 - Service->Create
+2020-02-16 14:41:27 DEBUG SkillServlet:46 - GET request to read
+2020-02-16 14:41:27 DEBUG SkillServlet:51 - Request to get all
+2020-02-16 14:41:27 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-16 14:41:27 DEBUG SkillService:37 - Service->Get all
+2020-02-16 14:41:27 DEBUG SkillServlet:55 - Sand JSON response
+2020-02-16 14:44:52 DEBUG SkillServlet:46 - GET request to read
+2020-02-16 14:44:52 DEBUG SkillServlet:57 - Request to get by ID
+2020-02-16 14:44:52 DEBUG JDBCSkillRepositoryImpl:54 - Read entry(DB) with ID: 4
+2020-02-16 14:44:52 DEBUG SkillService:24 - Service->Read
+2020-02-16 14:44:52 DEBUG SkillServlet:61 - Sand JSON response
+2020-02-16 14:45:07 DEBUG SkillServlet:46 - GET request to read
+2020-02-16 14:45:07 DEBUG SkillServlet:57 - Request to get by ID
+2020-02-16 14:45:07 DEBUG JDBCSkillRepositoryImpl:54 - Read entry(DB) with ID: 4
+2020-02-16 14:45:07 DEBUG SkillService:24 - Service->Read
+2020-02-16 14:45:07 DEBUG SkillServlet:61 - Sand JSON response
+2020-02-16 14:45:51 DEBUG SkillServlet:70 - PUT request to update
+2020-02-16 14:45:51 DEBUG JDBCSkillRepositoryImpl:70 - Update entry(DB): 4 SmallTalk
+2020-02-16 14:45:51 DEBUG SkillService:29 - Service->Update
+2020-02-16 14:45:59 DEBUG SkillServlet:46 - GET request to read
+2020-02-16 14:45:59 DEBUG SkillServlet:57 - Request to get by ID
+2020-02-16 14:45:59 DEBUG JDBCSkillRepositoryImpl:54 - Read entry(DB) with ID: 4
+2020-02-16 14:45:59 DEBUG SkillService:24 - Service->Read
+2020-02-16 14:45:59 DEBUG SkillServlet:61 - Sand JSON response
+2020-02-16 14:46:03 DEBUG SkillServlet:46 - GET request to read
+2020-02-16 14:46:03 DEBUG SkillServlet:51 - Request to get all
+2020-02-16 14:46:03 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-16 14:46:03 DEBUG SkillService:37 - Service->Get all
+2020-02-16 14:46:03 DEBUG SkillServlet:55 - Sand JSON response
+2020-02-16 14:46:32 DEBUG SkillServlet:80 - DELETE request to delete
+2020-02-16 14:46:32 DEBUG JDBCSkillRepositoryImpl:84 - Delete entry(DB) with ID: 4
+2020-02-16 14:46:32 DEBUG SkillService:33 - Service->Delete
+2020-02-16 14:46:36 DEBUG SkillServlet:46 - GET request to read
+2020-02-16 14:46:36 DEBUG SkillServlet:51 - Request to get all
+2020-02-16 14:46:36 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-16 14:46:36 DEBUG SkillService:37 - Service->Get all
+2020-02-16 14:46:36 DEBUG SkillServlet:55 - Sand JSON response
+2020-02-16 20:03:21 DEBUG SkillServlet:52 - GET request to read
+2020-02-16 20:03:21 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 20:03:24 DEBUG SkillServlet:58 - Request to get all
+2020-02-16 20:03:24 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-16 20:03:24 DEBUG SkillService:37 - Service->Get all
+2020-02-16 20:03:24 DEBUG SkillServlet:62 - Sand JSON response
+2020-02-16 20:03:42 DEBUG SkillServlet:52 - GET request to read
+2020-02-16 20:03:42 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 20:03:43 DEBUG SkillServlet:58 - Request to get all
+2020-02-16 20:03:43 DEBUG JDBCAccountRepositoryImpl:100 - Read all entries(DB)
+2020-02-16 20:03:43 DEBUG AccountService:37 - Service->Get all
+2020-02-16 20:03:43 DEBUG SkillServlet:62 - Sand JSON response
+2020-02-16 20:03:57 DEBUG SkillServlet:52 - GET request to read
+2020-02-16 20:03:57 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 20:03:58 DEBUG SkillServlet:58 - Request to get all
+2020-02-16 20:03:58 DEBUG JDBCAccountRepositoryImpl:100 - Read all entries(DB)
+2020-02-16 20:03:58 DEBUG AccountService:37 - Service->Get all
+2020-02-16 20:03:58 DEBUG SkillServlet:62 - Sand JSON response
+2020-02-16 20:04:10 DEBUG SkillServlet:52 - GET request to read
+2020-02-16 20:04:10 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 20:04:11 DEBUG SkillServlet:58 - Request to get all
+2020-02-16 20:04:11 DEBUG JDBCDeveloperRepositoryImpl:174 - Read all entries(DB)
+2020-02-16 20:04:11 DEBUG DeveloperService:37 - Service->Get all
+2020-02-16 20:04:11 DEBUG SkillServlet:62 - Sand JSON response
+2020-02-16 20:04:44 DEBUG SkillServlet:52 - GET request to read
+2020-02-16 20:04:44 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 20:04:44 DEBUG SkillServlet:58 - Request to get all
+2020-02-16 20:04:45 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-16 20:04:45 DEBUG SkillService:37 - Service->Get all
+2020-02-16 20:04:45 DEBUG SkillServlet:62 - Sand JSON response
+2020-02-16 20:08:50 DEBUG SkillServlet:52 - GET request to read
+2020-02-16 20:08:50 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 20:08:51 DEBUG SkillServlet:58 - Request to get all
+2020-02-16 20:08:51 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-16 20:08:51 DEBUG SkillService:37 - Service->Get all
+2020-02-16 20:08:51 DEBUG SkillServlet:62 - Sand JSON response
+2020-02-16 20:08:58 DEBUG SkillServlet:52 - GET request to read
+2020-02-16 20:08:58 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 20:08:59 DEBUG SkillServlet:58 - Request to get all
+2020-02-16 20:08:59 DEBUG JDBCDeveloperRepositoryImpl:174 - Read all entries(DB)
+2020-02-16 20:08:59 DEBUG DeveloperService:37 - Service->Get all
+2020-02-16 20:08:59 DEBUG SkillServlet:62 - Sand JSON response
+2020-02-16 20:52:01 DEBUG MainServlet:41 - GET request to read
+2020-02-16 20:52:01 DEBUG MainServlet:47 - Request to get all
+2020-02-16 20:52:01 ERROR MainServlet:60 - Cannot read entry
+java.lang.NullPointerException
+	at org.mycode.rest.MainServlet.doGet(MainServlet.java:49)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:543)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:609)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:810)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1623)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-02-16 20:52:41 DEBUG MainServlet:41 - GET request to read
+2020-02-16 20:52:41 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 20:52:43 DEBUG MainServlet:47 - Request to get all
+2020-02-16 20:52:44 DEBUG JDBCDeveloperRepositoryImpl:174 - Read all entries(DB)
+2020-02-16 20:52:44 DEBUG DeveloperService:37 - Service->Get all
+2020-02-16 20:52:44 DEBUG MainServlet:51 - Sand JSON response
+2020-02-16 20:52:50 DEBUG MainServlet:41 - GET request to read
+2020-02-16 20:52:50 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 20:52:51 DEBUG MainServlet:47 - Request to get all
+2020-02-16 20:52:51 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-16 20:52:51 DEBUG SkillService:37 - Service->Get all
+2020-02-16 20:52:51 DEBUG MainServlet:51 - Sand JSON response
+2020-02-16 20:53:28 DEBUG MainServlet:41 - GET request to read
+2020-02-16 20:53:28 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 20:53:29 DEBUG MainServlet:47 - Request to get all
+2020-02-16 20:53:29 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-16 20:53:29 DEBUG SkillService:37 - Service->Get all
+2020-02-16 20:53:29 DEBUG MainServlet:51 - Sand JSON response
+2020-02-16 20:54:04 DEBUG MainServlet:30 - POST request to create
+2020-02-16 20:54:04 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 20:54:05 DEBUG JDBCSkillRepositoryImpl:37 - Create entry(DB): null C++
+2020-02-16 20:54:05 DEBUG SkillService:20 - Service->Create
+2020-02-16 20:54:09 DEBUG MainServlet:41 - GET request to read
+2020-02-16 20:54:09 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 20:54:10 DEBUG MainServlet:47 - Request to get all
+2020-02-16 20:54:10 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-16 20:54:10 DEBUG SkillService:37 - Service->Get all
+2020-02-16 20:54:10 DEBUG MainServlet:51 - Sand JSON response
+2020-02-16 20:54:44 DEBUG MainServlet:77 - DELETE request to delete
+2020-02-16 20:54:44 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 20:54:45 DEBUG JDBCSkillRepositoryImpl:84 - Delete entry(DB) with ID: 5
+2020-02-16 20:54:45 DEBUG SkillService:33 - Service->Delete
+2020-02-16 20:54:50 DEBUG MainServlet:41 - GET request to read
+2020-02-16 20:54:50 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 20:54:51 DEBUG MainServlet:47 - Request to get all
+2020-02-16 20:54:51 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-16 20:54:51 DEBUG SkillService:37 - Service->Get all
+2020-02-16 20:54:51 DEBUG MainServlet:51 - Sand JSON response
+2020-02-16 21:00:51 DEBUG MainServlet:66 - PUT request to update
+2020-02-16 21:00:51 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 21:00:52 ERROR MainServlet:71 - Cannot update entry
+java.lang.NullPointerException
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.update(JDBCSkillRepositoryImpl.java:65)
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.update(JDBCSkillRepositoryImpl.java:16)
+	at org.mycode.service.SkillService.update(SkillService.java:28)
+	at org.mycode.service.visitors.UpdateVisitor.visitSkillService(UpdateVisitor.java:19)
+	at org.mycode.service.SkillService.doService(SkillService.java:42)
+	at org.mycode.rest.MainServlet.doPut(MainServlet.java:69)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:663)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:543)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:609)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:810)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1623)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-02-16 21:02:50 DEBUG MainServlet:66 - PUT request to update
+2020-02-16 21:02:50 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 21:03:06 DEBUG MainServlet:41 - GET request to read
+2020-02-16 21:03:06 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 21:03:44 DEBUG MainServlet:41 - GET request to read
+2020-02-16 21:03:44 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 21:05:28 DEBUG MainServlet:41 - GET request to read
+2020-02-16 21:05:28 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 21:05:30 DEBUG MainServlet:47 - Request to get all
+2020-02-16 21:05:30 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-16 21:05:30 DEBUG SkillService:37 - Service->Get all
+2020-02-16 21:05:30 DEBUG MainServlet:51 - Sand JSON response
+2020-02-16 21:06:06 DEBUG MainServlet:66 - PUT request to update
+2020-02-16 21:06:06 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 21:06:07 ERROR MainServlet:71 - Cannot update entry
+java.lang.NullPointerException
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.update(JDBCSkillRepositoryImpl.java:65)
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.update(JDBCSkillRepositoryImpl.java:16)
+	at org.mycode.service.SkillService.update(SkillService.java:28)
+	at org.mycode.service.visitors.UpdateVisitor.visitSkillService(UpdateVisitor.java:19)
+	at org.mycode.service.SkillService.doService(SkillService.java:42)
+	at org.mycode.rest.MainServlet.doPut(MainServlet.java:69)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:663)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:543)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:609)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:810)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1623)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-02-16 21:06:30 DEBUG MainServlet:41 - GET request to read
+2020-02-16 21:06:30 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 21:06:32 DEBUG MainServlet:47 - Request to get all
+2020-02-16 21:06:32 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-16 21:06:32 DEBUG SkillService:37 - Service->Get all
+2020-02-16 21:06:32 DEBUG MainServlet:51 - Sand JSON response
+2020-02-16 21:06:46 DEBUG MainServlet:66 - PUT request to update
+2020-02-16 21:06:46 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 21:08:57 DEBUG JDBCSkillRepositoryImpl:70 - Update entry(DB): 2 C#
+2020-02-16 21:08:57 DEBUG SkillService:29 - Service->Update
+2020-02-16 21:09:03 DEBUG MainServlet:41 - GET request to read
+2020-02-16 21:09:03 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 21:09:04 DEBUG MainServlet:47 - Request to get all
+2020-02-16 21:09:04 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-16 21:09:04 DEBUG SkillService:37 - Service->Get all
+2020-02-16 21:09:04 DEBUG MainServlet:51 - Sand JSON response
+2020-02-16 21:09:36 DEBUG MainServlet:66 - PUT request to update
+2020-02-16 21:09:36 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 21:10:25 ERROR MainServlet:71 - Cannot update entry
+java.lang.NullPointerException
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.update(JDBCSkillRepositoryImpl.java:65)
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.update(JDBCSkillRepositoryImpl.java:16)
+	at org.mycode.service.SkillService.update(SkillService.java:28)
+	at org.mycode.service.visitors.UpdateVisitor.visitSkillService(UpdateVisitor.java:19)
+	at org.mycode.service.SkillService.doService(SkillService.java:42)
+	at org.mycode.rest.MainServlet.doPut(MainServlet.java:69)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:663)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:543)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:609)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:810)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1623)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-02-16 21:10:46 DEBUG MainServlet:41 - GET request to read
+2020-02-16 21:10:46 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 21:10:48 DEBUG MainServlet:47 - Request to get all
+2020-02-16 21:10:48 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-16 21:10:48 DEBUG SkillService:37 - Service->Get all
+2020-02-16 21:10:48 DEBUG MainServlet:51 - Sand JSON response
+2020-02-16 21:11:28 DEBUG MainServlet:66 - PUT request to update
+2020-02-16 21:11:28 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 21:28:25 DEBUG MainServlet:42 - GET request to read
+2020-02-16 21:28:25 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 21:28:27 DEBUG MainServlet:48 - Request to get all
+2020-02-16 21:28:27 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-16 21:28:27 DEBUG SkillService:37 - Service->Get all
+2020-02-16 21:28:27 DEBUG MainServlet:52 - Sand JSON response
+2020-02-16 21:28:46 DEBUG MainServlet:67 - PUT request to update
+2020-02-16 21:28:46 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 21:28:52 ERROR MainServlet:74 - Cannot update entry
+java.lang.IllegalStateException: Expected a long but was BEGIN_OBJECT at line 1 column 2 path $
+	at com.google.gson.stream.JsonReader.nextLong(JsonReader.java:961)
+	at org.mycode.rest.MainServlet.doPut(MainServlet.java:71)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:663)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:543)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:609)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:810)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1623)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-02-16 21:30:32 DEBUG MainServlet:67 - PUT request to update
+2020-02-16 21:30:32 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 21:30:58 ERROR MainServlet:75 - Cannot update entry
+java.lang.IllegalStateException: Expected a long but was NAME at line 1 column 3 path $.
+	at com.google.gson.stream.JsonReader.nextLong(JsonReader.java:961)
+	at org.mycode.rest.MainServlet.doPut(MainServlet.java:72)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:663)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:543)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:609)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:810)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1623)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-02-16 21:32:00 DEBUG MainServlet:67 - PUT request to update
+2020-02-16 21:32:00 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 21:32:36 ERROR MainServlet:76 - Cannot update entry
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was NAME at line 1 column 10 path $.id
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:226)
+	at com.google.gson.Gson.fromJson(Gson.java:932)
+	at org.mycode.rest.MainServlet.doPut(MainServlet.java:74)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:663)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:543)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:609)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:810)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1623)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was NAME at line 1 column 10 path $.id
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:386)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:215)
+	... 22 more
+2020-02-16 21:32:55 DEBUG MainServlet:67 - PUT request to update
+2020-02-16 21:32:55 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 21:33:25 ERROR MainServlet:76 - Cannot update entry
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was NAME at line 1 column 10 path $.id
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:226)
+	at com.google.gson.Gson.fromJson(Gson.java:932)
+	at org.mycode.rest.MainServlet.doPut(MainServlet.java:74)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:663)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:543)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:609)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:810)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1623)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was NAME at line 1 column 10 path $.id
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:386)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:215)
+	... 22 more
+2020-02-16 21:34:38 DEBUG MainServlet:67 - PUT request to update
+2020-02-16 21:34:38 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 21:34:41 ERROR MainServlet:76 - Cannot update entry
+java.lang.IllegalStateException: Expected a name but was NUMBER at line 1 column 8 path $.id
+	at com.google.gson.stream.JsonReader.nextName(JsonReader.java:790)
+	at org.mycode.rest.MainServlet.doPut(MainServlet.java:73)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:663)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:543)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:609)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:810)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1623)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-02-16 21:39:51 DEBUG MainServlet:67 - PUT request to update
+2020-02-16 21:39:51 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 21:39:55 ERROR MainServlet:72 - Cannot update entry
+com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: Unterminated string at line 1 column 21 path $.named
+	at com.google.gson.Gson.fromJson(Gson.java:947)
+	at com.google.gson.Gson.fromJson(Gson.java:870)
+	at org.mycode.rest.MainServlet.doPut(MainServlet.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:663)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:543)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:609)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:810)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1623)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.google.gson.stream.MalformedJsonException: Unterminated string at line 1 column 21 path $.named
+	at com.google.gson.stream.JsonReader.syntaxError(JsonReader.java:1564)
+	at com.google.gson.stream.JsonReader.skipQuotedValue(JsonReader.java:1120)
+	at com.google.gson.stream.JsonReader.skipValue(JsonReader.java:1253)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:220)
+	at com.google.gson.Gson.fromJson(Gson.java:932)
+	... 22 more
+2020-02-16 21:43:04 DEBUG MainServlet:67 - PUT request to update
+2020-02-16 21:43:04 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 21:43:05 DEBUG JDBCSkillRepositoryImpl:70 - Update entry(DB): 2 C#
+2020-02-16 21:43:05 DEBUG SkillService:29 - Service->Update
+2020-02-16 21:45:35 DEBUG MainServlet:67 - PUT request to update
+2020-02-16 21:45:35 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 21:45:38 DEBUG JDBCSkillRepositoryImpl:70 - Update entry(DB): 2 C#
+2020-02-16 21:45:38 DEBUG SkillService:29 - Service->Update
+2020-02-16 21:45:50 DEBUG MainServlet:67 - PUT request to update
+2020-02-16 21:45:50 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 21:45:51 ERROR MainServlet:72 - Cannot update entry
+com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: Unterminated string at line 1 column 21 path $.named
+	at com.google.gson.Gson.fromJson(Gson.java:947)
+	at com.google.gson.Gson.fromJson(Gson.java:870)
+	at org.mycode.rest.MainServlet.doPut(MainServlet.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:663)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:543)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:609)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:810)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1623)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.google.gson.stream.MalformedJsonException: Unterminated string at line 1 column 21 path $.named
+	at com.google.gson.stream.JsonReader.syntaxError(JsonReader.java:1564)
+	at com.google.gson.stream.JsonReader.skipQuotedValue(JsonReader.java:1120)
+	at com.google.gson.stream.JsonReader.skipValue(JsonReader.java:1253)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:220)
+	at com.google.gson.Gson.fromJson(Gson.java:932)
+	... 22 more
+2020-02-16 21:47:36 DEBUG MainServlet:68 - PUT request to update
+2020-02-16 21:47:36 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 21:47:38 ERROR MainServlet:73 - Cannot update entry
+com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: Unterminated string at line 1 column 21 path $.named
+	at com.google.gson.Gson.fromJson(Gson.java:947)
+	at com.google.gson.Gson.fromJson(Gson.java:870)
+	at org.mycode.rest.MainServlet.doPut(MainServlet.java:71)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:663)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:543)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:609)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:810)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1623)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.google.gson.stream.MalformedJsonException: Unterminated string at line 1 column 21 path $.named
+	at com.google.gson.stream.JsonReader.syntaxError(JsonReader.java:1564)
+	at com.google.gson.stream.JsonReader.skipQuotedValue(JsonReader.java:1120)
+	at com.google.gson.stream.JsonReader.skipValue(JsonReader.java:1253)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:220)
+	at com.google.gson.Gson.fromJson(Gson.java:932)
+	... 22 more
+2020-02-16 21:56:25 DEBUG MainServlet:68 - PUT request to update
+2020-02-16 21:56:25 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-16 21:56:27 DEBUG JDBCSkillRepositoryImpl:70 - Update entry(DB): 2 C#
+2020-02-16 21:56:27 DEBUG SkillService:29 - Service->Update

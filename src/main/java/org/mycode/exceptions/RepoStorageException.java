@@ -1,6 +1,6 @@
 package org.mycode.exceptions;
 
-public class RepoStorageException extends Exception {
+public class RepoStorageException extends RuntimeException {
     public RepoStorageException() {
         super();
     }
