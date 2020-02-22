@@ -29,7 +29,7 @@ public class DeveloperServiceTest {
     public static void connect(){
         TestUtils.switchConfigToTestMode();
         try {
-            testedDeveloperService = new DeveloperService();
+            testedDeveloperService = TestUtils.getApplicationContext().getBean(DeveloperService.class);
         } catch (RepoStorageException e) {
             e.printStackTrace();
         }

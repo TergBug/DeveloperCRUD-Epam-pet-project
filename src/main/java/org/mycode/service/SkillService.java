@@ -1,19 +1,22 @@
 package org.mycode.service;
 
 import org.apache.log4j.Logger;
-import org.mycode.exceptions.RepoStorageException;
 import org.mycode.model.Skill;
 import org.mycode.repository.SkillRepository;
-import org.mycode.repository.jdbc.JDBCSkillRepositoryImpl;
 import org.mycode.service.visitors.ServiceVisitor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public class SkillService extends Service {
+@Service
+public class SkillService implements Serviceable {
     private static final Logger log = Logger.getLogger(SkillService.class);
     private SkillRepository currentRepo;
-    public SkillService() throws RepoStorageException {
-        this.currentRepo = new JDBCSkillRepositoryImpl();
+    public SkillService(SkillRepository currentRepo) {
+        this.currentRepo = currentRepo;
+    }
+    public void doStuff(){
+        System.out.println(currentRepo);
     }
     public void create(Skill model) throws RuntimeException{
         currentRepo.create(model);

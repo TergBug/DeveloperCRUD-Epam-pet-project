@@ -27,7 +27,7 @@ public class AccountServiceTest {
     public static void connect(){
         TestUtils.switchConfigToTestMode();
         try {
-            testedAccountService = new AccountService();
+            testedAccountService = TestUtils.getApplicationContext().getBean(AccountService.class);
         } catch (RepoStorageException e) {
             e.printStackTrace();
         }

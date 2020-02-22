@@ -26,7 +26,7 @@ public class SkillServiceTest {
     public static void connect(){
         TestUtils.switchConfigToTestMode();
         try {
-            testedSkillService = new SkillService();
+            testedSkillService = TestUtils.getApplicationContext().getBean(SkillService.class);
         } catch (RepoStorageException e) {
             e.printStackTrace();
         }

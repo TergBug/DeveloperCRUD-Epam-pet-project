@@ -4,19 +4,20 @@ import org.mycode.service.AccountService;
 import org.mycode.service.DeveloperService;
 import org.mycode.service.SkillService;
 
-import java.util.Optional;
-
 public abstract class ServiceVisitor {
-    protected Optional inputData;
-    protected Optional resultData;
-    protected ServiceVisitor(Optional inputData) {
+    protected Object inputData;
+    protected Object resultData;
+    protected ServiceVisitor(Object inputData) {
         this.inputData = inputData;
-        resultData = Optional.empty();
+        resultData = new Object();
     }
     public void visitSkillService(SkillService service){}
     public void visitAccountService(AccountService service){}
     public void visitDeveloperService(DeveloperService service){}
-    public Optional getResultData() {
+    public Object getResultData() {
         return resultData;
+    }
+    public void setInputData(Object inputData) {
+        this.inputData = inputData;
     }
 }

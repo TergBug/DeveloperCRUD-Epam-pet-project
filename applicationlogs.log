@@ -1,0 +1,342 @@
+2020-02-20 00:53:18 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-21 13:29:46 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-21 13:29:48 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-21 13:29:49 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-21 13:29:58 WARN  JDBCSkillMapper:26 - No such entry with ID: 4
+2020-02-21 13:31:31 DEBUG JDBCSkillRepositoryImpl:54 - Read entry(DB) with ID: 3
+2020-02-21 13:31:31 DEBUG SkillService:27 - Service->Read
+2020-02-21 13:40:19 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-21 13:40:21 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-21 13:40:22 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-21 13:40:30 DEBUG JDBCSkillRepositoryImpl:54 - Read entry(DB) with ID: 3
+2020-02-21 13:40:30 DEBUG SkillService:27 - Service->Read
+2020-02-21 13:40:34 WARN  JDBCSkillMapper:26 - No such entry with ID: 4
+2020-02-21 13:43:55 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-21 13:43:57 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-21 13:43:58 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-21 13:44:05 DEBUG JDBCSkillRepositoryImpl:54 - Read entry(DB) with ID: 3
+2020-02-21 13:44:05 DEBUG SkillService:27 - Service->Read
+2020-02-21 14:11:14 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-21 14:11:17 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-21 14:11:17 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-21 14:11:21 WARN  JDBCSkillMapper:26 - No such entry with ID: 4
+2020-02-21 14:11:50 DEBUG JDBCSkillRepositoryImpl:54 - Read entry(DB) with ID: 3
+2020-02-21 14:11:50 DEBUG SkillService:27 - Service->Read
+2020-02-21 14:26:04 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-21 14:26:06 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-21 14:26:07 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-21 14:26:16 DEBUG JDBCSkillRepositoryImpl:54 - Read entry(DB) with ID: 3
+2020-02-21 14:26:16 DEBUG SkillService:27 - Service->Read
+2020-02-21 14:45:37 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-21 14:45:39 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-21 14:45:40 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-21 14:45:46 DEBUG JDBCSkillRepositoryImpl:54 - Read entry(DB) with ID: 3
+2020-02-21 14:45:46 DEBUG SkillService:27 - Service->Read
+2020-02-21 14:48:54 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-21 14:48:56 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-21 14:48:57 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-21 14:50:03 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-21 14:50:05 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-21 14:50:06 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 15:07:20 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 15:07:22 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 15:07:23 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 15:07:34 DEBUG JDBCSkillRepositoryImpl:54 - Read entry(DB) with ID: 3
+2020-02-22 15:07:34 DEBUG SkillService:27 - Service->Read
+2020-02-22 15:08:02 WARN  JDBCSkillMapper:26 - No such entry with ID: 4
+2020-02-22 15:08:30 DEBUG JDBCSkillRepositoryImpl:54 - Read entry(DB) with ID: 1
+2020-02-22 15:08:30 DEBUG SkillService:27 - Service->Read
+2020-02-22 15:10:54 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 15:10:56 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 15:10:57 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 15:11:11 DEBUG JDBCSkillRepositoryImpl:54 - Read entry(DB) with ID: 1
+2020-02-22 15:11:11 DEBUG SkillService:27 - Service->Read
+2020-02-22 15:17:16 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 15:17:18 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 15:17:19 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 15:22:07 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 15:22:10 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 15:22:10 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 15:23:10 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 15:23:12 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 15:23:13 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 15:33:02 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 15:33:04 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 15:33:05 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 15:36:16 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 15:36:18 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 15:36:19 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 15:45:27 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 15:45:30 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 15:45:31 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 15:54:44 ERROR JDBCSkillRepositoryImpl:39 - Wrong SQL query to DB in creation
+java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'Java' for key 'name'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:970)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:387)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:94)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:94)
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.create(JDBCSkillRepositoryImpl.java:36)
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.create(JDBCSkillRepositoryImpl.java:16)
+	at org.mycode.service.SkillService.create(SkillService.java:22)
+	at org.mycode.service.visitors.CreateVisitor.visitSkillService(CreateVisitor.java:19)
+	at org.mycode.service.SkillService.doService(SkillService.java:45)
+	at org.mycode.controller.SkillController.createSkill(SkillController.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:543)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:609)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:810)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1623)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-02-22 15:55:16 DEBUG JDBCSkillRepositoryImpl:37 - Create entry(DB): null Perl
+2020-02-22 15:55:16 DEBUG SkillService:23 - Service->Create
+2020-02-22 15:55:39 WARN  JDBCSkillMapper:26 - No such entry with ID: 4
+2020-02-22 15:55:44 WARN  JDBCSkillMapper:26 - No such entry with ID: 7
+2020-02-22 15:55:49 WARN  JDBCSkillMapper:26 - No such entry with ID: 8
+2020-02-22 15:55:53 WARN  JDBCSkillMapper:26 - No such entry with ID: 9
+2020-02-22 15:55:58 DEBUG JDBCSkillRepositoryImpl:54 - Read entry(DB) with ID: 10
+2020-02-22 15:55:58 DEBUG SkillService:27 - Service->Read
+2020-02-22 15:57:03 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 15:57:05 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 15:57:06 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 16:02:57 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 16:02:59 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 16:03:00 DEBUG JDBCConnectionUtil:28 - Getting connection from pool
+2020-02-22 16:03:18 DEBUG JDBCSkillRepositoryImpl:37 - Create entry(DB): 1 JavaScript
+2020-02-22 16:03:18 DEBUG SkillService:23 - Service->Create
+2020-02-22 17:37:36 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-22 17:37:38 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-22 17:37:39 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-22 17:37:47 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-22 17:37:47 DEBUG SkillService:40 - Service->Get all
+2020-02-22 17:38:03 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-22 17:38:03 DEBUG SkillService:40 - Service->Get all
+2020-02-22 17:38:44 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-22 17:38:44 DEBUG SkillService:40 - Service->Get all
+2020-02-22 17:55:00 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-22 17:55:02 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-22 17:55:03 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-22 17:55:11 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-22 17:55:11 DEBUG SkillService:40 - Service->Get all
+2020-02-22 17:55:19 DEBUG JDBCSkillRepositoryImpl:54 - Read entry(DB) with ID: 2
+2020-02-22 17:55:19 DEBUG SkillService:27 - Service->Read
+2020-02-22 17:55:30 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-22 17:55:30 DEBUG SkillService:40 - Service->Get all
+2020-02-22 17:57:02 DEBUG JDBCSkillRepositoryImpl:37 - Create entry(DB): null F#
+2020-02-22 17:57:02 DEBUG SkillService:23 - Service->Create
+2020-02-22 17:57:11 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-22 17:57:11 DEBUG SkillService:40 - Service->Get all
+2020-02-22 17:57:20 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-22 17:57:20 DEBUG SkillService:40 - Service->Get all
+2020-02-22 17:58:51 DEBUG JDBCSkillRepositoryImpl:70 - Update entry(DB): 12 F
+2020-02-22 17:58:51 DEBUG SkillService:32 - Service->Update
+2020-02-22 17:59:05 WARN  JDBCSkillRepositoryImpl:67 - No such entry: 17 F
+2020-02-22 17:59:32 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-22 17:59:32 DEBUG SkillService:40 - Service->Get all
+2020-02-22 17:59:57 DEBUG JDBCSkillRepositoryImpl:84 - Delete entry(DB) with ID: 12
+2020-02-22 17:59:57 DEBUG SkillService:36 - Service->Delete
+2020-02-22 18:00:13 DEBUG JDBCSkillRepositoryImpl:84 - Delete entry(DB) with ID: 11
+2020-02-22 18:00:13 DEBUG SkillService:36 - Service->Delete
+2020-02-22 18:00:19 WARN  JDBCSkillRepositoryImpl:81 - No such entry with ID: 11
+2020-02-22 18:00:30 DEBUG JDBCSkillRepositoryImpl:84 - Delete entry(DB) with ID: 10
+2020-02-22 18:00:30 DEBUG SkillService:36 - Service->Delete
+2020-02-22 18:00:37 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-22 18:00:37 DEBUG SkillService:40 - Service->Get all
+2020-02-22 18:01:15 ERROR JDBCSkillRepositoryImpl:86 - Wrong SQL query to DB in deleting
+java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`xz8xc9c13prgjhyx`.`developer_skill`, CONSTRAINT `developer_skill_ibfk_2` FOREIGN KEY (`skill_id`) REFERENCES `skills` (`id`))
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:970)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1109)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1057)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1377)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1042)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:136)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:136)
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.delete(JDBCSkillRepositoryImpl.java:80)
+	at org.mycode.repository.jdbc.JDBCSkillRepositoryImpl.delete(JDBCSkillRepositoryImpl.java:16)
+	at org.mycode.service.SkillService.delete(SkillService.java:35)
+	at org.mycode.service.visitors.DeleteVisitor.visitSkillService(DeleteVisitor.java:14)
+	at org.mycode.service.SkillService.doService(SkillService.java:45)
+	at org.mycode.controller.SkillController.delete(SkillController.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:931)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:666)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:543)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:609)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:810)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1623)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-02-22 18:01:22 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-22 18:01:22 DEBUG SkillService:40 - Service->Get all
+2020-02-22 18:23:41 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-22 18:23:43 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-22 18:23:44 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-22 18:23:48 DEBUG JDBCAccountRepositoryImpl:100 - Read all entries(DB)
+2020-02-22 18:23:48 DEBUG AccountService:37 - Service->Get all
+2020-02-22 18:24:13 DEBUG JDBCAccountRepositoryImpl:54 - Read entry(DB) with ID: 1
+2020-02-22 18:24:13 DEBUG AccountService:24 - Service->Read
+2020-02-22 18:24:21 DEBUG JDBCAccountRepositoryImpl:100 - Read all entries(DB)
+2020-02-22 18:24:21 DEBUG AccountService:37 - Service->Get all
+2020-02-22 18:27:08 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-22 18:27:10 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-22 18:27:11 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-22 18:27:15 DEBUG JDBCDeveloperRepositoryImpl:174 - Read all entries(DB)
+2020-02-22 18:27:15 DEBUG DeveloperService:37 - Service->Get all
+2020-02-22 18:29:01 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-22 18:29:01 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-22 18:29:01 DEBUG JDBCAccountRepositoryImpl:38 - Create entry(DB): 5 Lord ACTIVE
+2020-02-22 18:29:01 DEBUG JDBCAccountRepositoryImplTest:71 - Create
+2020-02-22 18:29:01 DEBUG JDBCAccountRepositoryImpl:85 - Delete entry(DB) with ID: 4
+2020-02-22 18:29:01 DEBUG JDBCAccountRepositoryImplTest:103 - Delete
+2020-02-22 18:29:01 DEBUG JDBCAccountRepositoryImpl:100 - Read all entries(DB)
+2020-02-22 18:29:01 DEBUG JDBCAccountRepositoryImplTest:116 - GetAll
+2020-02-22 18:29:01 DEBUG JDBCAccountRepositoryImpl:71 - Update entry(DB): 1 Ming BANNED
+2020-02-22 18:29:01 DEBUG JDBCAccountRepositoryImplTest:92 - Update
+2020-02-22 18:29:01 DEBUG JDBCAccountRepositoryImpl:54 - Read entry(DB) with ID: 2
+2020-02-22 18:29:01 DEBUG JDBCAccountRepositoryImplTest:80 - Read
+2020-02-22 18:29:01 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-22 18:29:01 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-22 18:29:01 DEBUG JDBCDeveloperRepositoryImpl:60 - Create entry(DB): 5 Lord Dog
+Skills: C# 
+Account: Geek BANNED
+2020-02-22 18:29:01 DEBUG JDBCDeveloperRepositoryImplTest:101 - Create
+2020-02-22 18:29:01 DEBUG JDBCDeveloperRepositoryImpl:147 - Delete entry(DB) with ID: 4
+2020-02-22 18:29:01 DEBUG JDBCDeveloperRepositoryImplTest:133 - Delete
+2020-02-22 18:29:01 DEBUG JDBCDeveloperRepositoryImpl:174 - Read all entries(DB)
+2020-02-22 18:29:01 DEBUG JDBCDeveloperRepositoryImplTest:154 - GetAll
+2020-02-22 18:29:02 DEBUG JDBCDeveloperRepositoryImpl:118 - Update entry(DB): 1 Dinis Wong
+Skills: JDBC 
+Account: Din DELETED
+2020-02-22 18:29:02 DEBUG JDBCDeveloperRepositoryImplTest:122 - Update
+2020-02-22 18:29:02 DEBUG JDBCDeveloperRepositoryImpl:79 - Read entry(DB) with ID: 2
+2020-02-22 18:29:02 DEBUG JDBCDeveloperRepositoryImplTest:110 - Read
+2020-02-22 18:29:02 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-22 18:29:02 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-22 18:29:02 DEBUG JDBCSkillRepositoryImpl:37 - Create entry(DB): 5 HTML
+2020-02-22 18:29:02 DEBUG JDBCSkillRepositoryImplTest:70 - Create
+2020-02-22 18:29:02 DEBUG JDBCSkillRepositoryImpl:84 - Delete entry(DB) with ID: 4
+2020-02-22 18:29:02 DEBUG JDBCSkillRepositoryImplTest:102 - Delete
+2020-02-22 18:29:02 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-22 18:29:02 DEBUG JDBCSkillRepositoryImplTest:115 - GetAll
+2020-02-22 18:29:02 DEBUG JDBCSkillRepositoryImpl:70 - Update entry(DB): 1 JavaScript
+2020-02-22 18:29:02 DEBUG JDBCSkillRepositoryImplTest:91 - Update
+2020-02-22 18:29:02 DEBUG JDBCSkillRepositoryImpl:54 - Read entry(DB) with ID: 2
+2020-02-22 18:29:02 DEBUG JDBCSkillRepositoryImplTest:79 - Read
+2020-02-22 18:40:32 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-22 18:40:34 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-22 18:40:35 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-22 18:40:36 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-22 18:40:37 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-22 18:40:42 DEBUG JDBCAccountRepositoryImpl:38 - Create entry(DB): 5 Lord ACTIVE
+2020-02-22 18:40:42 DEBUG JDBCAccountRepositoryImplTest:71 - Create
+2020-02-22 18:40:46 DEBUG JDBCAccountRepositoryImpl:85 - Delete entry(DB) with ID: 4
+2020-02-22 18:40:46 DEBUG JDBCAccountRepositoryImplTest:103 - Delete
+2020-02-22 18:40:50 DEBUG JDBCAccountRepositoryImpl:100 - Read all entries(DB)
+2020-02-22 18:40:50 DEBUG JDBCAccountRepositoryImplTest:116 - GetAll
+2020-02-22 18:40:54 DEBUG JDBCAccountRepositoryImpl:71 - Update entry(DB): 1 Ming BANNED
+2020-02-22 18:40:55 DEBUG JDBCAccountRepositoryImplTest:92 - Update
+2020-02-22 18:40:59 DEBUG JDBCAccountRepositoryImpl:54 - Read entry(DB) with ID: 2
+2020-02-22 18:40:59 DEBUG JDBCAccountRepositoryImplTest:80 - Read
+2020-02-22 18:40:59 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-22 18:40:59 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-22 18:41:04 DEBUG JDBCDeveloperRepositoryImpl:60 - Create entry(DB): 5 Lord Dog
+Skills: C# 
+Account: Geek BANNED
+2020-02-22 18:41:04 DEBUG JDBCDeveloperRepositoryImplTest:101 - Create
+2020-02-22 18:41:09 DEBUG JDBCDeveloperRepositoryImpl:147 - Delete entry(DB) with ID: 4
+2020-02-22 18:41:09 DEBUG JDBCDeveloperRepositoryImplTest:133 - Delete
+2020-02-22 18:41:13 DEBUG JDBCDeveloperRepositoryImpl:174 - Read all entries(DB)
+2020-02-22 18:41:13 DEBUG JDBCDeveloperRepositoryImplTest:154 - GetAll
+2020-02-22 18:41:18 DEBUG JDBCDeveloperRepositoryImpl:118 - Update entry(DB): 1 Dinis Wong
+Skills: JDBC 
+Account: Din DELETED
+2020-02-22 18:41:18 DEBUG JDBCDeveloperRepositoryImplTest:122 - Update
+2020-02-22 18:41:22 DEBUG JDBCDeveloperRepositoryImpl:79 - Read entry(DB) with ID: 2
+2020-02-22 18:41:22 DEBUG JDBCDeveloperRepositoryImplTest:110 - Read
+2020-02-22 18:41:22 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-22 18:41:22 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-22 18:41:27 DEBUG JDBCSkillRepositoryImpl:37 - Create entry(DB): 5 HTML
+2020-02-22 18:41:27 DEBUG JDBCSkillRepositoryImplTest:70 - Create
+2020-02-22 18:41:31 DEBUG JDBCSkillRepositoryImpl:84 - Delete entry(DB) with ID: 4
+2020-02-22 18:41:31 DEBUG JDBCSkillRepositoryImplTest:102 - Delete
+2020-02-22 18:41:35 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-22 18:41:35 DEBUG JDBCSkillRepositoryImplTest:115 - GetAll
+2020-02-22 18:41:39 DEBUG JDBCSkillRepositoryImpl:70 - Update entry(DB): 1 JavaScript
+2020-02-22 18:41:40 DEBUG JDBCSkillRepositoryImplTest:91 - Update
+2020-02-22 18:41:44 DEBUG JDBCSkillRepositoryImpl:54 - Read entry(DB) with ID: 2
+2020-02-22 18:41:44 DEBUG JDBCSkillRepositoryImplTest:79 - Read
+2020-02-22 18:41:45 DEBUG AccountService:37 - Service->Get all
+2020-02-22 18:41:45 DEBUG AccountService:20 - Service->Create
+2020-02-22 18:41:45 DEBUG AccountService:29 - Service->Update
+2020-02-22 18:41:45 DEBUG AccountService:33 - Service->Delete
+2020-02-22 18:41:45 DEBUG AccountService:24 - Service->Read
+2020-02-22 18:41:45 DEBUG DeveloperService:37 - Service->Get all
+2020-02-22 18:41:45 DEBUG DeveloperService:20 - Service->Create
+2020-02-22 18:41:45 DEBUG DeveloperService:29 - Service->Update
+2020-02-22 18:41:45 DEBUG DeveloperService:33 - Service->Delete
+2020-02-22 18:41:45 DEBUG DeveloperService:24 - Service->Read
+2020-02-22 18:41:45 DEBUG SkillService:40 - Service->Get all
+2020-02-22 18:41:45 DEBUG SkillService:23 - Service->Create
+2020-02-22 18:41:45 DEBUG SkillService:32 - Service->Update
+2020-02-22 18:41:45 DEBUG SkillService:36 - Service->Delete
+2020-02-22 18:41:45 DEBUG SkillService:27 - Service->Read

@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.sql.*;
 import java.util.Properties;
 
-public class JDBCConnectionUtil {
+public final class JDBCConnectionUtil {
     private static final Logger log = Logger.getLogger(JDBCConnectionUtil.class);
     private final static String LINK_TO_CONFIG = "./src/main/resources/config.properties";
     private static BasicDataSource ds = new BasicDataSource();
@@ -24,6 +24,7 @@ public class JDBCConnectionUtil {
         ds.setUsername(properties.getProperty("jdbc.user"));
         ds.setPassword(properties.getProperty("jdbc.password"));
     }
+    private JDBCConnectionUtil(){}
     public static Connection getConnection() throws SQLException {
         log.debug("Getting connection from pool");
         return ds.getConnection();

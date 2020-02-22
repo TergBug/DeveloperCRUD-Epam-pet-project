@@ -1,19 +1,19 @@
 package org.mycode.service;
 
 import org.apache.log4j.Logger;
-import org.mycode.exceptions.RepoStorageException;
 import org.mycode.model.Account;
 import org.mycode.repository.AccountRepository;
-import org.mycode.repository.jdbc.JDBCAccountRepositoryImpl;
 import org.mycode.service.visitors.ServiceVisitor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public class AccountService extends Service{
+@Service
+public class AccountService implements Serviceable {
     private static final Logger log = Logger.getLogger(AccountService.class);
     private AccountRepository currentRepo;
-    public AccountService() throws RepoStorageException {
-        this.currentRepo = new JDBCAccountRepositoryImpl();
+    public AccountService(AccountRepository currentRepo) {
+        this.currentRepo = currentRepo;
     }
     public void create(Account model) throws RuntimeException{
         currentRepo.create(model);

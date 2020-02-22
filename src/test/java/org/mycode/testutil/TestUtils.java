@@ -1,8 +1,13 @@
 package org.mycode.testutil;
 
+import org.mycode.config.TestConfig;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 import java.io.*;
 
-public class TestUtils {
+public final class TestUtils {
+    private static final ApplicationContext applicationContext;
     private static final String LINK_TO_PROPERTIES = "./src/main/resources/config.properties";
     private static final String WORK;
     private static final String TEST= "# JDBC\n" +
@@ -11,6 +16,7 @@ public class TestUtils {
             "jdbc.user=sa\n" +
             "jdbc.password=";
     static {
+        applicationContext = new AnnotationConfigApplicationContext(TestConfig.class);
         StringBuilder stringBuilder = new StringBuilder();
         try (FileReader fr = new FileReader(LINK_TO_PROPERTIES)){
             int c;
@@ -37,5 +43,8 @@ public class TestUtils {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    public static ApplicationContext getApplicationContext(){
+        return applicationContext;
     }
 }

@@ -1,19 +1,19 @@
 package org.mycode.service;
 
 import org.apache.log4j.Logger;
-import org.mycode.exceptions.RepoStorageException;
 import org.mycode.model.Developer;
 import org.mycode.repository.DeveloperRepository;
-import org.mycode.repository.jdbc.JDBCDeveloperRepositoryImpl;
 import org.mycode.service.visitors.ServiceVisitor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public class DeveloperService extends Service{
+@Service
+public class DeveloperService implements Serviceable {
     private static final Logger log = Logger.getLogger(DeveloperService.class);
     private DeveloperRepository currentRepo;
-    public DeveloperService() throws RepoStorageException {
-        this.currentRepo = new JDBCDeveloperRepositoryImpl();
+    public DeveloperService(DeveloperRepository currentRepo) {
+        this.currentRepo = currentRepo;
     }
     public void create(Developer model) throws RuntimeException{
         currentRepo.create(model);

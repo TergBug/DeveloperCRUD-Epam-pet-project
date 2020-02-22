@@ -7,28 +7,26 @@ import org.mycode.service.AccountService;
 import org.mycode.service.DeveloperService;
 import org.mycode.service.SkillService;
 
-import java.util.Optional;
-
-public class CreateVisitor extends ServiceVisitor {
-    public CreateVisitor(Optional inputData) {
+public class CreateVisitor<T> extends ServiceVisitor {
+    public CreateVisitor(T inputData) {
         super(inputData);
     }
     @Override
     public void visitSkillService(SkillService service) {
-        if(inputData.isPresent() && inputData.get() instanceof Skill){
-            service.create((Skill)inputData.get());
+        if(inputData!=null && inputData instanceof Skill){
+            service.create((Skill)inputData);
         }
     }
     @Override
     public void visitAccountService(AccountService service) {
-        if(inputData.isPresent() && inputData.get() instanceof Account){
-            service.create((Account)inputData.get());
+        if(inputData!=null && inputData instanceof Account){
+            service.create((Account)inputData);
         }
     }
     @Override
     public void visitDeveloperService(DeveloperService service) {
-        if(inputData.isPresent() && inputData.get() instanceof Developer){
-            service.create((Developer)inputData.get());
+        if(inputData!=null && inputData instanceof Developer){
+            service.create((Developer)inputData);
         }
     }
 }
