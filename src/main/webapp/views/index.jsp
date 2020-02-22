@@ -3,7 +3,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <% String lang = request.getParameter("lang"); %>
-<% String linkToImg = "img/"; %>
+<% String linkToImg = "/img/"; %>
 <fmt:setLocale value="<%=lang%>"/>
 <fmt:setBundle basename="localization/messages"/>
 
@@ -20,7 +20,7 @@
 </ul>
 <h2><fmt:message key="message.title"/></h2>
 <fmt:message key="message.description"/><br>
-<a href="documentation"><fmt:message key="message.documentation"/></a><br>
+<a href="../documentation"><fmt:message key="message.documentation"/></a><br>
 <table style="border-spacing: 50px; width: 100%">
     <tr>
         <td style="text-align: center" colspan="3">
