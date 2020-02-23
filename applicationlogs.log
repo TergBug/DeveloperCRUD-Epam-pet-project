@@ -477,3 +477,147 @@ Account: Din DELETED
 2020-02-23 00:14:02 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
 2020-02-23 00:14:05 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
 2020-02-23 00:14:05 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 00:21:55 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 00:21:58 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 00:21:58 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 00:54:01 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 00:54:03 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 00:54:04 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 00:58:31 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 00:58:34 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 00:58:34 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 02:00:09 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 02:00:11 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 02:00:12 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 02:16:39 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 02:16:41 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 02:16:42 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 02:16:57 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-23 02:16:57 DEBUG SkillService:39 - Service->Get all
+2020-02-23 02:17:46 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 02:17:49 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 02:17:49 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 02:17:54 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-23 02:17:55 DEBUG SkillService:39 - Service->Get all
+2020-02-23 02:17:58 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-23 02:17:58 DEBUG SkillService:39 - Service->Get all
+2020-02-23 02:23:44 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 02:23:46 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 02:23:47 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 02:24:16 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-23 02:24:16 DEBUG SkillService:39 - Service->Get all
+2020-02-23 03:14:53 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:15:04 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:15:10 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:19:26 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:19:35 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:19:40 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:25:14 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:29:41 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:29:43 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:29:44 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:30:05 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-23 03:30:05 DEBUG SkillService:39 - Service->Get all
+2020-02-23 03:31:08 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:31:10 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:31:11 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:31:20 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-23 03:31:20 DEBUG SkillService:39 - Service->Get all
+2020-02-23 03:31:33 DEBUG JDBCSkillRepositoryImpl:54 - Read entry(DB) with ID: 2
+2020-02-23 03:31:33 DEBUG SkillService:26 - Service->Read
+2020-02-23 03:32:21 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:32:23 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:32:24 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:34:01 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:34:02 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:34:02 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:34:03 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:34:04 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:34:05 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:42:09 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:42:12 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:42:12 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:44:18 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:44:21 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:44:22 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:44:25 DEBUG JDBCSkillRepositoryImpl:54 - Read entry(DB) with ID: 2
+2020-02-23 03:44:25 DEBUG SkillService:28 - Service->Read
+2020-02-23 03:44:36 DEBUG JDBCSkillRepositoryImpl:54 - Read entry(DB) with ID: 2
+2020-02-23 03:44:36 DEBUG SkillService:28 - Service->Read
+2020-02-23 03:46:22 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:46:24 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:46:25 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 03:46:38 DEBUG JDBCSkillRepositoryImpl:54 - Read entry(DB) with ID: 2
+2020-02-23 03:46:38 DEBUG SkillService:28 - Service->Read
+2020-02-23 17:21:54 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 17:21:56 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 17:21:57 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 17:26:57 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 17:27:00 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 17:27:00 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 17:27:41 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-23 17:27:41 DEBUG SkillService:41 - Service->Get all
+2020-02-23 17:30:17 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 17:31:12 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 17:31:20 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 17:33:15 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 17:33:17 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 17:33:18 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 17:36:27 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 17:36:29 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 17:36:30 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 17:42:20 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 17:42:22 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 17:42:23 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 17:42:53 DEBUG JDBCSkillRepositoryImpl:99 - Read all entries(DB)
+2020-02-23 17:42:53 DEBUG SkillService:41 - Service->Get all
+2020-02-23 17:43:20 DEBUG JDBCSkillRepositoryImpl:54 - Read entry(DB) with ID: 2
+2020-02-23 17:43:20 DEBUG SkillService:28 - Service->Read
+2020-02-23 17:47:13 DEBUG JDBCSkillRepositoryImpl:54 - Read entry(DB) with ID: 2
+2020-02-23 17:47:13 DEBUG SkillService:28 - Service->Read
+2020-02-23 17:48:13 DEBUG JDBCSkillRepositoryImpl:54 - Read entry(DB) with ID: 2
+2020-02-23 17:48:15 DEBUG SkillService:28 - Service->Read
+2020-02-23 17:50:24 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 17:50:26 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 17:50:27 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 17:52:21 DEBUG JDBCSkillRepositoryImpl:56 - Read entry(DB) with ID: 2
+2020-02-23 17:52:21 DEBUG SkillService:26 - Service->Read
+2020-02-23 17:54:42 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 17:54:44 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 17:54:45 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 17:57:42 DEBUG JDBCSkillRepositoryImpl:55 - Read entry(DB) with ID: 2
+2020-02-23 17:57:42 DEBUG SkillService:26 - Service->Read
+2020-02-23 18:00:18 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 18:00:20 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 18:00:21 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 18:01:10 DEBUG JDBCSkillRepositoryImpl:55 - Read entry(DB) with ID: 2
+2020-02-23 18:01:10 DEBUG SkillService:26 - Service->Read
+2020-02-23 18:01:49 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 18:01:51 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 18:01:52 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 18:03:38 DEBUG JDBCSkillRepositoryImpl:55 - Read entry(DB) with ID: 2
+2020-02-23 18:03:38 DEBUG SkillService:27 - Service->Read
+2020-02-23 18:05:25 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 18:05:27 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 18:05:28 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 18:05:36 DEBUG JDBCSkillRepositoryImpl:56 - Read entry(DB) with ID: 2
+2020-02-23 18:05:36 DEBUG SkillService:26 - Service->Read
+2020-02-23 18:05:46 DEBUG JDBCSkillRepositoryImpl:101 - Read all entries(DB)
+2020-02-23 18:05:46 DEBUG SkillService:39 - Service->Get all
+2020-02-23 18:20:32 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 18:20:34 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 18:20:35 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 18:20:59 DEBUG JDBCSkillRepositoryImpl:55 - Read entry(DB) with ID: 2
+2020-02-23 18:20:59 DEBUG SkillService:26 - Service->Read
+2020-02-23 18:23:36 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 18:23:38 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 18:23:39 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 18:23:47 DEBUG JDBCSkillRepositoryImpl:55 - Read entry(DB) with ID: 2
+2020-02-23 18:23:47 DEBUG SkillService:26 - Service->Read
+2020-02-23 18:26:32 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 18:26:34 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 18:26:35 DEBUG JDBCConnectionUtil:29 - Getting connection from pool
+2020-02-23 18:26:56 DEBUG JDBCSkillRepositoryImpl:57 - Read entry(DB) with ID: 2
+2020-02-23 18:26:56 DEBUG SkillService:25 - Service->Read
+2020-02-23 18:27:04 DEBUG JDBCSkillRepositoryImpl:105 - Read all entries(DB)
+2020-02-23 18:27:04 DEBUG SkillService:38 - Service->Get all

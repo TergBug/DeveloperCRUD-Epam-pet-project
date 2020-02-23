@@ -1,6 +1,7 @@
 package org.mycode.service;
 
 import org.apache.log4j.Logger;
+import org.mycode.annotations.TimedMethod;
 import org.mycode.model.Skill;
 import org.mycode.repository.SkillRepository;
 import org.mycode.service.visitors.ServiceVisitor;
@@ -14,9 +15,6 @@ public class SkillService implements Serviceable {
     private SkillRepository currentRepo;
     public SkillService(SkillRepository currentRepo) {
         this.currentRepo = currentRepo;
-    }
-    public void doStuff(){
-        System.out.println(currentRepo);
     }
     public void create(Skill model) throws RuntimeException{
         currentRepo.create(model);
