@@ -1,7 +1,6 @@
 package org.mycode.service;
 
 import org.apache.log4j.Logger;
-import org.mycode.annotations.TimedMethod;
 import org.mycode.model.Skill;
 import org.mycode.repository.SkillRepository;
 import org.mycode.service.visitors.ServiceVisitor;
