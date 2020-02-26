@@ -1,6 +1,7 @@
 package org.mycode.repository.jdbc;
 
 import org.apache.log4j.Logger;
+import org.mycode.annotations.TimedMethod;
 import org.mycode.exceptions.RepoStorageException;
 import org.mycode.exceptions.NoSuchEntryException;
 import org.mycode.exceptions.NotUniquePrimaryKeyException;
@@ -30,6 +31,7 @@ public class JDBCSkillRepositoryImpl implements SkillRepository {
         }
     }
     @Override
+    @TimedMethod
     public void create(Skill model) throws RepoStorageException {
         try (PreparedStatement statement = connection.prepareStatement(INSERT_QUERY, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE)){
             statement.setString(1, model.getName());
@@ -41,6 +43,7 @@ public class JDBCSkillRepositoryImpl implements SkillRepository {
         }
     }
     @Override
+    @TimedMethod
     public Skill getById(Long readID) throws RepoStorageException, NoSuchEntryException, NotUniquePrimaryKeyException {
         try (PreparedStatement statement = connection.prepareStatement(SELECT_QUERY, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE)){
             statement.setLong(1, readID);
@@ -59,6 +62,7 @@ public class JDBCSkillRepositoryImpl implements SkillRepository {
         }
     }
     @Override
+    @TimedMethod
     public void update(Skill updatedModel) throws RepoStorageException, NoSuchEntryException {
         try (PreparedStatement statement = connection.prepareStatement(UPDATE_QUERY, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE)){
             statement.setString(1, updatedModel.getName());
@@ -74,6 +78,7 @@ public class JDBCSkillRepositoryImpl implements SkillRepository {
         }
     }
     @Override
+    @TimedMethod
     public void delete(Long deletedEntry) throws RepoStorageException, NoSuchEntryException {
         try (PreparedStatement statement = connection.prepareStatement(DELETE_QUERY, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE)){
             statement.setLong(1, deletedEntry);
@@ -88,6 +93,7 @@ public class JDBCSkillRepositoryImpl implements SkillRepository {
         }
     }
     @Override
+    @TimedMethod
     public List<Skill> getAll() throws RepoStorageException, NoSuchEntryException {
         try (PreparedStatement statement = connection.prepareStatement(SELECT_ALL_QUERY, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE)){
             ResultSet resultSet = statement.executeQuery();
