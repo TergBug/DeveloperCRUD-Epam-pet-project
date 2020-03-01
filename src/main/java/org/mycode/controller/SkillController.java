@@ -54,9 +54,9 @@ public class SkillController {
         service.doService(VisitorFactory.getVisitorByOperation(VisitorFactory.UPDATE, skill));
     }
 
-    @DeleteMapping("skills")
+    @DeleteMapping("skills/{id}")
     @ResponseStatus(code = HttpStatus.NO_CONTENT)
-    public void delete(@RequestParam(value = "id") Long id) {
+    public void delete(@PathVariable Long id) {
         service.doService(VisitorFactory.getVisitorByOperation(VisitorFactory.DELETE, id));
     }
 }

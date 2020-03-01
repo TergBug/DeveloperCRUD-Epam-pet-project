@@ -4,10 +4,7 @@
     "description": "This is a CRUD REST API DeveloperCRUD",
     "version": "1.0.0",
     "title": "DeveloperCRUD",
-    "termsOfService": "https://github.com/TergBug",
-    "contact": {
-      "email": "tergbug@gmail.com"
-    }
+    "termsOfService": "https://github.com/TergBug"
   },
   "host": "developercrud.herokuapp.com",
   "basePath": "/",
@@ -30,7 +27,7 @@
     "http"
   ],
   "paths": {
-    "/api/v1/skill": {
+    "/api/v1/skills/{id}": {
       "get": {
         "tags": [
           "skill"
@@ -43,7 +40,7 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
             "description": "ID of skill",
             "required": true,
             "type": "integer"
@@ -61,6 +58,36 @@
           },
           "404": {
             "description": "No such id"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "skill"
+        ],
+        "summary": "Delete skill",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of skill",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Invalid parameter id"
+          },
+          "404": {
+            "description": "No such id"
+          },
+          "409": {
+            "description": "Conflict"
           }
         }
       }
@@ -148,39 +175,9 @@
             "description": "Conflict"
           }
         }
-      },
-      "delete": {
-        "tags": [
-          "skill"
-        ],
-        "summary": "Delete skill",
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "description": "ID of skill",
-            "required": true,
-            "type": "integer"
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "400": {
-            "description": "Invalid parameter id"
-          },
-          "404": {
-            "description": "No such id"
-          },
-          "409": {
-            "description": "Conflict"
-          }
-        }
       }
     },
-    "/api/v1/account": {
+    "/api/v1/accounts/{id}": {
       "get": {
         "tags": [
           "account"
@@ -193,7 +190,7 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
             "description": "ID of account",
             "required": true,
             "type": "integer"
@@ -211,6 +208,36 @@
           },
           "404": {
             "description": "No such id"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "account"
+        ],
+        "summary": "Delete account",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of account",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Invalid parameter id"
+          },
+          "404": {
+            "description": "No such id"
+          },
+          "409": {
+            "description": "Conflict"
           }
         }
       }
@@ -298,39 +325,9 @@
             "description": "Conflict"
           }
         }
-      },
-      "delete": {
-        "tags": [
-          "account"
-        ],
-        "summary": "Delete account",
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "description": "ID of account",
-            "required": true,
-            "type": "integer"
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "400": {
-            "description": "Invalid parameter id"
-          },
-          "404": {
-            "description": "No such id"
-          },
-          "409": {
-            "description": "Conflict"
-          }
-        }
       }
     },
-    "/api/v1/developer": {
+    "/api/v1/developers/{id}": {
       "get": {
         "tags": [
           "developer"
@@ -343,7 +340,7 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
             "description": "ID of developer",
             "required": true,
             "type": "integer"
@@ -361,6 +358,36 @@
           },
           "404": {
             "description": "No such id"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "developer"
+        ],
+        "summary": "Delete developer",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of developer",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Invalid parameter id"
+          },
+          "404": {
+            "description": "No such id"
+          },
+          "409": {
+            "description": "Conflict"
           }
         }
       }
@@ -443,36 +470,6 @@
           },
           "404": {
             "description": "No such entry"
-          },
-          "409": {
-            "description": "Conflict"
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "developer"
-        ],
-        "summary": "Delete developer",
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "description": "ID of developer",
-            "required": true,
-            "type": "integer"
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "400": {
-            "description": "Invalid parameter id"
-          },
-          "404": {
-            "description": "No such id"
           },
           "409": {
             "description": "Conflict"

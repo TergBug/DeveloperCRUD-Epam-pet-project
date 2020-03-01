@@ -54,9 +54,9 @@ public class AccountController {
         service.doService(VisitorFactory.getVisitorByOperation(VisitorFactory.UPDATE, account));
     }
 
-    @DeleteMapping("accounts")
+    @DeleteMapping("accounts/{id}")
     @ResponseStatus(code = HttpStatus.NO_CONTENT)
-    public void delete(@RequestParam(value = "id") Long id) {
+    public void delete(@PathVariable Long id) {
         service.doService(VisitorFactory.getVisitorByOperation(VisitorFactory.DELETE, id));
     }
 }

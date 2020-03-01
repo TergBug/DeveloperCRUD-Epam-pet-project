@@ -16,6 +16,7 @@
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
     <spring.version>5.2.3.RELEASE</spring.version>
+      <aspectj.version>1.9.5</aspectj.version>
     <cglib.version>3.3.0</cglib.version>
     <dbcp.version>2.7.0</dbcp.version>
     <mybatis.version>3.4.5</mybatis.version>
@@ -54,6 +55,12 @@
       <artifactId>spring-webmvc</artifactId>
       <version>${spring.version}</version>
     </dependency>
+      <!--AspectJ-->
+      <dependency>
+          <groupId>org.aspectj</groupId>
+          <artifactId>aspectjweaver</artifactId>
+          <version>${aspectj.version}</version>
+      </dependency>
     <!--CGLIB-->
     <dependency>
       <groupId>cglib</groupId>

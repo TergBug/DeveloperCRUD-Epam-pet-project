@@ -54,9 +54,9 @@ public class DeveloperController {
         service.doService(VisitorFactory.getVisitorByOperation(VisitorFactory.UPDATE, developer));
     }
 
-    @DeleteMapping("developers")
+    @DeleteMapping("developers/{id}")
     @ResponseStatus(code = HttpStatus.NO_CONTENT)
-    public void delete(@RequestParam(value = "id") Long id) {
+    public void delete(@PathVariable Long id) {
         service.doService(VisitorFactory.getVisitorByOperation(VisitorFactory.DELETE, id));
     }
 }
