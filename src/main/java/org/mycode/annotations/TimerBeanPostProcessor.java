@@ -34,14 +34,18 @@ public class TimerBeanPostProcessor implements BeanPostProcessor {
 
     private InvocationHandler getInvocationHandler(Object bean) {
         return (object, method, args) -> {
-            if (methodsThatHaveAnnotationTime.containsKey(method.getName())) {
-                long before = System.nanoTime();
-                Object invoke = method.invoke(bean, args);
-                long after = System.nanoTime();
-                System.out.println("Method " + method.getName() + " has been working for: " + (after - before));
-                return invoke;
+            try {
+                if (methodsThatHaveAnnotationTime.containsKey(method.getName())) {
+                    long before = System.nanoTime();
+                    Object invoke = method.invoke(bean, args);
+                    long after = System.nanoTime();
+                    System.out.println("Method " + method.getName() + " has been working for: " + (after - before));
+                    return invoke;
+                }
+                return method.invoke(bean, args);
+            } catch (Exception e) {
+                throw e.getCause();
             }
-            return method.invoke(bean, args);
         };
     }
 }
