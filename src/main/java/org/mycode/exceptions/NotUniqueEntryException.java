@@ -4,11 +4,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(code = HttpStatus.BAD_REQUEST)
-public class NotUniquePrimaryKeyException extends RuntimeException {
-    public NotUniquePrimaryKeyException() {
+public class NotUniqueEntryException extends RuntimeException {
+    public NotUniqueEntryException() {
         super();
     }
-    public NotUniquePrimaryKeyException(String message) {
+
+    public NotUniqueEntryException(String message) {
         super(message);
     }
 }

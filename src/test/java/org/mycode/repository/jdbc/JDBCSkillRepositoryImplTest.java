@@ -1,23 +1,27 @@
 package org.mycode.repository.jdbc;
 
-import static org.junit.Assert.*;
-
 import org.apache.ibatis.jdbc.ScriptRunner;
 import org.apache.log4j.Logger;
-import org.junit.*;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
 import org.mycode.exceptions.NoSuchEntryException;
-import org.mycode.exceptions.NotUniquePrimaryKeyException;
+import org.mycode.exceptions.NotUniqueEntryException;
 import org.mycode.exceptions.RepoStorageException;
 import org.mycode.mapping.JDBCSkillMapper;
 import org.mycode.model.Skill;
 import org.mycode.testutil.TestUtils;
 import org.mycode.util.JDBCConnectionUtil;
 
-import java.io.*;
+import java.io.FileReader;
+import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import static org.junit.Assert.*;
 
 public class JDBCSkillRepositoryImplTest {
     private static final Logger log = Logger.getLogger(JDBCSkillRepositoryImplTest.class);
@@ -31,18 +35,20 @@ public class JDBCSkillRepositoryImplTest {
     private Skill readSkill = new Skill(2L, "C#");
     private Skill updatedSkill = new Skill(1L, "JavaScript");
     private List<Skill> allSkill = new ArrayList<>();
+
     @BeforeClass
     public static void connect() throws RepoStorageException {
         TestUtils.switchConfigToTestMode();
-        try{
+        try {
             connection = JDBCConnectionUtil.getConnection();
         } catch (SQLException e) {
             e.printStackTrace();
         }
         testedRepo = new JDBCSkillRepositoryImpl();
     }
+
     @AfterClass
-    public static void backProperty(){
+    public static void backProperty() {
         TestUtils.switchConfigToWorkMode();
         try {
             connection.close();
@@ -50,10 +56,11 @@ public class JDBCSkillRepositoryImplTest {
             e.printStackTrace();
         }
     }
+
     @Before
-    public void setupProperty(){
-        try(FileReader frInit = new FileReader(LINK_TO_INIT_SCRIPT);
-            FileReader frPop = new FileReader(LINK_TO_POP_SCRIPT)){
+    public void setupProperty() {
+        try (FileReader frInit = new FileReader(LINK_TO_INIT_SCRIPT);
+             FileReader frPop = new FileReader(LINK_TO_POP_SCRIPT)) {
             ScriptRunner scriptRunner = new ScriptRunner(connection);
             scriptRunner.runScript(frInit);
             scriptRunner.runScript(frPop);
@@ -61,9 +68,10 @@ public class JDBCSkillRepositoryImplTest {
             e.printStackTrace();
         }
     }
+
     @Test
     public void shouldCreate() {
-        try (Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE)){
+        try (Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE)) {
             testedRepo.create(createdSkill);
             ResultSet resultSet = statement.executeQuery(selectQueryForCreate);
             assertEquals(createdSkill, new JDBCSkillMapper().map(resultSet, 5L));
@@ -72,18 +80,20 @@ public class JDBCSkillRepositoryImplTest {
             fail();
         }
     }
+
     @Test
     public void shouldGetById() {
         try {
             assertEquals(readSkill, testedRepo.getById(2L));
             log.debug("Read");
-        } catch (RepoStorageException | NoSuchEntryException | NotUniquePrimaryKeyException e) {
+        } catch (RepoStorageException | NoSuchEntryException | NotUniqueEntryException e) {
             fail();
         }
     }
+
     @Test
     public void shouldUpdate() {
-        try (PreparedStatement statement = connection.prepareStatement(selectQuery, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE)){
+        try (PreparedStatement statement = connection.prepareStatement(selectQuery, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE)) {
             testedRepo.update(updatedSkill);
             statement.setLong(1, 1);
             ResultSet resultSet = statement.executeQuery();
@@ -93,9 +103,10 @@ public class JDBCSkillRepositoryImplTest {
             fail();
         }
     }
+
     @Test
     public void shouldDelete() {
-        try (PreparedStatement statement = connection.prepareStatement(selectQuery, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE)){
+        try (PreparedStatement statement = connection.prepareStatement(selectQuery, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE)) {
             testedRepo.delete(4L);
             statement.setLong(1, 4);
             assertFalse(statement.executeQuery().next());
@@ -104,6 +115,7 @@ public class JDBCSkillRepositoryImplTest {
             fail();
         }
     }
+
     @Test
     public void shouldGetAll() {
         try {

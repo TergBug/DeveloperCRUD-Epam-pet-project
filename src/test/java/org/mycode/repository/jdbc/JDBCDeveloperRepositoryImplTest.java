@@ -62,18 +62,20 @@ public class JDBCDeveloperRepositoryImplTest {
             Arrays.stream(new Skill[]{new Skill(3L, "JDBC")}).collect(Collectors.toSet()),
             new Account(2L, "Din", AccountStatus.DELETED));
     private List<Developer> allDeveloper = new ArrayList<>();
+
     @BeforeClass
     public static void connect() throws RepoStorageException {
         TestUtils.switchConfigToTestMode();
-        try{
+        try {
             connection = JDBCConnectionUtil.getConnection();
         } catch (SQLException e) {
             e.printStackTrace();
         }
         testedRepo = new JDBCDeveloperRepositoryImpl();
     }
+
     @AfterClass
-    public static void backProperty(){
+    public static void backProperty() {
         TestUtils.switchConfigToWorkMode();
         try {
             connection.close();
@@ -81,10 +83,11 @@ public class JDBCDeveloperRepositoryImplTest {
             e.printStackTrace();
         }
     }
+
     @Before
-    public void setupProperty(){
-        try(FileReader frInit = new FileReader(LINK_TO_INIT_SCRIPT);
-            FileReader frPop = new FileReader(LINK_TO_POP_SCRIPT)){
+    public void setupProperty() {
+        try (FileReader frInit = new FileReader(LINK_TO_INIT_SCRIPT);
+             FileReader frPop = new FileReader(LINK_TO_POP_SCRIPT)) {
             ScriptRunner scriptRunner = new ScriptRunner(connection);
             scriptRunner.runScript(frInit);
             scriptRunner.runScript(frPop);
@@ -92,9 +95,10 @@ public class JDBCDeveloperRepositoryImplTest {
             e.printStackTrace();
         }
     }
+
     @Test
     public void shouldCreate() {
-        try (Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE)){
+        try (Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE)) {
             testedRepo.create(createdDeveloper);
             ResultSet resultSet = statement.executeQuery(selectQueryForCreate);
             assertEquals(createdDeveloper, new JDBCDeveloperMapper().map(resultSet, 5L));
@@ -103,6 +107,7 @@ public class JDBCDeveloperRepositoryImplTest {
             fail();
         }
     }
+
     @Test
     public void shouldGetById() {
         try {
@@ -112,9 +117,10 @@ public class JDBCDeveloperRepositoryImplTest {
             fail();
         }
     }
+
     @Test
     public void shouldUpdate() {
-        try (PreparedStatement statement = connection.prepareStatement(selectQuery, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE)){
+        try (PreparedStatement statement = connection.prepareStatement(selectQuery, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE)) {
             testedRepo.update(updatedDeveloper);
             statement.setLong(1, 1);
             ResultSet resultSet = statement.executeQuery();
@@ -124,9 +130,10 @@ public class JDBCDeveloperRepositoryImplTest {
             fail();
         }
     }
+
     @Test
     public void shouldDelete() {
-        try (PreparedStatement statement = connection.prepareStatement(selectQuery, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE)){
+        try (PreparedStatement statement = connection.prepareStatement(selectQuery, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE)) {
             testedRepo.delete(4L);
             statement.setLong(1, 4);
             assertFalse(statement.executeQuery().next());
@@ -135,6 +142,7 @@ public class JDBCDeveloperRepositoryImplTest {
             fail();
         }
     }
+
     @Test
     public void shouldGetAll() {
         try {

@@ -13,7 +13,8 @@ import org.mycode.model.AccountStatus;
 import org.mycode.repository.AccountRepository;
 import org.mycode.testutil.TestUtils;
 
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 
 @RunWith(MockitoJUnitRunner.class)
 public class AccountServiceTest {
@@ -23,8 +24,9 @@ public class AccountServiceTest {
     private AccountRepository currentRepo;
     private Account createAccount = new Account(5L, "Jog", AccountStatus.ACTIVE);
     private Account updateAccount = new Account(5L, "Pof", AccountStatus.BANNED);
+
     @BeforeClass
-    public static void connect(){
+    public static void connect() {
         TestUtils.switchConfigToTestMode();
         try {
             testedAccountService = TestUtils.getApplicationContext().getBean(AccountService.class);
@@ -32,10 +34,12 @@ public class AccountServiceTest {
             e.printStackTrace();
         }
     }
+
     @AfterClass
-    public static void backProperty(){
+    public static void backProperty() {
         TestUtils.switchConfigToWorkMode();
     }
+
     @Test
     public void shouldInvokeCreateInRepo() {
         try {
@@ -45,6 +49,7 @@ public class AccountServiceTest {
             e.printStackTrace();
         }
     }
+
     @Test
     public void shouldInvokeGetByIdInRepo() {
         try {
@@ -54,6 +59,7 @@ public class AccountServiceTest {
             e.printStackTrace();
         }
     }
+
     @Test
     public void shouldInvokeUpdateInRepo() {
         try {
@@ -63,6 +69,7 @@ public class AccountServiceTest {
             e.printStackTrace();
         }
     }
+
     @Test
     public void shouldInvokeDeleteInRepo() {
         try {
@@ -72,6 +79,7 @@ public class AccountServiceTest {
             e.printStackTrace();
         }
     }
+
     @Test
     public void shouldInvokeGetAllInRepo() {
         try {

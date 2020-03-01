@@ -15,7 +15,8 @@ import org.mycode.testutil.TestUtils;
 
 import java.util.HashSet;
 
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 
 @RunWith(MockitoJUnitRunner.class)
 public class DeveloperServiceTest {
@@ -25,8 +26,9 @@ public class DeveloperServiceTest {
     private DeveloperRepository currentRepo;
     private Developer createDeveloper = new Developer(5L, "Joe", "Tred", new HashSet<>(), new Account(2L));
     private Developer updateDeveloper = new Developer(5L, "Jony", "Fedorov", new HashSet<>(), new Account(1L));
+
     @BeforeClass
-    public static void connect(){
+    public static void connect() {
         TestUtils.switchConfigToTestMode();
         try {
             testedDeveloperService = TestUtils.getApplicationContext().getBean(DeveloperService.class);
@@ -34,10 +36,12 @@ public class DeveloperServiceTest {
             e.printStackTrace();
         }
     }
+
     @AfterClass
-    public static void backProperty(){
+    public static void backProperty() {
         TestUtils.switchConfigToWorkMode();
     }
+
     @Test
     public void shouldInvokeCreateInRepo() {
         try {
@@ -47,6 +51,7 @@ public class DeveloperServiceTest {
             e.printStackTrace();
         }
     }
+
     @Test
     public void shouldInvokeGetByIdInRepo() {
         try {
@@ -56,6 +61,7 @@ public class DeveloperServiceTest {
             e.printStackTrace();
         }
     }
+
     @Test
     public void shouldInvokeUpdateInRepo() {
         try {
@@ -65,6 +71,7 @@ public class DeveloperServiceTest {
             e.printStackTrace();
         }
     }
+
     @Test
     public void shouldInvokeDeleteInRepo() {
         try {
@@ -74,6 +81,7 @@ public class DeveloperServiceTest {
             e.printStackTrace();
         }
     }
+
     @Test
     public void shouldInvokeGetAllInRepo() {
         try {

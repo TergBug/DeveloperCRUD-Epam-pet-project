@@ -12,7 +12,8 @@ import org.mycode.model.Skill;
 import org.mycode.repository.SkillRepository;
 import org.mycode.testutil.TestUtils;
 
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 
 @RunWith(MockitoJUnitRunner.class)
 public class SkillServiceTest {
@@ -22,8 +23,9 @@ public class SkillServiceTest {
     private SkillRepository currentRepo;
     private Skill createSkill = new Skill(5L, "Java");
     private Skill updateSkill = new Skill(5L, "JDBC");
+
     @BeforeClass
-    public static void connect(){
+    public static void connect() {
         TestUtils.switchConfigToTestMode();
         try {
             testedSkillService = TestUtils.getApplicationContext().getBean(SkillService.class);
@@ -31,10 +33,12 @@ public class SkillServiceTest {
             e.printStackTrace();
         }
     }
+
     @AfterClass
-    public static void backProperty(){
+    public static void backProperty() {
         TestUtils.switchConfigToWorkMode();
     }
+
     @Test
     public void shouldInvokeCreateInRepo() {
         try {
@@ -44,6 +48,7 @@ public class SkillServiceTest {
             e.printStackTrace();
         }
     }
+
     @Test
     public void shouldInvokeGetByIdInRepo() {
         try {
@@ -53,6 +58,7 @@ public class SkillServiceTest {
             e.printStackTrace();
         }
     }
+
     @Test
     public void shouldInvokeUpdateInRepo() {
         try {
@@ -62,6 +68,7 @@ public class SkillServiceTest {
             e.printStackTrace();
         }
     }
+
     @Test
     public void shouldInvokeDeleteInRepo() {
         try {
@@ -71,6 +78,7 @@ public class SkillServiceTest {
             e.printStackTrace();
         }
     }
+
     @Test
     public void shouldInvokeGetAllInRepo() {
         try {
