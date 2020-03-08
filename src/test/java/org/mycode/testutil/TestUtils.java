@@ -1,5 +1,6 @@
 package org.mycode.testutil;
 
+import org.apache.log4j.Logger;
 import org.mycode.config.TestConfig;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -9,6 +10,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public final class TestUtils {
+    private static final Logger log = Logger.getLogger(TestUtils.class);
     private static final ApplicationContext APPLICATION_CONTEXT;
     private static final String LINK_TO_PROPERTIES = "./src/main/resources/config.properties";
     private static final String WORK_PROPERTIES_TEXT;
@@ -27,7 +29,7 @@ public final class TestUtils {
                 stringBuilder.append((char) c);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error("No properties file", e);
         }
         WORK_PROPERTIES_TEXT = stringBuilder.toString();
     }
@@ -40,7 +42,7 @@ public final class TestUtils {
             fw.write(TEST_PROPERTIES_TEXT);
             fw.flush();
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error("No properties file", e);
         }
     }
 
@@ -49,7 +51,7 @@ public final class TestUtils {
             fw.write(WORK_PROPERTIES_TEXT);
             fw.flush();
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error("No properties file", e);
         }
     }
 

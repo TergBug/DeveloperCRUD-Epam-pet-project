@@ -7,7 +7,6 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
-import org.mycode.exceptions.RepoStorageException;
 import org.mycode.model.Account;
 import org.mycode.model.AccountStatus;
 import org.mycode.repository.AccountRepository;
@@ -28,11 +27,7 @@ public class AccountServiceTest {
     @BeforeClass
     public static void connect() {
         TestUtils.switchConfigToTestMode();
-        try {
-            testedAccountService = TestUtils.getApplicationContext().getBean(AccountService.class);
-        } catch (RepoStorageException e) {
-            e.printStackTrace();
-        }
+        testedAccountService = TestUtils.getApplicationContext().getBean(AccountService.class);
     }
 
     @AfterClass
@@ -42,51 +37,31 @@ public class AccountServiceTest {
 
     @Test
     public void shouldInvokeCreateInRepo() {
-        try {
-            testedAccountService.create(createAccount);
-            verify(currentRepo, times(1)).create(createAccount);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        testedAccountService.create(createAccount);
+        verify(currentRepo, times(1)).create(createAccount);
     }
 
     @Test
     public void shouldInvokeGetByIdInRepo() {
-        try {
-            testedAccountService.getById(1L);
-            verify(currentRepo, times(1)).getById(1L);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        testedAccountService.getById(1L);
+        verify(currentRepo, times(1)).getById(1L);
     }
 
     @Test
     public void shouldInvokeUpdateInRepo() {
-        try {
-            testedAccountService.update(updateAccount);
-            verify(currentRepo, times(1)).update(updateAccount);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        testedAccountService.update(updateAccount);
+        verify(currentRepo, times(1)).update(updateAccount);
     }
 
     @Test
     public void shouldInvokeDeleteInRepo() {
-        try {
-            testedAccountService.delete(2L);
-            verify(currentRepo, times(1)).delete(2L);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        testedAccountService.delete(2L);
+        verify(currentRepo, times(1)).delete(2L);
     }
 
     @Test
     public void shouldInvokeGetAllInRepo() {
-        try {
-            testedAccountService.getAll();
-            verify(currentRepo, times(1)).getAll();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        testedAccountService.getAll();
+        verify(currentRepo, times(1)).getAll();
     }
 }

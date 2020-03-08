@@ -7,7 +7,6 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
-import org.mycode.exceptions.RepoStorageException;
 import org.mycode.model.Account;
 import org.mycode.model.Developer;
 import org.mycode.repository.DeveloperRepository;
@@ -30,11 +29,7 @@ public class DeveloperServiceTest {
     @BeforeClass
     public static void connect() {
         TestUtils.switchConfigToTestMode();
-        try {
-            testedDeveloperService = TestUtils.getApplicationContext().getBean(DeveloperService.class);
-        } catch (RepoStorageException e) {
-            e.printStackTrace();
-        }
+        testedDeveloperService = TestUtils.getApplicationContext().getBean(DeveloperService.class);
     }
 
     @AfterClass
@@ -44,51 +39,31 @@ public class DeveloperServiceTest {
 
     @Test
     public void shouldInvokeCreateInRepo() {
-        try {
-            testedDeveloperService.create(createDeveloper);
-            verify(currentRepo, times(1)).create(createDeveloper);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        testedDeveloperService.create(createDeveloper);
+        verify(currentRepo, times(1)).create(createDeveloper);
     }
 
     @Test
     public void shouldInvokeGetByIdInRepo() {
-        try {
-            testedDeveloperService.getById(1L);
-            verify(currentRepo, times(1)).getById(1L);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        testedDeveloperService.getById(1L);
+        verify(currentRepo, times(1)).getById(1L);
     }
 
     @Test
     public void shouldInvokeUpdateInRepo() {
-        try {
-            testedDeveloperService.update(updateDeveloper);
-            verify(currentRepo, times(1)).update(updateDeveloper);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        testedDeveloperService.update(updateDeveloper);
+        verify(currentRepo, times(1)).update(updateDeveloper);
     }
 
     @Test
     public void shouldInvokeDeleteInRepo() {
-        try {
-            testedDeveloperService.delete(2L);
-            verify(currentRepo, times(1)).delete(2L);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        testedDeveloperService.delete(2L);
+        verify(currentRepo, times(1)).delete(2L);
     }
 
     @Test
     public void shouldInvokeGetAllInRepo() {
-        try {
-            testedDeveloperService.getAll();
-            verify(currentRepo, times(1)).getAll();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        testedDeveloperService.getAll();
+        verify(currentRepo, times(1)).getAll();
     }
 }

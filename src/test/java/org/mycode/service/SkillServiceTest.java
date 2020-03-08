@@ -7,7 +7,6 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
-import org.mycode.exceptions.RepoStorageException;
 import org.mycode.model.Skill;
 import org.mycode.repository.SkillRepository;
 import org.mycode.testutil.TestUtils;
@@ -27,11 +26,7 @@ public class SkillServiceTest {
     @BeforeClass
     public static void connect() {
         TestUtils.switchConfigToTestMode();
-        try {
-            testedSkillService = TestUtils.getApplicationContext().getBean(SkillService.class);
-        } catch (RepoStorageException e) {
-            e.printStackTrace();
-        }
+        testedSkillService = TestUtils.getApplicationContext().getBean(SkillService.class);
     }
 
     @AfterClass
@@ -41,51 +36,31 @@ public class SkillServiceTest {
 
     @Test
     public void shouldInvokeCreateInRepo() {
-        try {
-            testedSkillService.create(createSkill);
-            verify(currentRepo, times(1)).create(createSkill);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        testedSkillService.create(createSkill);
+        verify(currentRepo, times(1)).create(createSkill);
     }
 
     @Test
     public void shouldInvokeGetByIdInRepo() {
-        try {
-            testedSkillService.getById(1L);
-            verify(currentRepo, times(1)).getById(1L);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        testedSkillService.getById(1L);
+        verify(currentRepo, times(1)).getById(1L);
     }
 
     @Test
     public void shouldInvokeUpdateInRepo() {
-        try {
-            testedSkillService.update(updateSkill);
-            verify(currentRepo, times(1)).update(updateSkill);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        testedSkillService.update(updateSkill);
+        verify(currentRepo, times(1)).update(updateSkill);
     }
 
     @Test
     public void shouldInvokeDeleteInRepo() {
-        try {
-            testedSkillService.delete(2L);
-            verify(currentRepo, times(1)).delete(2L);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        testedSkillService.delete(2L);
+        verify(currentRepo, times(1)).delete(2L);
     }
 
     @Test
     public void shouldInvokeGetAllInRepo() {
-        try {
-            testedSkillService.getAll();
-            verify(currentRepo, times(1)).getAll();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        testedSkillService.getAll();
+        verify(currentRepo, times(1)).getAll();
     }
 }
