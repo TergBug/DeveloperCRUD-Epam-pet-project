@@ -19,7 +19,7 @@ public final class JDBCConnectionUtil {
         try (FileReader fr = new FileReader(LINK_TO_CONFIG)) {
             properties.load(fr);
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error("No properties file", e);
         }
         ds.setDriverClassName(properties.getProperty("jdbc.driver"));
         ds.setUrl(properties.getProperty("jdbc.url"));

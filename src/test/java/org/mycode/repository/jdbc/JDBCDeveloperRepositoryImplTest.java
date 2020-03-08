@@ -69,7 +69,7 @@ public class JDBCDeveloperRepositoryImplTest {
         try {
             connection = JDBCConnectionUtil.getConnection();
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error("No connection to DB", e);
         }
         testedRepo = new JDBCDeveloperRepositoryImpl();
     }
@@ -80,7 +80,7 @@ public class JDBCDeveloperRepositoryImplTest {
         try {
             connection.close();
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error("Cannot close connection to DB", e);
         }
     }
 
@@ -92,7 +92,7 @@ public class JDBCDeveloperRepositoryImplTest {
             scriptRunner.runScript(frInit);
             scriptRunner.runScript(frPop);
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error("No properties file", e);
         }
     }
 
