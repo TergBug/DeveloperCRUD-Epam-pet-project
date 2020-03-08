@@ -1,4 +1,4 @@
-use xz8xc9c13prgjhyx;
+use uboafn2j5p8ew05f;
 insert into skills(id, name) values ('1', 'Java');
 insert into skills(id, name) values ('2', 'C#');
 insert into skills(id, name) values ('3', 'JDBC');
