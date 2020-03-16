@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 @Configuration
-@Import({WebConfig.class})
+@Import({WebConfig.class, SecurityConfig.class, DatabaseConfig.class})
 public class CommonConfig {
     @Bean
     public TimerBeanPostProcessor timerBeanPostProcessor(){

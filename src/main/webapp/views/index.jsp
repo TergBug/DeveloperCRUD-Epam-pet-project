@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 <% String lang = request.getParameter("lang"); %>
 <% String linkToImg = "/img/"; %>
@@ -13,11 +14,23 @@
     <title><fmt:message key="message.title"/></title>
 </head>
 <body>
-<ul>
-    <li><a href="?lang=en"><fmt:message key="label.lang.en"/></a></li>
-    <li><a href="?lang=zh"><fmt:message key="label.lang.zh"/></a></li>
-    <li><a href="?lang=ru"><fmt:message key="label.lang.ru"/></a></li>
-</ul>
+<table style="border-spacing: 0; width: 100%">
+    <tr style="height: fit-content;">
+        <td style="text-align: left;">
+            <ul>
+                <li><a href="?lang=en"><fmt:message key="label.lang.en"/></a></li>
+                <li><a href="?lang=zh"><fmt:message key="label.lang.zh"/></a></li>
+                <li><a href="?lang=ru"><fmt:message key="label.lang.ru"/></a></li>
+            </ul>
+        </td>
+        <td style="text-align: right">
+            <form name='f' action="logout_proc" method='POST'>
+                <sec:csrfInput/>
+                <input name="logout" type="submit" value="Logout"/>
+            </form>
+        </td>
+    </tr>
+</table>
 <h2><fmt:message key="message.title"/></h2>
 <fmt:message key="message.description"/><br>
 <a href="../documentation"><fmt:message key="message.documentation"/></a><br>
