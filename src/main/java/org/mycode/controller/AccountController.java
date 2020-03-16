@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -23,6 +24,7 @@ public class AccountController {
     }
 
     @GetMapping("accounts/{id}")
+    @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
     public ResponseEntity<Account> getById(@PathVariable Long id) {
         ServiceVisitor visitor = VisitorFactory.getVisitorByOperation(VisitorFactory.GET_BY_ID, id);
         service.doService(visitor);
@@ -33,6 +35,7 @@ public class AccountController {
     }
 
     @GetMapping("accounts")
+    @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
     public ResponseEntity<List<?>> getAll() {
         ServiceVisitor visitor = VisitorFactory.getVisitorByOperation(VisitorFactory.GET_ALL, null);
         service.doService(visitor);
@@ -44,18 +47,21 @@ public class AccountController {
 
     @PostMapping("accounts")
     @ResponseStatus(code = HttpStatus.CREATED)
+    @PreAuthorize("hasRole('ADMIN')")
     public void create(@RequestBody Account account) {
         service.doService(VisitorFactory.getVisitorByOperation(VisitorFactory.CREATE, account));
     }
 
     @PutMapping("accounts")
     @ResponseStatus(code = HttpStatus.NO_CONTENT)
+    @PreAuthorize("hasRole('ADMIN')")
     public void update(@RequestBody Account account) {
         service.doService(VisitorFactory.getVisitorByOperation(VisitorFactory.UPDATE, account));
     }
 
     @DeleteMapping("accounts/{id}")
     @ResponseStatus(code = HttpStatus.NO_CONTENT)
+    @PreAuthorize("hasRole('ADMIN')")
     public void delete(@PathVariable Long id) {
         service.doService(VisitorFactory.getVisitorByOperation(VisitorFactory.DELETE, id));
     }
