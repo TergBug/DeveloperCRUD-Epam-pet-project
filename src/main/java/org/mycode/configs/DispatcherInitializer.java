@@ -1,7 +1,5 @@
-package org.mycode.controller;
+package org.mycode.configs;
 
-import org.mycode.configs.CommonConfig;
-import org.mycode.configs.WebConfig;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
@@ -12,7 +10,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
 
-public class DispatcherController implements WebApplicationInitializer {
+public class DispatcherInitializer implements WebApplicationInitializer {
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
         AnnotationConfigWebApplicationContext rootContext = new AnnotationConfigWebApplicationContext();

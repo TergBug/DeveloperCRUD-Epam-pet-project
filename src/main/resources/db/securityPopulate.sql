@@ -1,3 +1,4 @@
+use uboafn2j5p8ew05f;
 insert into security_users (username, password, enabled)
 values ('user', '$2y$12$COBXcOilGx5kG8WoEVmANuwyl9PHO1jfXMH9Xz.zFYJuYFDRHmNne', 1);
 commit;

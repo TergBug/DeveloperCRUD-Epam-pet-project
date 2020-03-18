@@ -1,3 +1,4 @@
+use uboafn2j5p8ew05f;
 drop table if exists security_authorities;
 commit;
 drop table if exists security_users;
