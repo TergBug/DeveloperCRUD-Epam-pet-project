@@ -1,67 +1,45 @@
 package org.mycode.service;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnitRunner;
 import org.mycode.model.Account;
 import org.mycode.model.AccountStatus;
 import org.mycode.repository.AccountRepository;
-import org.mycode.testutil.TestUtils;
 
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.*;
 
-@RunWith(MockitoJUnitRunner.class)
 public class AccountServiceTest {
-    @InjectMocks
-    private static AccountService testedAccountService;
-    @Mock
-    private AccountRepository currentRepo;
-    private Account createAccount = new Account(5L, "Jog", AccountStatus.ACTIVE);
-    private Account updateAccount = new Account(5L, "Pof", AccountStatus.BANNED);
-
-    @BeforeClass
-    public static void connect() {
-        TestUtils.switchConfigToTestMode();
-        testedAccountService = TestUtils.getApplicationContext().getBean(AccountService.class);
-    }
-
-    @AfterClass
-    public static void backProperty() {
-        TestUtils.switchConfigToWorkMode();
-    }
+    private static final Account CREATE_ACCOUNT = new Account(5L, "Jog", AccountStatus.ACTIVE);
+    private static final Account UPDATE_ACCOUNT = new Account(5L, "Pof", AccountStatus.BANNED);
+    private AccountRepository mockedRepo = mock(AccountRepository.class);
+    private AccountService sut = new AccountService(mockedRepo);
 
     @Test
     public void shouldInvokeCreateInRepo() {
-        testedAccountService.create(createAccount);
-        verify(currentRepo, times(1)).create(createAccount);
+        sut.create(CREATE_ACCOUNT);
+        verify(mockedRepo, times(1)).create(CREATE_ACCOUNT);
     }
 
     @Test
     public void shouldInvokeGetByIdInRepo() {
-        testedAccountService.getById(1L);
-        verify(currentRepo, times(1)).getById(1L);
+        sut.getById(1L);
+        verify(mockedRepo, times(1)).getById(1L);
     }
 
     @Test
     public void shouldInvokeUpdateInRepo() {
-        testedAccountService.update(updateAccount);
-        verify(currentRepo, times(1)).update(updateAccount);
+        sut.update(UPDATE_ACCOUNT);
+        verify(mockedRepo, times(1)).update(UPDATE_ACCOUNT);
     }
 
     @Test
     public void shouldInvokeDeleteInRepo() {
-        testedAccountService.delete(2L);
-        verify(currentRepo, times(1)).delete(2L);
+        sut.delete(2L);
+        verify(mockedRepo, times(1)).delete(2L);
     }
 
     @Test
     public void shouldInvokeGetAllInRepo() {
-        testedAccountService.getAll();
-        verify(currentRepo, times(1)).getAll();
+        sut.getAll();
+        verify(mockedRepo, times(1)).getAll();
     }
 }

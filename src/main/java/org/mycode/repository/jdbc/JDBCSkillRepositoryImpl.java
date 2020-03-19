@@ -8,9 +8,10 @@ import org.mycode.exceptions.RepoStorageException;
 import org.mycode.mapping.JDBCSkillMapper;
 import org.mycode.model.Skill;
 import org.mycode.repository.SkillRepository;
-import org.mycode.util.JDBCConnectionUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,9 +26,10 @@ public class JDBCSkillRepositoryImpl implements SkillRepository {
     private final String SELECT_ALL_QUERY = "select * from skills;";
     private Connection connection;
 
-    public JDBCSkillRepositoryImpl() {
+    @Autowired
+    public JDBCSkillRepositoryImpl(DataSource dataSource) {
         try {
-            connection = JDBCConnectionUtil.getConnection();
+            connection = dataSource.getConnection();
         } catch (SQLException e) {
             log.error("Cannot connect to SQL DB", e);
             throw new RepoStorageException("Cannot connect to SQL DB");

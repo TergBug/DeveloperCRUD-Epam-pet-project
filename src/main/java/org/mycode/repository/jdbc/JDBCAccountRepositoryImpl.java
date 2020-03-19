@@ -7,9 +7,10 @@ import org.mycode.exceptions.RepoStorageException;
 import org.mycode.mapping.JDBCAccountMapper;
 import org.mycode.model.Account;
 import org.mycode.repository.AccountRepository;
-import org.mycode.util.JDBCConnectionUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,9 +25,10 @@ public class JDBCAccountRepositoryImpl implements AccountRepository {
     private final String SELECT_ALL_QUERY = "select * from accounts;";
     private Connection connection;
 
-    public JDBCAccountRepositoryImpl() {
+    @Autowired
+    public JDBCAccountRepositoryImpl(DataSource dataSource) {
         try {
-            connection = JDBCConnectionUtil.getConnection();
+            connection = dataSource.getConnection();
         } catch (SQLException e) {
             log.error("Cannot connect to SQL DB", e);
             throw new RepoStorageException("Cannot connect to SQL DB");

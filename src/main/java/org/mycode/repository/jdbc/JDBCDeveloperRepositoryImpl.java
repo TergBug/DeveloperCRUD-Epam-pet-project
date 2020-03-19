@@ -7,9 +7,10 @@ import org.mycode.mapping.JDBCDeveloperMapper;
 import org.mycode.model.Developer;
 import org.mycode.model.Skill;
 import org.mycode.repository.DeveloperRepository;
-import org.mycode.util.JDBCConnectionUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -37,9 +38,10 @@ public class JDBCDeveloperRepositoryImpl implements DeveloperRepository {
     private final String DELETE_QUERY = "delete from 1? where 2?;";
     private Connection connection;
 
-    public JDBCDeveloperRepositoryImpl() {
+    @Autowired
+    public JDBCDeveloperRepositoryImpl(DataSource dataSource) {
         try {
-            connection = JDBCConnectionUtil.getConnection();
+            connection = dataSource.getConnection();
         } catch (SQLException e) {
             log.error("Cannot connect to SQL DB", e);
             throw new RepoStorageException("Cannot connect to SQL DB");
