@@ -1,53 +1,18 @@
 package org.mycode.service;
 
-import org.apache.log4j.Logger;
-import org.mycode.model.Developer;
-import org.mycode.repository.DeveloperRepository;
-import org.mycode.service.visitors.ServiceVisitor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.mycode.dto.DeveloperDto;
 
 import java.util.List;
+import java.util.UUID;
 
-@Service("developerService")
-public class DeveloperService implements Serviceable {
-    private static final Logger log = Logger.getLogger(DeveloperService.class);
-    private DeveloperRepository currentRepo;
+public interface DeveloperService {
+    void create(DeveloperDto model);
 
-    @Autowired
-    public DeveloperService(DeveloperRepository currentRepo) {
-        this.currentRepo = currentRepo;
-    }
+    DeveloperDto getById(UUID readID);
 
-    public void create(Developer model) {
-        currentRepo.create(model);
-        log.debug("Service->Create");
-    }
+    void update(DeveloperDto updatedModel);
 
-    public Developer getById(Long readID) {
-        Developer developer = currentRepo.getById(readID);
-        log.debug("Service->Read");
-        return developer;
-    }
+    void delete(UUID deletedEntry);
 
-    public void update(Developer updatedModel) {
-        currentRepo.update(updatedModel);
-        log.debug("Service->Update");
-    }
-
-    public void delete(Long deletedEntry) {
-        currentRepo.delete(deletedEntry);
-        log.debug("Service->Delete");
-    }
-
-    public List<Developer> getAll() {
-        List<Developer> developers = currentRepo.getAll();
-        log.debug("Service->Get all");
-        return developers;
-    }
-
-    @Override
-    public void doService(ServiceVisitor visitor) {
-        visitor.visitDeveloperService(this);
-    }
+    List<DeveloperDto> getAll();
 }

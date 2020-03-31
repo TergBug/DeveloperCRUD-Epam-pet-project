@@ -2,5 +2,7 @@ package org.mycode.repository;
 
 import org.mycode.model.Developer;
 
-public interface DeveloperRepository extends GenericRepository<Developer, Long> {
+import java.util.UUID;
+
+public interface DeveloperRepository extends GenericRepository<Developer, UUID> {
 }

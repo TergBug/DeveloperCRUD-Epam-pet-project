@@ -1,30 +1,47 @@
 package org.mycode.model;
 
-import java.util.Objects;
+import org.hibernate.annotations.GenericGenerator;
 
+import javax.persistence.*;
+import java.util.Objects;
+import java.util.UUID;
+
+@Entity
+@Table(name = "skills")
 public class Skill {
-    private Long id;
+    @Id
+    @GeneratedValue(generator = "uuid2")
+    @GenericGenerator(name = "uuid2", strategy = "uuid2")
+    @Column(columnDefinition = "BINARY(16)")
+    private UUID id;
+    @Column(unique = true)
     private String name;
 
-    public Skill(Long id) {
+    public Skill() {
+        this.id = UUID.randomUUID();
+        this.name = "";
+    }
+
+    public Skill(UUID id) {
         this.id = id;
+        this.name = "";
     }
 
     public Skill(String name) {
-        this.id = 0L;
+        this.id = UUID.randomUUID();
         this.name = name;
     }
 
-    public Skill(Long id, String name) {
+    public Skill(UUID id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public Long getId() {
-        return id != null ? id : 0L;
+    public UUID getId() {
+        return id;
     }
 
-    public void setId(Long id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
@@ -38,7 +55,9 @@ public class Skill {
 
     @Override
     public String toString() {
-        return id + " " + name;
+        return "Skill{" +
+                "id=" + id +
+                '}';
     }
 
     @Override

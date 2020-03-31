@@ -1,33 +1,53 @@
 package org.mycode.model;
 
-import java.util.Objects;
+import org.hibernate.annotations.GenericGenerator;
+import org.mycode.model.enums.AccountStatus;
 
+import javax.persistence.*;
+import java.util.Objects;
+import java.util.UUID;
+
+@Entity
+@Table(name = "accounts")
 public class Account {
-    private Long id;
+    @Id
+    @GeneratedValue(generator = "uuid2")
+    @GenericGenerator(name = "uuid2", strategy = "uuid2")
+    @Column(columnDefinition = "BINARY(16)")
+    private UUID id;
     private String name;
+    @Enumerated(EnumType.STRING)
     private AccountStatus status;
 
-    public Account(Long id) {
+    public Account() {
+        this.id = UUID.randomUUID();
+        this.name = "";
+        this.status = null;
+    }
+
+    public Account(UUID id) {
         this.id = id;
+        this.name = "";
+        this.status = null;
     }
 
     public Account(String name, AccountStatus status) {
-        this.id = 0L;
+        this.id = UUID.randomUUID();
         this.name = name;
         this.status = status;
     }
 
-    public Account(Long id, String name, AccountStatus status) {
+    public Account(UUID id, String name, AccountStatus status) {
         this.id = id;
         this.name = name;
         this.status = status;
     }
 
-    public Long getId() {
-        return id != null ? id : 0L;
+    public UUID getId() {
+        return id;
     }
 
-    public void setId(Long id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
@@ -49,7 +69,9 @@ public class Account {
 
     @Override
     public String toString() {
-        return id + " " + name + " " + status.toString();
+        return "Account{" +
+                "id=" + id +
+                '}';
     }
 
     @Override

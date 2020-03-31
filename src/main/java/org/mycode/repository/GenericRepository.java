@@ -9,7 +9,7 @@ public interface GenericRepository<T, ID> {
 
     void update(T updatedModel);
 
-    void delete(ID deletedEntry);
+    void delete(ID deletedEntryId);
 
     List<T> getAll();
 }

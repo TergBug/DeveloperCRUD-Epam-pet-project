@@ -8,4 +8,10 @@
     <changeSet author="user" id="12345-2">
         <sqlFile path="../db/populateDB.sql" relativeToChangelogFile="true"/>
     </changeSet>
+    <changeSet author="user" id="12345-3">
+        <sqlFile path="../db/securityInit.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <changeSet author="user" id="12345-4">
+        <sqlFile path="../db/securityPopulate.sql" relativeToChangelogFile="true"/>
+    </changeSet>
 </databaseChangeLog>

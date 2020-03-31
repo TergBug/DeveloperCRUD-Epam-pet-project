@@ -3,15 +3,19 @@ package org.mycode.configs;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
-import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.orm.hibernate5.HibernateTransactionManager;
+import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
+import java.util.Properties;
 
 @Configuration
+@ComponentScan({"org.mycode.repository.hibernate", "org.mycode.assembler"})
 @PropertySource(value = "classpath:/config.properties")
 public class DatabaseConfig {
     @Autowired
@@ -29,7 +33,32 @@ public class DatabaseConfig {
     }
 
     @Bean
+    public LocalSessionFactoryBean sessionFactory() {
+        LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
+        sessionFactory.setDataSource(dataSource());
+        sessionFactory.setPackagesToScan("org.mycode");
+        sessionFactory.setHibernateProperties(hibernateProperties());
+        return sessionFactory;
+    }
+
+    private Properties hibernateProperties() {
+        String[] needProperties = {
+                "hibernate.hbm2ddl.auto",
+                "hibernate.show_sql",
+                "hibernate.format_sql",
+                "hibernate.dialect"
+        };
+        Properties properties = new Properties();
+        for (String prop : needProperties) {
+            properties.setProperty(prop, environment.getProperty(prop));
+        }
+        return properties;
+    }
+
+    @Bean
     public PlatformTransactionManager platformTransactionManager() {
-        return new DataSourceTransactionManager(dataSource());
+        HibernateTransactionManager transactionManager = new HibernateTransactionManager();
+        transactionManager.setSessionFactory(sessionFactory().getObject());
+        return transactionManager;
     }
 }

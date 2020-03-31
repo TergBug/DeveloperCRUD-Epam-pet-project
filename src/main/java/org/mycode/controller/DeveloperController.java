@@ -1,68 +1,56 @@
 package org.mycode.controller;
 
-import org.mycode.model.Developer;
-import org.mycode.service.Serviceable;
-import org.mycode.service.visitors.ServiceVisitor;
-import org.mycode.service.visitors.VisitorFactory;
+import org.mycode.dto.DeveloperDto;
+import org.mycode.service.DeveloperService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
-@RequestMapping(value = "api/v1")
+@RequestMapping(value = "api/v1/developers")
 public class DeveloperController {
-    private Serviceable service;
+    private DeveloperService service;
 
     @Autowired
-    public DeveloperController(@Qualifier("developerService") Serviceable service) {
+    public DeveloperController(DeveloperService service) {
         this.service = service;
     }
 
-    @GetMapping("developers/{id}")
+    @GetMapping("{id}")
     @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
-    public ResponseEntity<Developer> getById(@PathVariable Long id) {
-        ServiceVisitor visitor = VisitorFactory.getVisitorByOperation(VisitorFactory.GET_BY_ID, id);
-        service.doService(visitor);
-        if (visitor.getResultData() != null && visitor.getResultData() instanceof Developer) {
-            return new ResponseEntity<>((Developer) visitor.getResultData(), HttpStatus.OK);
-        }
-        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    public ResponseEntity<DeveloperDto> getById(@PathVariable String id) {
+        return new ResponseEntity<>(service.getById(UUID.fromString(id.toLowerCase())), HttpStatus.OK);
     }
 
-    @GetMapping("developers")
+    @GetMapping
     @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
-    public ResponseEntity<List<?>> getAll() {
-        ServiceVisitor visitor = VisitorFactory.getVisitorByOperation(VisitorFactory.GET_ALL, null);
-        service.doService(visitor);
-        if (visitor.getResultData() != null && visitor.getResultData() instanceof List<?>) {
-            return new ResponseEntity<>((List<?>) visitor.getResultData(), HttpStatus.OK);
-        }
-        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    public ResponseEntity<List<DeveloperDto>> getAll() {
+        return new ResponseEntity<>(service.getAll(), HttpStatus.OK);
     }
 
-    @PostMapping("developers")
+    @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
     @PreAuthorize("hasRole('ADMIN')")
-    public void create(@RequestBody Developer developer) {
-        service.doService(VisitorFactory.getVisitorByOperation(VisitorFactory.CREATE, developer));
+    public void create(@RequestBody DeveloperDto developer) {
+        service.create(developer);
     }
 
-    @PutMapping("developers")
+    @PutMapping
     @ResponseStatus(code = HttpStatus.NO_CONTENT)
     @PreAuthorize("hasRole('ADMIN')")
-    public void update(@RequestBody Developer developer) {
-        service.doService(VisitorFactory.getVisitorByOperation(VisitorFactory.UPDATE, developer));
+    public void update(@RequestBody DeveloperDto developer) {
+        service.update(developer);
     }
 
-    @DeleteMapping("developers/{id}")
+    @DeleteMapping("{id}")
     @ResponseStatus(code = HttpStatus.NO_CONTENT)
     @PreAuthorize("hasRole('ADMIN')")
-    public void delete(@PathVariable Long id) {
-        service.doService(VisitorFactory.getVisitorByOperation(VisitorFactory.DELETE, id));
+    public void delete(@PathVariable String id) {
+        service.delete(UUID.fromString(id.toLowerCase()));
     }
 }

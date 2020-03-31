@@ -1,68 +1,56 @@
 package org.mycode.controller;
 
-import org.mycode.model.Skill;
-import org.mycode.service.Serviceable;
-import org.mycode.service.visitors.ServiceVisitor;
-import org.mycode.service.visitors.VisitorFactory;
+import org.mycode.dto.SkillDto;
+import org.mycode.service.SkillService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
-@RequestMapping(value = "api/v1")
+@RequestMapping(value = "api/v1/skills")
 public class SkillController {
-    private Serviceable service;
+    private SkillService service;
 
     @Autowired
-    public SkillController(@Qualifier("skillService") Serviceable service) {
+    public SkillController(SkillService service) {
         this.service = service;
     }
 
-    @GetMapping("skills/{id}")
+    @GetMapping("{id}")
     @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
-    public ResponseEntity<Skill> getById(@PathVariable Long id) {
-        ServiceVisitor visitor = VisitorFactory.getVisitorByOperation(VisitorFactory.GET_BY_ID, id);
-        service.doService(visitor);
-        if (visitor.getResultData() != null && visitor.getResultData() instanceof Skill) {
-            return new ResponseEntity<>((Skill) visitor.getResultData(), HttpStatus.OK);
-        }
-        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    public ResponseEntity<SkillDto> getById(@PathVariable String id) {
+        return new ResponseEntity<>(service.getById(UUID.fromString(id.toLowerCase())), HttpStatus.OK);
     }
 
-    @GetMapping("skills")
+    @GetMapping
     @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
-    public ResponseEntity<List<?>> getAll() {
-        ServiceVisitor visitor = VisitorFactory.getVisitorByOperation(VisitorFactory.GET_ALL, null);
-        service.doService(visitor);
-        if (visitor.getResultData() != null && visitor.getResultData() instanceof List<?>) {
-            return new ResponseEntity<>((List<?>) visitor.getResultData(), HttpStatus.OK);
-        }
-        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    public ResponseEntity<List<SkillDto>> getAll() {
+        return new ResponseEntity<>(service.getAll(), HttpStatus.OK);
     }
 
-    @PostMapping("skills")
+    @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
     @PreAuthorize("hasRole('ADMIN')")
-    public void create(@RequestBody Skill skill) {
-        service.doService(VisitorFactory.getVisitorByOperation(VisitorFactory.CREATE, skill));
+    public void create(@RequestBody SkillDto skill) {
+        service.create(skill);
     }
 
-    @PutMapping("skills")
+    @PutMapping
     @ResponseStatus(code = HttpStatus.NO_CONTENT)
     @PreAuthorize("hasRole('ADMIN')")
-    public void update(@RequestBody Skill skill) {
-        service.doService(VisitorFactory.getVisitorByOperation(VisitorFactory.UPDATE, skill));
+    public void update(@RequestBody SkillDto skill) {
+        service.update(skill);
     }
 
-    @DeleteMapping("skills/{id}")
+    @DeleteMapping("{id}")
     @ResponseStatus(code = HttpStatus.NO_CONTENT)
     @PreAuthorize("hasRole('ADMIN')")
-    public void delete(@PathVariable Long id) {
-        service.doService(VisitorFactory.getVisitorByOperation(VisitorFactory.DELETE, id));
+    public void delete(@PathVariable String id) {
+        service.delete(UUID.fromString(id.toLowerCase()));
     }
 }
