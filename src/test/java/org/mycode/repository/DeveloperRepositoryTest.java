@@ -4,7 +4,6 @@ import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.mycode.controller.it.BaseIT;
 import org.mycode.exceptions.NoSuchEntryException;
-import org.mycode.exceptions.RepoStorageException;
 import org.mycode.model.Account;
 import org.mycode.model.Developer;
 import org.mycode.model.Skill;
@@ -112,21 +111,17 @@ public class DeveloperRepositoryTest extends BaseIT {
     @Transactional
     @Rollback
     public void shouldGetAll() {
-        try {
-            Collections.addAll(DEVELOPERS_LIST,
-                    new Developer(ID_THIRD, "Gird", "Long",
-                            Arrays.stream(new Skill[]{FIRST_SKILL, SECOND_SKILL}).collect(Collectors.toSet()),
-                            THIRD_ACCOUNT),
-                    new Developer(ID_FOR_DELETE, "Nord", "Cir", null, null),
-                    READ_DEVELOPER,
-                    new Developer(ID_SECOND, "Xiaoming", "Li",
-                            Arrays.stream(new Skill[]{SECOND_SKILL}).collect(Collectors.toSet()),
-                            FIRST_ACCOUNT));
+        Collections.addAll(DEVELOPERS_LIST,
+                new Developer(ID_THIRD, "Gird", "Long",
+                        Arrays.stream(new Skill[]{FIRST_SKILL, SECOND_SKILL}).collect(Collectors.toSet()),
+                        THIRD_ACCOUNT),
+                new Developer(ID_FOR_DELETE, "Nord", "Cir", null, null),
+                READ_DEVELOPER,
+                new Developer(ID_SECOND, "Xiaoming", "Li",
+                        Arrays.stream(new Skill[]{SECOND_SKILL}).collect(Collectors.toSet()),
+                        FIRST_ACCOUNT));
 
-            assertEquals(DEVELOPERS_LIST, sut.getAll());
-            LOG.debug("GetAll");
-        } catch (RepoStorageException | NoSuchEntryException e) {
-            fail();
-        }
+        assertEquals(DEVELOPERS_LIST, sut.getAll());
+        LOG.debug("GetAll");
     }
 }
