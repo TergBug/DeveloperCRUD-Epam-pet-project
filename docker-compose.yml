@@ -1,0 +1,37 @@
+version: '3.7'
+
+networks:
+  innernet:
+    driver: bridge
+
+volumes:
+  data:
+
+services:
+  database:
+    image: mysql
+    ports:
+      - 3306:3306
+    volumes:
+      - data:/var/lib/mysql
+    networks:
+      - innernet
+    container_name: mysqldb
+    hostname: database
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: my-secret-pw
+      MYSQL_DATABASE: developercrud
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user-127891-user
+
+  webapp:
+    build: .
+    ports:
+      - 8080:8080
+    networks:
+      - innernet
+    container_name: developercrudapp
+    hostname: webapp
+    depends_on:
+      - database

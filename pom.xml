@@ -25,9 +25,9 @@
         <hibernate.version>5.4.12.Final</hibernate.version>
         <hibernate-validator.version>6.1.2.Final</hibernate-validator.version>
         <dbcp.version>2.7.0</dbcp.version>
-        <mybatis.version>3.4.5</mybatis.version>
         <jstl.version>1.2</jstl.version>
         <taglibs.version>1.1.2</taglibs.version>
+        <thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
         <mysql.version>8.0.15</mysql.version>
         <junit.version>4.13</junit.version>
         <mockito.version>3.2.4</mockito.version>
@@ -149,12 +149,6 @@
             <artifactId>commons-dbcp2</artifactId>
             <version>${dbcp.version}</version>
         </dependency>
-        <!--For executing SQL scripts-->
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis</artifactId>
-            <version>${mybatis.version}</version>
-        </dependency>
         <!--JSTL + TagLibs-->
         <dependency>
             <groupId>jstl</groupId>
@@ -165,6 +159,17 @@
             <groupId>taglibs</groupId>
             <artifactId>standard</artifactId>
             <version>${taglibs.version}</version>
+        </dependency>
+        <!--Thymeleaf-->
+        <dependency>
+            <groupId>org.thymeleaf</groupId>
+            <artifactId>thymeleaf</artifactId>
+            <version>${thymeleaf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.thymeleaf</groupId>
+            <artifactId>thymeleaf-spring5</artifactId>
+            <version>${thymeleaf.version}</version>
         </dependency>
         <!--MySQL connector-->
         <dependency>
@@ -391,6 +396,28 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>org.mycode.Main</mainClass>
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

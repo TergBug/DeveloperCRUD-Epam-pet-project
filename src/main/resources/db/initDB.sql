@@ -68,25 +68,13 @@ create table if not exists developer_skill
     unique (developer_id, skill_id)
 );
 commit;
-DELIMITER |
-CREATE TRIGGER developers_ai
-    BEFORE INSERT
-    ON developers
-    FOR EACH ROW
-begin
-    if (select a.name from accounts a where a.id = NEW.account_id) is null then
-        INSERT INTO accounts (id) VALUES (NEW.account_id);
-    end if;
-end;
-|
-DELIMITER ;
-# CREATE TRIGGER projects_ai
-#     BEFORE UPDATE
-#     ON projects
+# CREATE TRIGGER developers_ai
+#     BEFORE INSERT
+#     ON developers
 #     FOR EACH ROW
 # begin
 #     if (select a.name from accounts a where a.id = NEW.account_id) is null then
 #         INSERT INTO accounts (id) VALUES (NEW.account_id);
 #     end if;
-end;
-commit;
+# end;
+# commit;

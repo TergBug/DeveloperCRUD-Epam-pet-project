@@ -1,0 +1,57 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{message.title}">DeveloperCRUD</title>
+</head>
+<body>
+<table style="border-spacing: 0; width: 100%">
+    <tr style="height: fit-content;">
+        <td style="text-align: left;">
+            <ul>
+                <li><a href="?lang=en" th:text="#{label.lang.en}">English</a></li>
+                <li><a href="?lang=zh" th:text="#{label.lang.zh}">Chinese</a></li>
+                <li><a href="?lang=ru" th:text="#{label.lang.ru}">Russian</a></li>
+            </ul>
+        </td>
+        <td style="text-align: right">
+            <form action="#" method='POST' name='f' th:action="@{/logout_proc}">
+                <input th:name="${_csrf.parameterName}" th:value="${_csrf.token}" type="hidden"/>
+                <input name="logout" type="submit" value="Logout"/>
+            </form>
+        </td>
+    </tr>
+</table>
+<h2><span th:text="#{message.title}"></span></h2>
+<p th:text="#{message.description.p1}"></p>
+<p th:text="#{message.description.p2}"></p>
+<p th:text="#{message.description.p3}"></p>
+<p th:text="#{message.description.p4}"></p>
+<p th:text="#{message.description.p5}"></p>
+<p th:text="#{message.description.p6}"></p>
+<p th:text="#{message.description.p7}"></p>
+<p th:text="#{message.description.p8}"></p>
+<a href="./documentation" th:text="#{message.documentation}">Documentation</a><br>
+<table style="border-spacing: 50px; width: 100%">
+    <tr>
+        <td style="text-align: center" colspan="3">
+            <a href="/img/Project-uml.png"><img alt="UML" height="50%" src="/img/Project-uml.png" width="50%"></a><br>
+            Project UML diagram
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align: center" >
+            <img alt="Skill-seq" height="100%" src="/img/Skill-sequence.png" width="100%"><br>
+            Skill sequence diagram
+        </td>
+        <td style="text-align: center" >
+            <img alt="Account-seq" height="100%" src="/img/Account-sequence.png" width="100%"><br>
+            Account sequence diagram
+        </td>
+        <td style="text-align: center" >
+            <img alt="Developer-seq" height="100%" src="/img/Developer-sequence.png" width="100%"><br>
+            Developer sequence diagram
+        </td>
+    </tr>
+</table>
+</body>
+</html>

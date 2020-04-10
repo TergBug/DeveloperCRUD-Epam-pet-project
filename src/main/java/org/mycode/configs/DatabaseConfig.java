@@ -1,5 +1,6 @@
 package org.mycode.configs;
 
+import liquibase.integration.spring.SpringLiquibase;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -39,6 +40,14 @@ public class DatabaseConfig {
         sessionFactory.setPackagesToScan("org.mycode");
         sessionFactory.setHibernateProperties(hibernateProperties());
         return sessionFactory;
+    }
+
+    @Bean
+    public SpringLiquibase liquibase() {
+        SpringLiquibase liquibase = new SpringLiquibase();
+        liquibase.setChangeLog("classpath:liquibase/changelog.xml");
+        liquibase.setDataSource(dataSource());
+        return liquibase;
     }
 
     private Properties hibernateProperties() {

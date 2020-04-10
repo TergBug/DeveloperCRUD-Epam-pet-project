@@ -1,13 +1,11 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Login page</title>
 </head>
 <body>
 <h1>Login</h1>
-<form name='f' action="login_proc" method='POST'>
-    <sec:csrfInput/>
+<form action="#" method='POST' name='f' th:action="@{/login_proc}">
+    <input th:name="${_csrf.parameterName}" th:value="${_csrf.token}" type="hidden"/>
     <table>
         <tr>
             <td>User:</td>
