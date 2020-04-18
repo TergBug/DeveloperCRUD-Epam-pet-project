@@ -23,7 +23,9 @@ create table if not exists projects
     name        varchar(255) not null,
     status      varchar(255) not null,
     customer_id binary(16),
-    foreign key (customer_id) references customers (id),
+    foreign key (customer_id) references customers (id)
+        on update cascade
+        on delete cascade,
     unique (name)
 );
 create table if not exists skills
@@ -46,15 +48,23 @@ create table if not exists developers
     last_name  varchar(255),
     account_id binary(16),
     project_id binary(16),
-    foreign key (account_id) references accounts (id),
+    foreign key (account_id) references accounts (id)
+        on update cascade
+        on delete cascade,
     foreign key (project_id) references projects (id)
+        on update cascade
+        on delete cascade
 );
 create table if not exists developer_skill
 (
     developer_id binary(16) not null,
     skill_id     binary(16) not null,
-    foreign key (developer_id) references developers (id),
-    foreign key (skill_id) references skills (id),
+    foreign key (developer_id) references developers (id)
+        on update cascade
+        on delete cascade,
+    foreign key (skill_id) references skills (id)
+        on update cascade
+        on delete cascade,
     unique (developer_id, skill_id)
 );
 commit;

@@ -13,7 +13,8 @@ commit;
 insert into customers(id, name)
 values (unhex(replace('2936f525-5b05-47e2-8c08-f681c9ab1139', '-', '')), 'Customer1'),
        (unhex(replace('08e5f3bd-4c50-41d2-b769-1d2af49adb63', '-', '')), 'Customer2'),
-       (unhex(replace('3025faf1-dc64-40ae-840b-58d5f711eeb6', '-', '')), 'Customer3');
+       (unhex(replace('3025faf1-dc64-40ae-840b-58d5f711eeb6', '-', '')), 'Customer3'),
+       (unhex(replace('841ff081-2448-4c04-95db-527d4bf0d742', '-', '')), 'Customer4');
 commit;
 insert into projects(id, name, status, customer_id)
 values (unhex(replace('e07748c4-88ba-4c69-a994-8bad8890b2b8', '-', '')), 'Dinot', 'DESIGN',
@@ -21,7 +22,9 @@ values (unhex(replace('e07748c4-88ba-4c69-a994-8bad8890b2b8', '-', '')), 'Dinot'
        (unhex(replace('febdbac8-af6a-4ee0-bbc1-c401497a53ef', '-', '')), 'Redf', 'IMPLEMENTATION',
         unhex(replace('3025faf1-dc64-40ae-840b-58d5f711eeb6', '-', ''))),
        (unhex(replace('958c58da-dfae-4fcc-85bd-8d4a7454cfb4', '-', '')), 'Pejh', 'TESTING',
-        unhex(replace('08e5f3bd-4c50-41d2-b769-1d2af49adb63', '-', '')));
+        unhex(replace('08e5f3bd-4c50-41d2-b769-1d2af49adb63', '-', ''))),
+       (unhex(replace('cbea085c-f932-4651-ab39-1f5e6ac4df46', '-', '')), 'AWSTF', 'DESIGN',
+        unhex(replace('841ff081-2448-4c04-95db-527d4bf0d742', '-', '')));
 commit;
 insert into developers(id, first_name, last_name, account_id, project_id)
 values (unhex(replace('9a4f7c3f-fe35-4b45-82f1-128b65cb3a92', '-', '')), 'Din', 'Ford',
@@ -34,8 +37,8 @@ values (unhex(replace('9a4f7c3f-fe35-4b45-82f1-128b65cb3a92', '-', '')), 'Din', 
         unhex(replace('9743c5ef-4e76-4fc1-9b1b-a88f352cb22e', '-', '')),
         unhex(replace('febdbac8-af6a-4ee0-bbc1-c401497a53ef', '-', ''))),
        (unhex(replace('6bc3db84-1930-438a-b230-63379ac93ded', '-', '')), 'Nord', 'Cir',
-        null,
-        null);
+        unhex(replace('effaa7cc-373e-47f8-8ff6-7d227f950cfe', '-', '')),
+        unhex(replace('cbea085c-f932-4651-ab39-1f5e6ac4df46', '-', '')));
 commit;
 insert into developer_skill(developer_id, skill_id)
 values (unhex(replace('9a4f7c3f-fe35-4b45-82f1-128b65cb3a92', '-', '')),

@@ -36,7 +36,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .ignoringAntMatchers("/api/v1/**")
                 .and()
                 .authorizeRequests()
-                .mvcMatchers("/login", "/failedauth", "/logout").permitAll()
+                .mvcMatchers("/login", "/failedauth", "/logout", "/health").permitAll()
                 .mvcMatchers("/**").authenticated()
                 .and()
                 .formLogin()

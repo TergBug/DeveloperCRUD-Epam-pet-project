@@ -9,15 +9,16 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.EntityExistsException;
 import java.util.List;
 import java.util.UUID;
 
 @Repository
 @EnableTransactionManagement
 public class ProjectRepositoryImpl implements ProjectRepository {
-    private static final String HQL_QUERY_GET_BY_ID = "from Project p left join fetch p.developers " +
+    private static final String HQL_QUERY_GET_BY_ID = "select distinct p from Project p left join fetch p.developers " +
             "where p.id=unhex(replace('?', '-', ''))";
-    private static final String HQL_QUERY_GET_ALL = "from Project p left join fetch p.developers";
+    private static final String HQL_QUERY_GET_ALL = "select distinct p from Project p left join fetch p.developers";
     private SessionFactory sessionFactory;
 
     @Autowired
@@ -34,13 +35,19 @@ public class ProjectRepositoryImpl implements ProjectRepository {
     @Override
     @Transactional(readOnly = true)
     public Project getById(UUID readID) {
-        List<Project> readProjects = sessionFactory.getCurrentSession()
-                .createQuery(HQL_QUERY_GET_BY_ID.replace("?", readID.toString()), Project.class)
-                .getResultList();
-        if (readProjects == null || readProjects.size() != 1) {
-            throw new NoSuchEntryException("Entity for read not found");
+        Project outputProject;
+        try {
+            List<Project> readProjects = sessionFactory.getCurrentSession()
+                    .createQuery(HQL_QUERY_GET_BY_ID.replace("?", readID.toString()), Project.class)
+                    .getResultList();
+            if (readProjects == null || readProjects.size() != 1) {
+                throw new NoSuchEntryException("Entity for read not found");
+            }
+            outputProject = readProjects.get(0);
+        } catch (EntityExistsException e) {
+            outputProject = sessionFactory.getCurrentSession().get(Project.class, readID);
         }
-        return readProjects.get(0);
+        return outputProject;
     }
 
     @Override

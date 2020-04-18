@@ -2,7 +2,6 @@ package org.mycode.repository.hibernate;
 
 import org.hibernate.SessionFactory;
 import org.mycode.exceptions.NoSuchEntryException;
-import org.mycode.exceptions.NotUniqueEntryException;
 import org.mycode.model.Account;
 import org.mycode.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,9 +25,6 @@ public class AccountRepositoryImpl implements AccountRepository {
     @Override
     @Transactional
     public void create(Account model) {
-        if (!checkForUniquenessOfName(model.getName())) {
-            throw new NotUniqueEntryException("Not unique name");
-        }
         sessionFactory.getCurrentSession().save(model);
     }
 
@@ -45,9 +41,6 @@ public class AccountRepositoryImpl implements AccountRepository {
     @Override
     @Transactional
     public void update(Account updatedModel) {
-        if (!checkForUniquenessOfName(updatedModel.getName())) {
-            throw new NotUniqueEntryException("Not unique name");
-        }
         Account updatedAccount = sessionFactory.getCurrentSession().get(Account.class, updatedModel.getId());
         if (updatedAccount == null) {
             throw new NoSuchEntryException("Entity for update not found");
@@ -70,11 +63,5 @@ public class AccountRepositoryImpl implements AccountRepository {
     @Transactional(readOnly = true)
     public List<Account> getAll() {
         return sessionFactory.getCurrentSession().createQuery("from Account", Account.class).list();
-    }
-
-    private boolean checkForUniquenessOfName(String name) {
-        List<Account> existedEntities = sessionFactory.getCurrentSession()
-                .createQuery("from Account where name='" + name + "'", Account.class).getResultList();
-        return existedEntities.size() == 0;
     }
 }

@@ -35,9 +35,10 @@
     <script src="/documentation/swagger-ui-standalone-preset.js"> </script>
     <script>
     window.onload = function() {
+        const theUrl = window.location.protocol + "//" + window.location.host + "/doc";
       // Begin Swagger UI call region
       const ui = SwaggerUIBundle({
-        url: "https://developercrud.herokuapp.com/documentation/doc.json",
+          url: theUrl,
         dom_id: '#swagger-ui',
         deepLinking: true,
         presets: [
@@ -48,7 +49,7 @@
           SwaggerUIBundle.plugins.DownloadUrl
         ],
         layout: "StandaloneLayout"
-      })
+      });
       // End Swagger UI call region
 
       window.ui = ui

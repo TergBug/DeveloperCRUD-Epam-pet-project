@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.EntityExistsException;
 import java.util.List;
 import java.util.UUID;
 
@@ -34,13 +35,19 @@ public class DeveloperRepositoryImpl implements DeveloperRepository {
     @Override
     @Transactional(readOnly = true)
     public Developer getById(UUID readID) {
-        List<Developer> readDevelopers = sessionFactory.getCurrentSession()
-                .createQuery(HQL_QUERY_GET_BY_ID.replace("?", readID.toString()), Developer.class)
-                .getResultList();
-        if (readDevelopers == null || readDevelopers.size() != 1) {
-            throw new NoSuchEntryException("Entity for read not found");
+        Developer outputDeveloper;
+        try {
+            List<Developer> readDevelopers = sessionFactory.getCurrentSession()
+                    .createQuery(HQL_QUERY_GET_BY_ID.replace("?", readID.toString()), Developer.class)
+                    .getResultList();
+            if (readDevelopers == null || readDevelopers.size() != 1) {
+                throw new NoSuchEntryException("Entity for read not found");
+            }
+            outputDeveloper = readDevelopers.get(0);
+        } catch (EntityExistsException e) {
+            outputDeveloper = sessionFactory.getCurrentSession().get(Developer.class, readID);
         }
-        return readDevelopers.get(0);
+        return outputDeveloper;
     }
 
     @Override

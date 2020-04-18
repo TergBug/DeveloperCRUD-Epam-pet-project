@@ -94,7 +94,7 @@ public class ProjectDto {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", developersAccounts=" + developersAccounts +
-                ", customerName='" + customerId + '\'' +
+                ", customerId='" + customerId + '\'' +
                 ", status='" + status + '\'' +
                 '}';
     }

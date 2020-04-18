@@ -9,15 +9,16 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.EntityExistsException;
 import java.util.List;
 import java.util.UUID;
 
 @Repository
 @EnableTransactionManagement
 public class CustomerRepositoryImpl implements CustomerRepository {
-    private static final String HQL_QUERY_GET_BY_ID = "from Customer c left join fetch c.projects " +
+    private static final String HQL_QUERY_GET_BY_ID = "select distinct c from Customer c left join fetch c.projects " +
             "where c.id=unhex(replace('?', '-', ''))";
-    private static final String HQL_QUERY_GET_ALL = "from Customer c left join fetch c.projects";
+    private static final String HQL_QUERY_GET_ALL = "select distinct c from Customer c left join fetch c.projects";
     private SessionFactory sessionFactory;
 
     @Autowired
@@ -34,13 +35,19 @@ public class CustomerRepositoryImpl implements CustomerRepository {
     @Override
     @Transactional(readOnly = true)
     public Customer getById(UUID readID) {
-        List<Customer> readCustomers = sessionFactory.getCurrentSession()
-                .createQuery(HQL_QUERY_GET_BY_ID.replace("?", readID.toString()), Customer.class)
-                .getResultList();
-        if (readCustomers == null || readCustomers.size() != 1) {
-            throw new NoSuchEntryException("Entity for read not found");
+        Customer outputCustomer;
+        try {
+            List<Customer> readCustomers = sessionFactory.getCurrentSession()
+                    .createQuery(HQL_QUERY_GET_BY_ID.replace("?", readID.toString()), Customer.class)
+                    .getResultList();
+            if (readCustomers == null || readCustomers.size() != 1) {
+                throw new NoSuchEntryException("Entity for read not found");
+            }
+            outputCustomer = readCustomers.get(0);
+        } catch (EntityExistsException e) {
+            outputCustomer = sessionFactory.getCurrentSession().get(Customer.class, readID);
         }
-        return readCustomers.get(0);
+        return outputCustomer;
     }
 
     @Override

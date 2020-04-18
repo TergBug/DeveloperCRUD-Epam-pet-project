@@ -42,7 +42,6 @@ public class SkillRepositoryImpl implements SkillRepository {
     @Transactional
     public void update(Skill updatedModel) {
         Skill updatedSkill = sessionFactory.getCurrentSession().get(Skill.class, updatedModel.getId());
-        ;
         if (updatedSkill == null) {
             throw new NoSuchEntryException("Entity for update not found");
         }

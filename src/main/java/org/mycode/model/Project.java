@@ -4,6 +4,7 @@ import org.hibernate.annotations.GenericGenerator;
 import org.mycode.model.enums.ProjectStatus;
 
 import javax.persistence.*;
+import java.util.Objects;
 import java.util.Set;
 import java.util.UUID;
 
@@ -102,5 +103,20 @@ public class Project {
         return "Project{" +
                 "id=" + id +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Project project = (Project) o;
+        return Objects.equals(id, project.id) &&
+                Objects.equals(name, project.name) &&
+                status == project.status;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, status);
     }
 }

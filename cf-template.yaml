@@ -1,0 +1,279 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  #--- Subnets ---#
+  SubnetPetPub:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      MapPublicIpOnLaunch: true
+      AvailabilityZone: us-west-1b
+      VpcId: vpc-0dc46e5d658d227a7
+      CidrBlock: 10.0.32.0/20
+      Tags:
+        - Key: Application
+          Value: !Ref 'AWS::StackId'
+        - Key: Name
+          Value: 'pet-public'
+  SubnetPetPriv:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: vpc-0dc46e5d658d227a7
+      CidrBlock: 10.0.16.0/20
+      Tags:
+        - Key: Application
+          Value: !Ref 'AWS::StackId'
+        - Key: Name
+          Value: 'pet-private'
+  SubnetLbPub:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      AvailabilityZone: us-west-1c
+      VpcId: vpc-0dc46e5d658d227a7
+      CidrBlock: 10.0.48.0/20
+      Tags:
+        - Key: Application
+          Value: !Ref 'AWS::StackId'
+        - Key: Name
+          Value: 'lb-public'
+  #--- Gateways ---#
+  InternetGateway:
+    Type: 'AWS::EC2::InternetGateway'
+    Properties:
+      Tags:
+        - Key: Application
+          Value: !Ref 'AWS::StackId'
+  AttachGateway:
+    Type: 'AWS::EC2::VPCGatewayAttachment'
+    Properties:
+      VpcId: vpc-0dc46e5d658d227a7
+      InternetGatewayId: !Ref InternetGateway
+  ElasticIP:
+    Type: 'AWS::EC2::EIP'
+    Properties:
+      Domain: vpc
+  NatGateway:
+    Type: 'AWS::EC2::NatGateway'
+    Properties:
+      SubnetId: !Ref SubnetPetPub
+      AllocationId:
+        Fn::GetAtt:
+          - ElasticIP
+          - AllocationId
+  #--- Route tables ---#
+  RouteTableNat:
+    Type: 'AWS::EC2::RouteTable'
+    Properties:
+      VpcId: vpc-0dc46e5d658d227a7
+      Tags:
+        - Key: Application
+          Value: !Ref 'AWS::StackId'
+        - Key: Name
+          Value: 'to-nat'
+  RouteTableInternet:
+    Type: 'AWS::EC2::RouteTable'
+    Properties:
+      VpcId: vpc-0dc46e5d658d227a7
+      Tags:
+        - Key: Application
+          Value: !Ref 'AWS::StackId'
+        - Key: Name
+          Value: 'to-internet'
+  RouteInernet:
+    Type: 'AWS::EC2::Route'
+    DependsOn: AttachGateway
+    Properties:
+      RouteTableId: !Ref RouteTableInternet
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: !Ref InternetGateway
+  RouteNat:
+    Type: 'AWS::EC2::Route'
+    DependsOn: NatGateway
+    Properties:
+      RouteTableId: !Ref RouteTableNat
+      DestinationCidrBlock: 0.0.0.0/0
+      NatGatewayId: !Ref NatGateway
+  SubnetPetPrivNatRT:
+    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Properties:
+      SubnetId: !Ref SubnetPetPriv
+      RouteTableId: !Ref RouteTableNat
+  SubnetLbPubInternetRT:
+    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Properties:
+      SubnetId: !Ref SubnetLbPub
+      RouteTableId: !Ref RouteTableInternet
+  SubnetPetPubInternetRT:
+    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Properties:
+      SubnetId: !Ref SubnetPetPub
+      RouteTableId: !Ref RouteTableInternet
+  #--- Security groups ---#
+  SGpIngressPrivate:
+    Type: 'AWS::EC2::SecurityGroupIngress'
+    Properties:
+      GroupId: !Ref SGPrivate
+      IpProtocol: -1
+      SourceSecurityGroupId: !Ref SGDefault
+      ToPort: -1
+      FromPort: -1
+  SGpIngressDefault:
+    Type: 'AWS::EC2::SecurityGroupIngress'
+    Properties:
+      GroupId: !Ref SGDefault
+      IpProtocol: -1
+      CidrIp: 0.0.0.0/0
+      ToPort: -1
+      FromPort: -1
+  SGPrivate:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      VpcId: vpc-0dc46e5d658d227a7
+      GroupName: 'private-sg'
+      GroupDescription: 'Allow traffic'
+  SGDefault:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      VpcId: vpc-0dc46e5d658d227a7
+      GroupName: 'default-1'
+      GroupDescription: 'Allow all'
+  #--- Load balancer ---#
+  ALB:
+    Type: 'AWS::ElasticLoadBalancingV2::LoadBalancer'
+    DependsOn: AttachGateway
+    Properties:
+      SecurityGroups:
+        - !Ref SGDefault
+      Subnets:
+        - !Ref SubnetPetPub
+        - !Ref SubnetLbPub
+  ALBListener:
+    Type: 'AWS::ElasticLoadBalancingV2::Listener'
+    Properties:
+      DefaultActions:
+        - Type: forward
+          TargetGroupArn: !Ref ALBTargetGroup
+      LoadBalancerArn: !Ref ALB
+      Port: '80'
+      Protocol: HTTP
+  ALBTargetGroup:
+    Type: 'AWS::ElasticLoadBalancingV2::TargetGroup'
+    Properties:
+      HealthCheckPath: '/health'
+      HealthCheckIntervalSeconds: 30
+      HealthCheckTimeoutSeconds: 10
+      HealthyThresholdCount: 5
+      Port: 8080
+      Protocol: HTTP
+      UnhealthyThresholdCount: 5
+      VpcId: vpc-0dc46e5d658d227a7
+      Targets:
+        - Id: !Ref EC2DevCRUD1
+          Port: 8080
+        - Id: !Ref EC2DevCRUD2
+          Port: 8080
+      TargetGroupAttributes:
+        - Key: stickiness.enabled
+          Value: 'true'
+        - Key: stickiness.type
+          Value: lb_cookie
+        - Key: stickiness.lb_cookie.duration_seconds
+          Value: '600'
+  #--- EC2 ---#
+  EC2Bastion:
+    Type: 'AWS::EC2::Instance'
+    DependsOn: InternetGateway
+    Properties:
+      AvailabilityZone: us-west-1b
+      IamInstanceProfile: EC2Role
+      SubnetId: !Ref SubnetPetPub
+      SecurityGroupIds:
+        - !Ref SGDefault
+      KeyName: 'key.pem'
+      InstanceType: 't2.micro'
+      ImageId: 'ami-03ba3948f6c37a4b0'
+      Tags:
+        - Key: Name
+          Value: 'Bastion'
+  EC2DevCRUD1:
+    Type: 'AWS::EC2::Instance'
+    DependsOn: NatGateway
+    Properties:
+      AvailabilityZone: us-west-1b
+      IamInstanceProfile: RDSAndS3Access
+      SubnetId: !Ref SubnetPetPriv
+      SecurityGroupIds:
+        - !Ref SGPrivate
+      KeyName: 'key.pem'
+      InstanceType: 't2.micro'
+      ImageId: 'ami-03ba3948f6c37a4b0'
+      UserData:
+        Fn::Base64:
+          !Sub |
+          Content-Type: multipart/mixed; boundary="//"
+          MIME-Version: 1.0
+          --//
+          Content-Type: text/cloud-config; charset="us-ascii"
+          MIME-Version: 1.0
+          Content-Transfer-Encoding: 7bit
+          Content-Disposition: attachment; filename="cloud-config.txt"
+          #cloud-config
+          cloud_final_modules:
+          - [scripts-user, always]
+          --//
+          Content-Type: text/x-shellscript; charset="us-ascii"
+          MIME-Version: 1.0
+          Content-Transfer-Encoding: 7bit
+          Content-Disposition: attachment; filename="userdata.txt"
+          #!/bin/bash
+          apt-get -y update
+          apt -y install openjdk-8-jre
+          apt -y install awscli
+          aws s3 cp s3://pet-project-bucket/DevCRUD.jar ./DevCRUD.jar
+          nohup java -jar DevCRUD.jar > ./logs &
+          --//
+      Tags:
+        - Key: Name
+          Value: 'DevCRUD'
+  EC2DevCRUD2:
+    Type: 'AWS::EC2::Instance'
+    DependsOn: NatGateway
+    Properties:
+      AvailabilityZone: us-west-1b
+      IamInstanceProfile: RDSAndS3Access
+      SubnetId: !Ref SubnetPetPriv
+      SecurityGroupIds:
+        - !Ref SGPrivate
+      KeyName: 'key.pem'
+      InstanceType: 't2.micro'
+      ImageId: 'ami-03ba3948f6c37a4b0'
+      UserData:
+        Fn::Base64:
+          !Sub |
+          Content-Type: multipart/mixed; boundary="//"
+          MIME-Version: 1.0
+          --//
+          Content-Type: text/cloud-config; charset="us-ascii"
+          MIME-Version: 1.0
+          Content-Transfer-Encoding: 7bit
+          Content-Disposition: attachment; filename="cloud-config.txt"
+          #cloud-config
+          cloud_final_modules:
+          - [scripts-user, always]
+          --//
+          Content-Type: text/x-shellscript; charset="us-ascii"
+          MIME-Version: 1.0
+          Content-Transfer-Encoding: 7bit
+          Content-Disposition: attachment; filename="userdata.txt"
+          #!/bin/bash
+          apt-get -y update
+          apt -y install openjdk-8-jre
+          apt -y install awscli
+          aws s3 cp s3://pet-project-bucket/DevCRUD.jar ./DevCRUD.jar
+          nohup java -jar DevCRUD.jar > ./logs &
+          --//
+      Tags:
+        - Key: Name
+          Value: 'DevCRUD'
+Outputs:
+  URL:
+    Description: DNSName of the ALB
+    Value: !GetAtt ALB.DNSName

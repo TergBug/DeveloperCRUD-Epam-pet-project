@@ -6,7 +6,6 @@
     "title": "DeveloperCRUD",
     "termsOfService": "https://github.com/TergBug"
   },
-  "host": "developercrud.herokuapp.com",
   "basePath": "/",
   "tags": [
     {
@@ -23,7 +22,6 @@
     }
   ],
   "schemes": [
-    "https",
     "http"
   ],
   "paths": {
@@ -43,7 +41,7 @@
             "in": "path",
             "description": "ID of skill",
             "required": true,
-            "type": "integer"
+            "type": "string"
           }
         ],
         "responses": {
@@ -73,7 +71,7 @@
             "in": "path",
             "description": "ID of skill",
             "required": true,
-            "type": "integer"
+            "type": "string"
           }
         ],
         "responses": {
@@ -193,7 +191,7 @@
             "in": "path",
             "description": "ID of account",
             "required": true,
-            "type": "integer"
+            "type": "string"
           }
         ],
         "responses": {
@@ -223,7 +221,7 @@
             "in": "path",
             "description": "ID of account",
             "required": true,
-            "type": "integer"
+            "type": "string"
           }
         ],
         "responses": {
@@ -343,7 +341,7 @@
             "in": "path",
             "description": "ID of developer",
             "required": true,
-            "type": "integer"
+            "type": "string"
           }
         ],
         "responses": {
@@ -373,7 +371,7 @@
             "in": "path",
             "description": "ID of developer",
             "required": true,
-            "type": "integer"
+            "type": "string"
           }
         ],
         "responses": {
@@ -483,7 +481,7 @@
       "type": "object",
       "properties": {
         "id": {
-          "type": "integer"
+          "type": "string"
         },
         "name": {
           "type": "string"
@@ -494,7 +492,7 @@
       "type": "object",
       "properties": {
         "id": {
-          "type": "integer"
+          "type": "string"
         },
         "name": {
           "type": "string"
@@ -513,7 +511,7 @@
       "type": "object",
       "properties": {
         "id": {
-          "type": "integer"
+          "type": "string"
         },
         "firstName": {
           "type": "string"
